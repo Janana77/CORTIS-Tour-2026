@@ -1,0 +1,312 @@
+
+<html data-type="html" data-identifier="0bbdfcb0-23a1-4357-96bf-a8647a407fa2" data-title="CORTIS Tour Japan 繁中售票指南" data-version="1"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- 瀏覽器分頁標題 -->
+    <title>CORTIS Tour Japan 橫濱場售票指南 (台灣時間版)</title>
+    
+    <!-- 社群分享預覽優化（LINE、FB、Threads）使用您上傳的 banner.jpg 或日本宣傳圖 -->
+    <meta property="og:title" content="CORTIS Tour Japan 橫濱場售票指南 (台灣時間版)">
+    <meta property="og:description" content="2026 CORTIS TOUR IN JAPAN 繁中售票指南！完整解析日本「先抽指定席、再升級VIP」流程與時間">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="banner_japan.jpg">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #121418;
+            color: #e2e8f0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+        .tab-active {
+            border-bottom: 3px solid #e03e3e;
+            color: #ffffff;
+            font-weight: bold;
+        }
+        .red-bullet {
+            width: 8px;
+            height: 14px;
+            background-color: #e03e3e;
+            display: inline-block;
+            margin-right: 8px;
+            transform: skewX(-15deg);
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+    <div class="max-w-4xl mx-auto bg-[#1a1d24] rounded-xl shadow-2xl overflow-hidden border border-gray-800">
+        
+        <!-- Banner Header: 直接使用原本的 banner.jpg，並拉高高度 -->
+        <div class="relative h-64 md:h-96 flex flex-col justify-end p-6 border-b border-gray-800" style="background: linear-gradient(180deg, rgba(26,29,36,0) 50%, rgba(26,29,36,0.95) 100%), url('banner_japan.jpg') no-repeat center top / cover;">
+            <div class="absolute bottom-4 right-4 bg-red-600 text-white text-[10px] font-bold px-2.5 py-1 rounded shadow-lg tracking-wider">日本公演繁中指南 (台灣時間版)</div>
+        </div>
+
+        <!-- Warning Notice Banner -->
+        <div class="bg-[#1f242e] px-6 py-4 border-b border-gray-800 text-xs text-gray-300 leading-relaxed">
+            <span class="text-[#e03e3e] font-bold">⚠️ 日本購票重要提醒：</span> 
+            日本場售票採取<span class="text-yellow-400 font-bold">「抽選制 (抽籤)」</span>而非先搶先贏。本指南的<span class="text-yellow-400 font-bold">「抽選申請、公佈、繳費」已全面轉換為台灣時間 (UTC+8)</span>。去日本現場觀演時請注意，日本當地的開場與開演時間比台灣快 1 小時喔！
+        </div>
+
+        <!-- Interactive Tabs -->
+        <div class="flex border-b border-gray-800 overflow-x-auto bg-[#15181e] scrollbar-none">
+            <button id="btn-info" class="tab-btn px-6 py-4 text-sm text-gray-400 hover:text-white transition whitespace-nowrap tab-active">📊 演出資訊</button>
+            <button id="btn-seats" class="tab-btn px-6 py-4 text-sm text-gray-400 hover:text-white transition whitespace-nowrap">🗺️ 票價與VIP福利</button>
+            <button id="btn-schedule" class="tab-btn px-6 py-4 text-sm text-gray-400 hover:text-white transition whitespace-nowrap">📅 抽選時程 (台灣時間)</button>
+            <button id="btn-entry" class="tab-btn px-6 py-4 text-sm text-gray-400 hover:text-white transition whitespace-nowrap">🎫 購票與抽選流程</button>
+            <button id="btn-rules" class="tab-btn px-6 py-4 text-sm text-gray-400 hover:text-white transition whitespace-nowrap">📋 日本入場須知</button>
+        </div>
+
+        <!-- Content Area -->
+        <div class="p-6">
+            
+            <!-- Tab 1: 演出資訊 -->
+            <div id="content-info" class="tab-content space-y-6">
+                <div class="flex items-center mb-4">
+                    <span class="red-bullet"></span>
+                    <h2 class="text-xl font-bold text-white">日本公演資訊 (公演情報)</h2>
+                </div>
+                
+                <div class="overflow-hidden border border-gray-800 rounded-lg">
+                    <table class="w-full text-left border-collapse text-sm">
+                        <tbody>
+                            <tr class="border-b border-gray-800 bg-[#1f242e]">
+                                <td class="p-4 w-1/4 font-semibold text-gray-400">演出名稱</td>
+                                <td class="p-4 text-white font-bold">2026 CORTIS TOUR &lt;PUT YOUR PHONE DOWN&gt; IN JAPAN</td>
+                            </tr>
+                            <tr class="border-b border-gray-800">
+                                <td class="p-4 font-semibold text-gray-400">演出地點</td>
+                                <td class="p-4 text-white">
+                                    <span class="font-bold">神奈川・橫濱 PIA ARENA MM (ぴあアリーナMM)</span><br>
+                                    <span class="text-xs text-gray-400">地址：神奈川県横浜市西区みなとみらい3-2-2</span>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-gray-800 bg-[#1f242e]">
+                                <td class="p-4 font-semibold text-gray-400">演出日期與時間</td>
+                                <td class="p-4 text-white space-y-2">
+                                    <div class="text-red-400 font-semibold text-xs">⏰ 下方時間為【日本當地時間 JST】：</div>
+                                    <div class="pl-2 border-l-2 border-red-600">
+                                        • <span class="font-bold">9月 4日 (五)</span>：開場 18:00 / 開演 19:00 <span class="text-xs text-gray-500">(台時 17:00 開場 / 18:00 開演)</span><br>
+                                        • <span class="font-bold">9月 5日 (六)</span>：開場 16:00 / 開演 17:00 <span class="text-xs text-gray-500">(台時 15:00 開場 / 16:00 開演)</span><br>
+                                        • <span class="font-bold">9月 6日 (日)</span>：開場 14:00 / 開演 15:00 <span class="text-xs text-gray-500">(台時 13:00 開場 / 14:00 開演)</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-gray-800">
+                                <td class="p-4 font-semibold text-gray-400">票價 (含稅)</td>
+                                <td class="p-4 text-white">
+                                    • <span class="text-blue-400 font-bold">指定席 (一般對號座)</span>：14,000 日圓<br>
+                                    • <span class="text-[#e03e3e] font-bold">VIP SEAT (升級席)</span>：25,000 日圓 <span class="text-xs text-gray-400">(包含指定席票 14k+升級費 11k)</span>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-gray-800 bg-[#1f242e]">
+                                <td class="p-4 font-semibold text-gray-400">購票限制</td>
+                                <td class="p-4 text-red-400 font-bold">滿 3 歲以上需購票，未滿 3 歲兒童謝絕入場。</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Tab 2: 票價與VIP福利 -->
+            <div id="content-seats" class="tab-content hidden space-y-6">
+                <div class="flex items-center mb-4">
+                    <span class="red-bullet"></span>
+                    <h2 class="text-xl font-bold text-white">票種與 VIP 升級福利 (チケット料金)</h2>
+                </div>
+
+                <!-- VIP Seat Special card -->
+                <div class="bg-gradient-to-r from-[#e03e3e]/20 to-transparent p-6 rounded-lg border border-[#e03e3e]/50 space-y-4">
+                    <div class="flex items-center space-x-2">
+                        <span class="bg-[#e03e3e] text-white text-xs font-bold px-2 py-0.5 rounded">極致享受</span>
+                        <h3 class="text-lg font-bold text-white">👑 VIP SEAT (加價升級席) 福利說明</h3>
+                    </div>
+                    <p class="text-xs text-gray-300 leading-relaxed">
+                        VIP 席僅開放給擁有 <span class="text-[#e03e3e] font-bold">COER MEMBERSHIP (JP) 官方會員</span> 進行第二階段的「加價抽選升級」。無法直接單獨購買！
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs text-gray-300">
+                        <div class="bg-gray-900/80 p-3 rounded border border-gray-800">
+                            <span class="text-[#e03e3e] font-bold">✨ 福利 1：特等最前席</span><br>
+                            保證獲得舞台正前方 Arena 搖滾區或最前排座位。
+                        </div>
+                        <div class="bg-gray-900/80 p-3 rounded border border-gray-800">
+                            <span class="text-[#e03e3e] font-bold">✨ 福利 2：演出後送別會</span><br>
+                            演出結束後，可參加與 CORTIS 全員近距離的「Send-off 送別會」活動！
+                        </div>
+                        <div class="bg-gray-900/80 p-3 rounded border border-gray-800">
+                            <span class="text-[#e03e3e] font-bold">✨ 福利 3：專屬禮物 &amp; 通道</span><br>
+                            享有專屬 VIP 優先入場通道，並可領取專屬限定官方禮物一份。
+                        </div>
+                    </div>
+                    <p class="text-[10px] text-gray-500">※ 注意：若購買指定席（14,000日圓）並中籤 VIP 升級後，需另付 11,000日圓之升級費用。</p>
+                </div>
+
+                <!-- Arena seating diagram memo -->
+                <div class="bg-[#111317] p-5 rounded-lg border border-gray-800 text-xs space-y-3">
+                    <h3 class="font-bold text-white">🏟️ 橫濱 PIA ARENA MM 場地小科普</h3>
+                    <p class="text-gray-400">Pia Arena MM 是一個專為音樂演出打造的 4 層立體場館：</p>
+                    <ul class="list-disc pl-4 space-y-1 text-gray-400">
+                        <li><span class="text-white font-semibold">Arena (1樓)</span>：VIP 升級席與主要搖滾站/坐區。</li>
+                        <li><span class="text-white font-semibold">2樓、3樓、4樓 (看台區)</span>：為階梯式對號座，視野開闊且音響效果極佳。</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Tab 3: 抽選時程 -->
+            <div id="content-schedule" class="tab-content hidden space-y-6">
+                <div class="flex items-center mb-4">
+                    <span class="red-bullet"></span>
+                    <h2 class="text-xl font-bold text-white">日本 FC 官方會員優先抽選時程 (抽籤日程)</h2>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- Phase 1: Designated Seats -->
+                    <div class="bg-gradient-to-r from-[#e03e3e]/10 to-transparent p-5 rounded-lg border-l-4 border-[#e03e3e] border-y border-r border-gray-800">
+                        <span class="text-xs bg-[#e03e3e] text-white px-2 py-0.5 rounded-full font-bold">第一階段：指定席 (一般席) 抽選</span>
+                        <h3 class="text-md font-bold text-white mt-2">COER MEMBERSHIP (JP) 會員優先抽選</h3>
+                        <p class="text-xs text-gray-400 mt-1">您必須先加入日本 FC 官方會員並在此期間內提交指定席抽籤申請：</p>
+                        
+                        <div class="mt-3 grid grid-cols-1 md:grid-cols-3 gap-4 text-xs text-center">
+                            <div class="bg-gray-900 p-3 rounded">
+                                <span class="text-[#e03e3e] font-semibold">【1. 抽選申請期間】</span><br>
+                                <span class="text-white font-bold block mt-1">6/5 (五) 12:00 ~ 6/15 (一) 22:59</span>
+                                <span class="text-[10px] text-gray-500">(台灣時間)</span>
+                            </div>
+                            <div class="bg-gray-900 p-3 rounded">
+                                <span class="text-[#e03e3e] font-semibold">【2. 當落結果公佈】</span><br>
+                                <span class="text-white font-bold block mt-1">6/19 (五) 12:00</span>
+                                <span class="text-[10px] text-gray-500">(台灣時間)</span>
+                            </div>
+                            <div class="bg-gray-900 p-3 rounded">
+                                <span class="text-[#e03e3e] font-semibold">【3. 中籤繳費截止】</span><br>
+                                <span class="text-yellow-400 font-bold block mt-1">6/19 (五) 12:00 ~ 6/22 (一) 21:00</span>
+                                <span class="text-[10px] text-gray-500">(台灣時間)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Phase 2: VIP Seats -->
+                    <div class="bg-gray-900 p-5 rounded-lg border border-gray-800">
+                        <span class="text-xs bg-gray-700 text-white px-2 py-0.5 rounded-full font-bold">第二階段：VIP SEAT 升級抽選</span>
+                        <h3 class="text-md font-bold text-white mt-2">僅限已成功抽中並繳費「指定席」的日本 FC 會員申請</h3>
+                        <p class="text-xs text-gray-400 mt-1">中籤且付款完指定席的會員，可參與第二輪升級 VIP 席的抽籤（若升級失敗，依然保有一階的指定席座位）。</p>
+                        
+                        <div class="mt-3 grid grid-cols-1 md:grid-cols-3 gap-4 text-xs text-center">
+                            <div class="bg-gray-950 p-3 rounded">
+                                <span class="text-gray-400 font-semibold">【1. 升級申請期間】</span><br>
+                                <span class="text-white font-bold block mt-1">6/26 (五) 12:00 ~ 6/30 (二) 22:59</span>
+                                <span class="text-[10px] text-gray-500">(台灣時間)</span>
+                            </div>
+                            <div class="bg-gray-950 p-3 rounded">
+                                <span class="text-gray-400 font-semibold">【2. 升級結果公佈】</span><br>
+                                <span class="text-white font-bold block mt-1">7/10 (五) 12:00</span>
+                                <span class="text-[10px] text-gray-500">(台灣時間)</span>
+                            </div>
+                            <div class="bg-gray-950 p-3 rounded">
+                                <span class="text-gray-400 font-semibold">【3. 差額繳費截止】</span><br>
+                                <span class="text-yellow-400 font-bold block mt-1">7/10 (五) 12:00 ~ 7/13 (一) 21:00</span>
+                                <span class="text-[10px] text-gray-500">(台灣時間)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 4: 購票與抽選流程 -->
+            <div id="content-entry" class="tab-content hidden space-y-6">
+                <div class="flex items-center">
+                    <span class="red-bullet"></span>
+                    <h2 class="text-xl font-bold text-white">日本售票「抽選制」詳細指南</h2>
+                </div>
+
+                <!-- Step-by-Step workflow -->
+                <div class="space-y-4">
+                    <div class="bg-[#1f242e] p-5 rounded-lg border border-gray-800 space-y-3 text-xs leading-relaxed">
+                        <h3 class="text-sm font-bold text-white">💬 台灣粉絲參與日本抽選流程：</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-start space-x-3">
+                                <span class="bg-red-600 text-white rounded-full w-5 h-5 flex items-center justify-center text-[10px] font-bold flex-shrink-0 mt-0.5">1</span>
+                                <p><strong>加入日本 FC 會員</strong>：在 Weverse Shop 購買「CORTIS GLOBAL OFFICIAL FANCLUB COER MEMBERSHIP (JP)」。</p>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <span class="bg-red-600 text-white rounded-full w-5 h-5 flex items-center justify-center text-[10px] font-bold flex-shrink-0 mt-0.5">2</span>
+                                <p><strong>送出抽選申請</strong>：在申請期間，點擊 Weverse 公告的專屬售票系統（通常為 Lawson Ticket / ローチケ），選擇場次、輸入張數提交申請。</p>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <span class="bg-red-600 text-white rounded-full w-5 h-5 flex items-center justify-center text-[10px] font-bold flex-shrink-0 mt-0.5">3</span>
+                                <p><strong>等待公佈與扣款/付款</strong>：若登記時選擇「信用卡」，中籤當下會自動扣款。若選擇「便利商店付款」，必須在中籤後、繳費截止前，委託在日本的朋友或代付去日本 LAWSON 的 Loppi 機器繳現。</p>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <span class="bg-red-600 text-white rounded-full w-5 h-5 flex items-center justify-center text-[10px] font-bold flex-shrink-0 mt-0.5">4</span>
+                                <p><strong>領取電子門票</strong>：日本近年幾乎全面實施「智慧型手機電子票（AnyPASS 或 Lawson Ticket App）」，需要下載對應的日本 App、並使用在購票時填寫的同一個日本/海外手機門號進行簡訊驗證（SMS）領票。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 5: 日本入場須知 -->
+            <div id="content-rules" class="tab-content hidden space-y-6">
+                <div class="flex items-center">
+                    <span class="red-bullet"></span>
+                    <h2 class="text-xl font-bold text-white">日本現場入場與驗證規範 (入場規則)</h2>
+                </div>
+
+                <div class="bg-gray-900 p-5 rounded-lg border border-gray-800 text-xs space-y-3 text-gray-300 leading-relaxed">
+                    <h3 class="font-bold text-white text-sm">📱 關於日本電子票驗證（AnyPASS / 電子票 App）：</h3>
+                    <p>• 每位入場者都必須擁有自己的智慧型手機並下載對應電子票 App（一人一票，同行者也需有 App 並進行分票）。</p>
+                    <p>• 註冊 App 時驗證的手機號碼，必須與申請抽選時填寫的手機號碼 **完全一致**。若號碼不同，將完全無法收到票券！</p>
+                    
+                    <h3 class="font-bold text-white text-sm pt-2">🪪 本人身份查驗（實名制政策）：</h3>
+                    <p>• 雖然日本有時只掃描電子票 QR Code 即可入場，但若遇到系統抽查，**海外觀眾必須出示護照原件（Passport）**。護照上的英文姓名必須與您的 Weverse FC 會員姓名、購票填寫姓名一致。</p>
+                    <p class="text-red-400 font-bold">• 任何影印本、螢幕截圖或照片均不被接受。若姓名不符，將會被拒絕入場且不予退票！</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer Contact Info -->
+        <div class="bg-[#111317] p-6 border-t border-gray-800 text-xs text-gray-400 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div>
+                <p class="font-bold text-white">📞 日本官方客服諮詢 (JAPAN Inquiry)</p>
+                <p class="mt-1">CORTIS 日本官方客服：support@cortis-official.jp (週一至週五 10:00-17:00)</p>
+            </div>
+            <div class="text-right text-[11px] text-gray-500">
+                © 2026 BIGHIT MUSIC / HYBE JAPAN. All rights reserved.
+            </div>
+        </div>
+    </div>
+
+    <!-- Tab Logic Script -->
+    <script>
+        const buttons = {
+            'btn-info': 'content-info',
+            'btn-seats': 'content-seats',
+            'btn-schedule': 'content-schedule',
+            'btn-entry': 'content-entry',
+            'btn-rules': 'content-rules'
+        };
+
+        Object.keys(buttons).forEach(btnId => {
+            const button = document.getElementById(btnId);
+            if (button) {
+                button.addEventListener('click', () => {
+                    // Hide all content areas
+                    Object.values(buttons).forEach(contentId => {
+                        document.getElementById(contentId).classList.add('hidden');
+                    });
+                    
+                    // Deactivate all buttons
+                    Object.keys(buttons).forEach(id => {
+                        document.getElementById(id).classList.remove('tab-active');
+                    });
+
+                    // Show active content and set active button
+                    document.getElementById(buttons[btnId]).classList.remove('hidden');
+                    button.classList.add('tab-active');
+                });
+            }
+        });
+    </script>
+
+</body></html>
