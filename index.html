@@ -1,15 +1,18 @@
-<html data-type="html" data-identifier="245a165f-d5c9-43e8-a9ac-cf25b57419d5" data-title="CORTIS Tour Incheon 售票資訊 (台灣時間版)" data-version="3"><head>
+
+
+HTML
+<html data-type="html" data-identifier="245a165f-d5c9-43e8-a9ac-cf25b57419d5" data-title="CORTIS Tour Incheon 售票資訊 (直式海報橫幅版)" data-version="5"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- 1. 修改後的瀏覽器分頁標題 -->
+    <!-- 瀏覽器分頁標題 -->
     <title>CORTIS Tour Incheon 售票資訊 (台灣時間版)</title>
     
-    <!-- 2. 社群分享預覽優化（LINE、FB、Threads） -->
+    <!-- 社群分享預覽優化 -->
     <meta property="og:title" content="CORTIS Tour Incheon 售票資訊 (台灣時間版)">
     <meta property="og:description" content="2026 CORTIS TOUR IN INCHEON 已換算台灣搶票時間！繁體中文售票、座位圖與實名制入場指南">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&amp;w=1200&amp;auto=format&amp;fit=crop">
+    <meta property="og:image" content="banner.jpg">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -35,12 +38,15 @@
 </head>
 <body class="p-4 md:p-8">
     <div class="max-w-4xl mx-auto bg-[#1a1d24] rounded-xl shadow-2xl overflow-hidden border border-gray-800">
-        <!-- Banner Header -->
-        <div class="relative bg-black h-48 md:h-64 flex flex-col justify-end p-6 border-b border-gray-800" style="background: linear-gradient(180deg, rgba(18,20,24,0.4) 0%, rgba(18,20,24,0.95) 100%), url('https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&amp;w=1200&amp;auto=format&amp;fit=crop') center/cover;">
-            <span class="text-xs text-[#e03e3e] font-semibold tracking-widest uppercase mb-1">2026 CORTIS TOUR</span>
-            <h1 class="text-2xl md:text-4xl font-black text-white tracking-tight mb-2">PUT YOUR PHONE DOWN</h1>
-            <p class="text-sm text-gray-400">IN INCHEON | INSPIRE ARENA</p>
-            <div class="absolute top-4 right-4 bg-[#e03e3e] text-white text-[10px] font-bold px-2 py-1 rounded">繁體中文官方指南 (台灣時間版)</div>
+        <!-- 
+          Banner Header: 
+          1. 稍微拉高高度 (h-64 md:h-96) 露出更多海報內容 
+          2. 使用 no-repeat center top / cover 確保從頂部對齊並完美填滿，露出頂部紅字標題
+          3. 漸層微調，讓海報底部與深灰色背景完美融合
+        -->
+        <div class="relative h-64 md:h-96 flex flex-col justify-end p-6 border-b border-gray-800" style="background: linear-gradient(180deg, rgba(26,29,36,0) 50%, rgba(26,29,36,0.95) 100%), url('banner.jpg') no-repeat center top / cover;">
+            <!-- 僅保留官方標籤與右下角徽章，避免遮擋海報原本精美的紅字標題 -->
+            <div class="absolute bottom-4 right-4 bg-[#e03e3e] text-white text-[10px] font-bold px-2.5 py-1 rounded shadow-lg tracking-wider">繁體中文官方指南 (台灣時間版)</div>
         </div>
 
         <!-- Warning Notice Banner -->
@@ -284,7 +290,7 @@
                             <h3 class="font-bold text-red-400 mb-2">🇰🇷 韓國籍觀眾</h3>
                             <ul class="space-y-1 list-disc pl-4 text-gray-300">
                                 <li>身分證 (주민등록증)</li>
-                                <li>駕駛執照 (운전면हेर증)</li>
+                                <li>駕駛執照 (운전면허증)</li>
                                 <li>護照 (여권)</li>
                                 <li>青少年證 (청소년증 - 適合未成年者)</li>
                                 <li>行動身分證 (需現場在官方App啟動驗證)</li>
@@ -427,4 +433,4 @@
         });
     </script>
 
-</body></html>
+</body></html
