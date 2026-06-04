@@ -1,14 +1,16 @@
-
-<html data-type="html" data-identifier="245a165f-d5c9-43e8-a9ac-cf25b57419d5" data-title="2026 CORTIS TOUR 中文官方指南" data-version="1"><head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <!-- 1. 修改瀏覽器分頁標題 -->
- <title>2026 CORTIS Tour Incheon 售票資訊</title>
- 
- <!-- 2. 社群分享優化（LINE, FB, Threads 預覽標題） -->
- <meta property="og:title" content="CORTIS Tour Incheon 售票資訊">
- <meta property="og:description" content="2026 CORTIS TOUR IN INCHEON 繁體中文售票、座位圖與實名制入場指南">
+<html data-type="html" data-identifier="245a165f-d5c9-43e8-a9ac-cf25b57419d5" data-title="CORTIS Tour Incheon 售票資訊 (台灣時間版)" data-version="3"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <!-- 1. 修改後的瀏覽器分頁標題 -->
+    <title>CORTIS Tour Incheon 售票資訊 (台灣時間版)</title>
+    
+    <!-- 2. 社群分享預覽優化（LINE、FB、Threads） -->
+    <meta property="og:title" content="CORTIS Tour Incheon 售票資訊 (台灣時間版)">
+    <meta property="og:description" content="2026 CORTIS TOUR IN INCHEON 已換算台灣搶票時間！繁體中文售票、座位圖與實名制入場指南">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&amp;w=1200&amp;auto=format&amp;fit=crop">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
@@ -38,21 +40,22 @@
             <span class="text-xs text-[#e03e3e] font-semibold tracking-widest uppercase mb-1">2026 CORTIS TOUR</span>
             <h1 class="text-2xl md:text-4xl font-black text-white tracking-tight mb-2">PUT YOUR PHONE DOWN</h1>
             <p class="text-sm text-gray-400">IN INCHEON | INSPIRE ARENA</p>
-            <div class="absolute top-4 right-4 bg-[#e03e3e] text-white text-[10px] font-bold px-2 py-1 rounded">繁體中文官方指南</div>
+            <div class="absolute top-4 right-4 bg-[#e03e3e] text-white text-[10px] font-bold px-2 py-1 rounded">繁體中文官方指南 (台灣時間版)</div>
         </div>
 
         <!-- Warning Notice Banner -->
         <div class="bg-[#1f242e] px-6 py-4 border-b border-gray-800 text-xs text-gray-300 leading-relaxed">
-            <span class="text-[#e03e3e] font-bold">⚠️ 重要提示：</span> 購票即視為同意本指南下方的所有注意事項。本指南內容可能會根據現場實際情況進行追加或變更。為確保您的觀演權益不受損害，請務必在購票及前往現場前仔細閱讀。
+            <span class="text-[#e03e3e] font-bold">⚠️ 重要時差提醒：</span> 
+            本頁面的<span class="text-yellow-400 font-bold">「線上搶票/認證日程」已全面換算為台灣時間 (UTC+8)</span>。但請注意，演出當天的<span class="text-red-400 font-bold">「現場營運/整隊/開演時間」仍為韓國當地時間 (UTC+9)</span>，前往現場觀演時請務必留意時差，以免遲到！
         </div>
 
         <!-- Interactive Tabs -->
         <div class="flex border-b border-gray-800 overflow-x-auto bg-[#15181e] scrollbar-none">
             <button id="btn-info" class="tab-btn px-6 py-4 text-sm text-gray-400 hover:text-white transition whitespace-nowrap tab-active">📊 演出資訊</button>
             <button id="btn-seats" class="tab-btn px-6 py-4 text-sm text-gray-400 hover:text-white transition whitespace-nowrap">🗺️ 座位圖與票價</button>
-            <button id="btn-schedule" class="tab-btn px-6 py-4 text-sm text-gray-400 hover:text-white transition whitespace-nowrap">📅 購票時程</button>
+            <button id="btn-schedule" class="tab-btn px-6 py-4 text-sm text-gray-400 hover:text-white transition whitespace-nowrap">📅 購票時程 (台灣時間)</button>
             <button id="btn-entry" class="tab-btn px-6 py-4 text-sm text-gray-400 hover:text-white transition whitespace-nowrap">🎫 入場與實名制</button>
-            <button id="btn-rules" class="tab-btn px-6 py-4 text-sm text-gray-400 hover:text-white transition whitespace-nowrap">📋 觀演須知 &amp; 交通</button>
+            <button id="btn-rules" class="tab-btn px-6 py-4 text-sm text-gray-400 hover:text-white transition whitespace-nowrap">📋 現場須知 &amp; 交通</button>
         </div>
 
         <!-- Content Area -->
@@ -73,10 +76,11 @@
                                 <td class="p-4 text-white font-bold">2026 CORTIS TOUR &lt;PUT YOUR PHONE DOWN&gt; IN INCHEON</td>
                             </tr>
                             <tr class="border-b border-gray-800">
-                                <td class="p-4 font-semibold text-gray-400">演出時間 (KST)</td>
+                                <td class="p-4 font-semibold text-gray-400">演出時間 (開演)</td>
                                 <td class="p-4 text-white">
-                                    • 2026年 7月 18日 (六) 18:00<br>
-                                    • 2026年 7月 19日 (日) 17:00
+                                    <div class="text-red-400 font-semibold mb-1">⏰ 以下為韓國當地時間 (KST)：</div>
+                                    • 2026年 7月 18日 (六) 18:00 (KST) <span class="text-xs text-gray-400">/* 台灣時間 17:00 */</span><br>
+                                    • 2026年 7月 19日 (日) 17:00 (KST) <span class="text-xs text-gray-400">/* 台灣時間 16:00 */</span>
                                 </td>
                             </tr>
                             <tr class="border-b border-gray-800 bg-[#1f242e]">
@@ -180,7 +184,7 @@
             <div id="content-schedule" class="tab-content hidden space-y-6">
                 <div class="flex items-center mb-4">
                     <span class="red-bullet"></span>
-                    <h2 class="text-xl font-bold text-white">購票日程表 (예매 안내)</h2>
+                    <h2 class="text-xl font-bold text-white">購票日程表 <span class="text-[#e03e3e] text-sm">(★已全部轉換為台灣時間)</span></h2>
                 </div>
 
                 <!-- Process Flow Cards -->
@@ -192,12 +196,14 @@
                         <p class="text-xs text-gray-400 mt-1">欲參加會員先預售者，必須在指定售票頁面先完成會員資格認證。</p>
                         <div class="mt-3 grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
                             <div class="bg-gray-900 p-3 rounded">
-                                <span class="text-[#e03e3e] font-semibold">【國內頁面認證期間】</span><br>
-                                6月 12日(五) 14:00 ~ 6月 15日(一) 23:59 (KST)
+                                <span class="text-[#e03e3e] font-semibold">【國內頁面認證期間 - 台灣時間】</span><br>
+                                <span class="text-white font-bold text-sm">6月 12日(五) 13:00 ~ 6月 15日(一) 22:59</span><br>
+                                <span class="text-[10px] text-gray-500">/* 原韓國時間：6/12 14:00 ~ 6/15 23:59 */</span>
                             </div>
                             <div class="bg-gray-900 p-3 rounded">
-                                <span class="text-[#e03e3e] font-semibold">【全球頁面認證期間】</span><br>
-                                6月 12日(五) 14:00 ~ 6月 16日(二) 23:59 (KST)
+                                <span class="text-[#e03e3e] font-semibold">【全球頁面認證期間 - 台灣時間】</span><br>
+                                <span class="text-white font-bold text-sm">6月 12日(五) 13:00 ~ 6月 16日(二) 22:59</span><br>
+                                <span class="text-[10px] text-gray-500">/* 原韓國時間：6/12 14:00 ~ 6/16 23:59 */</span>
                             </div>
                         </div>
                     </div>
@@ -209,12 +215,14 @@
                         <p class="text-xs text-gray-400 mt-1">僅限已完成上述步驟 1 認證的會員進行優先搶票。</p>
                         <div class="mt-3 grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
                             <div class="bg-gray-950 p-3 rounded">
-                                <span class="text-[#e03e3e] font-semibold">【國內頁面預售開放】</span><br>
-                                6月 15日(一) 20:00 ~ 23:59 (KST)
+                                <span class="text-[#e03e3e] font-semibold">【國內頁面預售開放 - 台灣時間】</span><br>
+                                <span class="text-yellow-400 font-bold text-sm">6月 15日(一) 19:00 ~ 22:59</span><br>
+                                <span class="text-[10px] text-gray-500">/* 原韓國時間：6/15 20:00 ~ 23:59 */</span>
                             </div>
                             <div class="bg-gray-950 p-3 rounded">
-                                <span class="text-[#e03e3e] font-semibold">【全球頁面預售開放】</span><br>
-                                6月 16日(二) 20:00 ~ 23:59 (KST)
+                                <span class="text-[#e03e3e] font-semibold">【全球頁面預售開放 - 台灣時間】</span><br>
+                                <span class="text-yellow-400 font-bold text-sm">6月 16日(二) 19:00 ~ 22:59</span><br>
+                                <span class="text-[10px] text-gray-500">/* 原韓國時間：6/16 20:00 ~ 23:59 */</span>
                             </div>
                         </div>
                         <p class="text-[11px] text-red-400 mt-2">⚠️ 購票張數限制：每人每場次限購 1 張，兩場演出共限購 2 張。</p>
@@ -226,8 +234,9 @@
                         <h3 class="text-md font-bold text-white mt-2">一般全面開賣</h3>
                         <p class="text-xs text-gray-400 mt-1">開放給所有人進行購票（包含國內與全球頁面）。</p>
                         <div class="mt-3 bg-gray-950 p-3 rounded text-xs w-full md:w-1/2">
-                            <span class="text-blue-400 font-semibold">【一般售票開放時間】</span><br>
-                            6月 18日(四) 20:00 (KST) 開放
+                            <span class="text-blue-400 font-semibold">【一般售票開放時間 - 台灣時間】</span><br>
+                            <span class="text-yellow-400 font-bold text-sm">6月 18日(四) 19:00 開放</span><br>
+                            <span class="text-[10px] text-gray-500">/* 原韓國時間：6/18 20:00 */</span>
                         </div>
                         <p class="text-[11px] text-gray-400 mt-2">⚠️ 一般售票僅限「會員優先購票」剩餘的未售完票券開放購買。若會員優先售票已售罄，一般售票可能無票券可供購買。</p>
                     </div>
@@ -275,7 +284,7 @@
                             <h3 class="font-bold text-red-400 mb-2">🇰🇷 韓國籍觀眾</h3>
                             <ul class="space-y-1 list-disc pl-4 text-gray-300">
                                 <li>身分證 (주민등록증)</li>
-                                <li>駕駛執照 (운전면허증)</li>
+                                <li>駕駛執照 (운전면हेर증)</li>
                                 <li>護照 (여권)</li>
                                 <li>青少年證 (청소년증 - 適合未成年者)</li>
                                 <li>行動身分證 (需現場在官方App啟動驗證)</li>
@@ -291,7 +300,7 @@
                 <div class="space-y-4">
                     <div class="flex items-center">
                         <span class="red-bullet"></span>
-                        <h2 class="text-xl font-bold text-white">現場營運時間表 (현장 운영 시간)</h2>
+                        <h2 class="text-xl font-bold text-white">現場營運時間表 <span class="text-[#e03e3e] text-sm">(🚨注意：以下為韓國當地時間)</span></h2>
                     </div>
 
                     <div class="overflow-hidden border border-gray-800 rounded-lg text-xs">
@@ -299,40 +308,40 @@
                             <thead>
                                 <tr class="bg-gray-900 text-gray-300 font-semibold border-b border-gray-800">
                                     <th class="p-3">項目</th>
-                                    <th class="p-3">7/18 (六) 18:00 場</th>
-                                    <th class="p-3">7/19 (日) 17:00 場</th>
+                                    <th class="p-3">7/18 (六) 18:00 場 (韓國時間)</th>
+                                    <th class="p-3">7/19 (日) 17:00 場 (韓國時間)</th>
                                 </tr>
                             </thead>
                             <tbody class="text-gray-300">
                                 <tr class="border-b border-gray-800 bg-[#1f242e]">
                                     <td class="p-3 font-semibold text-white">IN-PASS快速通道 &amp; 搖滾區手環發放</td>
-                                    <td class="p-3">12:00 - 18:30</td>
-                                    <td class="p-3">12:00 - 17:30</td>
+                                    <td class="p-3">12:00 - 18:30 <span class="text-[10px] text-gray-500">(11:00-17:30 台時)</span></td>
+                                    <td class="p-3">12:00 - 17:30 <span class="text-[10px] text-gray-500">(11:00-16:30 台時)</span></td>
                                 </tr>
                                 <tr class="border-b border-gray-800">
                                     <td class="p-3 font-semibold text-white">寄物處開放 (物品保管所)</td>
-                                    <td class="p-3">12:00 開放</td>
-                                    <td class="p-3">12:00 開放</td>
+                                    <td class="p-3">12:00 開放 <span class="text-[10px] text-gray-500">(11:00 台時)</span></td>
+                                    <td class="p-3">12:00 開放 <span class="text-[10px] text-gray-500">(11:00 台時)</span></td>
                                 </tr>
                                 <tr class="border-b border-gray-800 bg-[#1f242e]">
                                     <td class="p-3 font-semibold text-white">大廳 (Lobby) 開放</td>
-                                    <td class="p-3">15:00</td>
-                                    <td class="p-3">14:00</td>
+                                    <td class="p-3">15:00 <span class="text-[10px] text-gray-500">(14:00 台時)</span></td>
+                                    <td class="p-3">14:00 <span class="text-[10px] text-gray-500">(13:00 台時)</span></td>
                                 </tr>
                                 <tr class="border-b border-gray-800">
                                     <td class="p-3 font-semibold text-white">搖滾站區整隊 (Standing)</td>
-                                    <td class="p-3">15:00 - 16:00</td>
-                                    <td class="p-3">14:00 - 15:00</td>
+                                    <td class="p-3">15:00 - 16:00 <span class="text-[10px] text-gray-500">(14:00-15:00 台時)</span></td>
+                                    <td class="p-3">14:00 - 15:00 <span class="text-[10px] text-gray-500">(13:00-14:00 台時)</span></td>
                                 </tr>
                                 <tr class="border-b border-gray-800 bg-[#1f242e]">
                                     <td class="p-3 font-semibold text-white">觀眾入場 (門票驗證)</td>
-                                    <td class="p-3">16:00 起</td>
-                                    <td class="p-3">15:00 起</td>
+                                    <td class="p-3">16:00 起 <span class="text-[10px] text-gray-500">(15:00 起 台時)</span></td>
+                                    <td class="p-3">15:00 起 <span class="text-[10px] text-gray-500">(14:00 起 台時)</span></td>
                                 </tr>
                                 <tr class="text-[#e03e3e] font-bold">
                                     <td class="p-3">演出正式開始</td>
-                                    <td class="p-3">18:00</td>
-                                    <td class="p-3">17:00</td>
+                                    <td class="p-3">18:00 <span class="text-[10px] text-gray-500">(17:00 台時)</span></td>
+                                    <td class="p-3">17:00 <span class="text-[10px] text-gray-500">(16:00 台時)</span></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -350,7 +359,7 @@
                 <!-- Venue Rules -->
                 <div class="bg-gray-900 p-4 rounded-lg border border-gray-800 text-xs space-y-2">
                     <h3 class="font-bold text-white">🚫 嚴禁行為 (공연 관람 유의사항)</h3>
-                    <p class="text-gray-400">• 嚴禁攜帶瓶裝水以外的所有食物和飲料進入場館。</p>
+                    <p class="text-gray-400">• 嚴禁攜帶瓶裝水以外的所有食物 and 飲料進入場館。</p>
                     <p class="text-gray-400">• 嚴禁攜帶玻璃瓶、煙火、爆裂物、雷射筆、大型行李箱、腳架及自拍棒。</p>
                     <p class="text-red-400">• <span class="font-bold">「手機與相機錄影政策」</span>：本公演嚴禁進行錄影、錄音、語音直播或高規格專業攝影。一經發現，將被強制刪除素材並請離現場，且不予退票。</p>
                 </div>
