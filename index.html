@@ -1,4 +1,5 @@
-<html data-type="html" data-identifier="245a165f-d5c9-43e8-a9ac-cf25b57419d5" data-title="CORTIS Tour Incheon 售票資訊 (精細座位圖版)" data-version="6"><head>
+
+<html data-type="html" data-identifier="245a165f-d5c9-43e8-a9ac-cf25b57419d5" data-title="CORTIS Tour Incheon 售票資訊 (精細地圖導航版)" data-version="8"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -93,7 +94,12 @@
                             </tr>
                             <tr class="border-b border-gray-800 bg-[#1f242e]">
                                 <td class="p-4 font-semibold text-gray-400">演出場館</td>
-                                <td class="p-4 text-white">仁川迎仕柏綜合競技館 (INSPIRE ARENA)</td>
+                                <td class="p-4 text-white">
+                                    仁川迎仕柏綜合競技館 (INSPIRE ARENA)<br>
+                                    <a href="https://www.google.com/maps/search/?api=1&amp;query=INSPIRE+Arena,+Jung-gu,+Incheon" target="_blank" rel="noopener noreferrer" class="inline-flex items-center mt-2 text-xs bg-red-600/20 hover:bg-red-600 text-[#e03e3e] hover:text-white border border-red-600/30 px-2.5 py-1 rounded transition duration-200">
+                                        🗺️ 開啟 Google 地圖導航
+                                    </a>
+                                </td>
                             </tr>
                             <tr class="border-b border-gray-800">
                                 <td class="p-4 font-semibold text-gray-400">票價 (含稅)</td>
@@ -127,38 +133,32 @@
                 </div>
 
                 <!-- 100% 高精細向量座位圖 (SVG) -->
-                <div class="bg-[#111317] p-4 md:p-8 rounded-lg border border-gray-800 flex flex-col items-center">
-                    <svg viewBox="0 0 550 560" class="w-full max-w-lg h-auto">
+                <div class="bg-[#111317] p-4 md:p-6 rounded-lg border border-gray-800 flex flex-col items-center">
+                    <svg viewBox="20 10 470 385" class="w-full max-w-2xl h-auto mx-auto">
                         <!-- 頂部 STAGE 舞台 -->
                         <rect x="210" y="30" width="130" height="40" fill="#4d535c" rx="2"></rect>
                         <text x="275" y="55" fill="#ffffff" font-size="12" font-weight="black" text-anchor="middle" letter-spacing="1">STAGE</text>
                         
                         <!-- 十字延伸舞台 Catwalk / Runway -->
-                        <!-- 垂直延伸 -->
                         <rect x="268" y="70" width="14" height="230" fill="#4d535c"></rect>
-                        <!-- 水平延伸 -->
                         <rect x="180" y="180" width="190" height="14" fill="#4d535c"></rect>
                         
                         <!-- 樓層標示 -->
-                        <text x="50" y="15" fill="#718096" font-size="9" font-weight="bold" text-anchor="middle">3F</text>
-                        <text x="110" y="15" fill="#718096" font-size="9" font-weight="bold" text-anchor="middle">2F</text>
-                        <text x="500" y="15" fill="#718096" font-size="9" font-weight="bold" text-anchor="middle">2F</text>
+                        <text x="50" y="22" fill="#718096" font-size="9" font-weight="bold" text-anchor="middle">3F</text>
+                        <text x="110" y="22" fill="#718096" font-size="9" font-weight="bold" text-anchor="middle">2F</text>
+                        <text x="440" y="22" fill="#718096" font-size="9" font-weight="bold" text-anchor="middle">2F</text>
 
                         <!-- STANDING 搖滾站區 S1 - S4 -->
-                        <!-- S1 (左上L形) -->
                         <path d="M 165,70 H 205 V 145 H 258 V 170 H 180 L 165,155 Z" fill="#e03e3e"></path>
                         <text x="215" y="125" fill="#ffffff" font-size="13" font-weight="black" text-anchor="middle">S1</text>
                         
-                        <!-- S2 (右上L形) -->
                         <path d="M 385,70 H 345 V 145 H 292 V 170 H 370 L 385,155 Z" fill="#e03e3e"></path>
                         <text x="335" y="125" fill="#ffffff" font-size="13" font-weight="black" text-anchor="middle">S2</text>
                         
-                        <!-- S3 (左下) -->
                         <path d="M 180,205 H 258 V 255 H 195 L 180,240 Z" fill="#e03e3e"></path>
                         <text x="220" y="235" fill="#ffffff" font-size="13" font-weight="black" text-anchor="middle">S3</text>
                         <text x="195" y="270" fill="#718096" font-size="8" font-weight="bold" text-anchor="middle">FLOOR</text>
 
-                        <!-- S4 (右下) -->
                         <path d="M 370,205 H 292 V 255 H 355 L 370,240 Z" fill="#e03e3e"></path>
                         <text x="330" y="235" fill="#ffffff" font-size="13" font-weight="black" text-anchor="middle">S4</text>
                         <text x="355" y="270" fill="#718096" font-size="8" font-weight="bold" text-anchor="middle">FLOOR</text>
@@ -167,113 +167,79 @@
                         <rect x="235" y="270" width="80" height="22" fill="#1a1d24" stroke="#4d535c" stroke-width="1.5" rx="1"></rect>
                         <text x="275" y="284" fill="#a0aec0" font-size="8" font-weight="bold" text-anchor="middle">CONSOLE</text>
 
-                        <!-- ================= 2F 看台區 (Inner Ring) ================= -->
+                        <!-- 2F 看台區 -->
                         <g fill="#9cb3c9" font-size="10" font-weight="bold" text-anchor="middle">
-                            <!-- Left Side -->
                             <rect x="90" y="30" width="40" height="40" rx="1" id="block-214"></rect>
                             <text x="110" y="54" fill="#1a1d24">214</text>
-
                             <rect x="90" y="80" width="40" height="40" rx="1" id="block-213"></rect>
                             <text x="110" y="104" fill="#1a1d24">213</text>
-
                             <rect x="90" y="130" width="40" height="40" rx="1" id="block-212"></rect>
                             <text x="110" y="154" fill="#1a1d24">212</text>
-
                             <rect x="90" y="180" width="40" height="30" rx="1" id="block-211"></rect>
                             <text x="110" y="199" fill="#1a1d24">211</text>
-
-                            <!-- Left Curve 210 -->
                             <path d="M 105,218 L 140,218 L 195,255 L 165,285 Z" id="block-210"></path>
                             <text x="145" y="250" fill="#1a1d24">210</text>
-
-                            <!-- Left Bottom 209 -->
                             <path d="M 175,295 L 240,295 L 240,330 L 205,330 Z" id="block-209"></path>
                             <text x="210" y="317" fill="#1a1d24">209</text>
-
-                            <!-- Bottom Center 208 -->
                             <rect x="245" y="295" width="60" height="35" rx="1" id="block-208"></rect>
                             <text x="275" y="317" fill="#1a1d24">208</text>
-
-                            <!-- Right Bottom 207 -->
                             <path d="M 310,295 L 375,295 L 345,330 L 310,330 Z" id="block-207"></path>
                             <text x="340" y="317" fill="#1a1d24">207</text>
-
-                            <!-- Right Curve 206 -->
                             <path d="M 445,218 L 410,218 L 355,255 L 385,285 Z" id="block-206"></path>
                             <text x="405" y="250" fill="#1a1d24">206</text>
-
-                            <!-- Right Side -->
                             <rect x="420" y="180" width="40" height="30" rx="1" id="block-205"></rect>
                             <text x="440" y="199" fill="#1a1d24">205</text>
-
                             <rect x="420" y="130" width="40" height="40" rx="1" id="block-204"></rect>
                             <text x="440" y="154" fill="#1a1d24">204</text>
-
                             <rect x="420" y="80" width="40" height="40" rx="1" id="block-203"></rect>
                             <text x="440" y="104" fill="#1a1d24">203</text>
-
                             <rect x="420" y="30" width="40" height="40" rx="1" id="block-202"></rect>
                             <text x="440" y="54" fill="#1a1d24">202</text>
                         </g>
 
-                        <!-- ================= 3F 看台區 (Outer Ring) ================= -->
+                        <!-- 3F 看台區 -->
                         <g fill="#9cb3c9" font-size="10" font-weight="bold" text-anchor="middle">
                             <rect x="30" y="30" width="40" height="40" rx="1" id="block-314"></rect>
                             <text x="50" y="54" fill="#1a1d24">314</text>
-
                             <rect x="30" y="80" width="40" height="40" rx="1" id="block-313"></rect>
                             <text x="50" y="104" fill="#1a1d24">313</text>
-
                             <rect x="30" y="130" width="40" height="40" rx="1" id="block-312"></rect>
                             <text x="50" y="154" fill="#1a1d24">312</text>
-
                             <rect x="30" y="180" width="40" height="40" rx="1" id="block-311"></rect>
                             <text x="50" y="204" fill="#1a1d24">311</text>
-
-                            <!-- Left Curve 310 -->
                             <path d="M 60,230 L 85,230 L 140,290 L 105,315 Z" id="block-310"></path>
                             <text x="95" y="270" fill="#1a1d24">310</text>
-
-                            <!-- Left Bottom 309 -->
                             <path d="M 115,340 L 220,340 L 220,370 L 145,370 Z" id="block-309"></path>
                             <text x="175" y="360" fill="#1a1d24">309</text>
-
-                            <!-- Bottom Center 308 -->
                             <rect x="225" y="340" width="100" height="30" rx="1" id="block-308"></rect>
                             <text x="275" y="359" fill="#1a1d24">308</text>
                         </g>
 
-                        <!-- ================= ♿ 輪椅專用席 (Teal Lines) ================= -->
-                        <!-- 210 前緣輪椅席 -->
+                        <!-- ♿ 輪椅專用席 -->
                         <line x1="140" y1="216" x2="195" y2="253" stroke="#00b4d8" stroke-width="3"></line>
-                        <!-- 206 前緣輪椅席 -->
                         <line x1="410" y1="216" x2="355" y2="253" stroke="#00b4d8" stroke-width="3"></line>
 
-                        <!-- ================= 🪜 移動式階梯 (Gold Icons) ================= -->
-                        <!-- 214 梯 -->
+                        <!-- 🪜 移動式階梯 -->
                         <g transform="translate(133, 40)">
                             <rect x="0" y="0" width="10" height="10" fill="#eab308" rx="1"></rect>
                             <path d="M 2,8 H 4 V 6 H 6 V 4 H 8" stroke="#1a1d24" stroke-width="1.2" fill="none"></path>
                         </g>
-                        <!-- 212 梯 -->
                         <g transform="translate(133, 145)">
                             <rect x="0" y="0" width="10" height="10" fill="#eab308" rx="1"></rect>
                             <path d="M 2,8 H 4 V 6 H 6 V 4 H 8" stroke="#1a1d24" stroke-width="1.2" fill="none"></path>
                         </g>
-                        <!-- 202 梯 -->
                         <g transform="translate(407, 40)">
                             <rect x="0" y="0" width="10" height="10" fill="#eab308" rx="1"></rect>
                             <path d="M 8,8 H 6 V 6 H 4 V 4 H 2" stroke="#1a1d24" stroke-width="1.2" fill="none"></path>
                         </g>
-                        <!-- 204 梯 -->
                         <g transform="translate(407, 145)">
                             <rect x="0" y="0" width="10" height="10" fill="#eab308" rx="1"></rect>
                             <path d="M 8,8 H 6 V 6 H 4 V 4 H 2" stroke="#1a1d24" stroke-width="1.2" fill="none"></path>
                         </g>
                     </svg>
 
-                    <!-- 自訂 SVG 專屬圖例說明 -->
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-xs mt-6 w-full max-w-md border-t border-gray-800 pt-4">
+                    <!-- 圖例 -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-xs mt-6 w-full max-w-xl border-t border-gray-800 pt-4">
                         <div class="flex items-center space-x-2">
                             <span class="w-3 h-3 bg-[#e03e3e] rounded-sm inline-block"></span>
                             <span class="text-gray-300">STANDING 搖滾站區</span>
@@ -470,7 +436,7 @@
                     <h3 class="font-bold text-white">🎒 寄物處 (물품보관소) 規範</h3>
                     <p class="text-gray-400">• 費用：5,000 韓元 (可刷卡、付現) / 再次寄物費用：5,000 韓元</p>
                     <p class="text-gray-400">• 營運時間：公演開始前 6 小時開放，直至公演結束後半小時關閉。</p>
-                    <p class="text-red-400">• 貴重物品、易碎品及寵物不接受寄放。因個人保管不當造成的遺失或損壞，主辦方恕不負責。</p>
+                    <p class="text-red-400">• 貴重物品、易碎品及寵物不接受寄放。因個人保管不當造成的遺失 or 損壞，主辦方恕不負責。</p>
                 </div>
 
                 <!-- Venue Rules -->
@@ -489,7 +455,10 @@
                     </div>
                     <div class="bg-gray-900 p-4 rounded-lg border border-gray-800 text-xs space-y-3 text-gray-300">
                         <p><span class="font-bold text-white">📍 地址：</span> 仁川廣域市中區空港文化路127，仁川迎仕柏綜合競技館 (인스파이어 아레나)</p>
-                        <p><span class="font-bold text-white">🚌 免費接駁車：</span></p>
+                        <a href="https://www.google.com/maps/search/?api=1&amp;query=INSPIRE+Arena,+Jung-gu,+Incheon" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs bg-red-600/20 hover:bg-red-600 text-[#e03e3e] hover:text-white border border-red-600/30 px-2.5 py-1 rounded transition duration-200">
+                            🗺️ 點此查看 Google 地圖導航
+                        </a>
+                        <p class="mt-4"><span class="font-bold text-white">🚌 免費接駁車：</span></p>
                         <div class="pl-4 space-y-1 text-gray-400">
                             <p>1. 仁川國際機場 (T1 &amp; T2) ↔ 迎仕柏度假村 (約 20 分鐘一班)</p>
                             <p>2. 大林站、明洞站等首爾主要站點提供觀演專屬收費巴士（需提前預約）</p>
@@ -503,8 +472,10 @@
         <!-- Footer Contact Info -->
         <div class="bg-[#111317] p-6 border-t border-gray-800 text-xs text-gray-400 flex flex-col md:flex-row justify-between items-center gap-4">
             <div>
-                <p class="font-bold text-white">📞 官方客服諮詢 (문의)</p>
-                <p class="mt-1">NOL 客服中心：1544-1555 (營業時間 09:00 - 18:00)</p>
+                <p class="font-bold text-white">📞 官方客服諮詢 (門票/場地)</p>
+                <p class="mt-1">
+                    【售票相關】NOL 客服中心：1544-1555 (營業時間 09:00 - 18:00)
+                </p>
             </div>
             <div class="text-right text-[11px] text-gray-500">
                 © 2026 BIGHIT MUSIC / HYBE. All rights reserved.
