@@ -1,12 +1,11 @@
-
-<html data-type="html" data-identifier="0bbdfcb0-23a1-4357-96bf-a8647a407fa2" data-title="CORTIS Tour Japan 繁中售票指南" data-version="1"><head>
+<html data-type="html" data-identifier="0bbdfcb0-23a1-4357-96bf-a8647a407fa2" data-title="CORTIS Tour Japan 繁中售票指南 (置中海報版)" data-version="2"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- 瀏覽器分頁標題 -->
     <title>CORTIS Tour Japan 橫濱場售票指南 (台灣時間版)</title>
     
-    <!-- 社群分享預覽優化（LINE、FB、Threads）使用您上傳的 banner.jpg 或日本宣傳圖 -->
+    <!-- 社群分享預覽優化（LINE、FB、Threads）使用您上傳的 banner_japan.jpg -->
     <meta property="og:title" content="CORTIS Tour Japan 橫濱場售票指南 (台灣時間版)">
     <meta property="og:description" content="2026 CORTIS TOUR IN JAPAN 繁中售票指南！完整解析日本「先抽指定席、再升級VIP」流程與時間">
     <meta property="og:type" content="website">
@@ -37,8 +36,13 @@
 <body class="p-4 md:p-8">
     <div class="max-w-4xl mx-auto bg-[#1a1d24] rounded-xl shadow-2xl overflow-hidden border border-gray-800">
         
-        <!-- Banner Header: 直接使用原本的 banner.jpg，並拉高高度 -->
-        <div class="relative h-64 md:h-96 flex flex-col justify-end p-6 border-b border-gray-800" style="background: linear-gradient(180deg, rgba(26,29,36,0) 50%, rgba(26,29,36,0.95) 100%), url('banner_japan.jpg') no-repeat center top / cover;">
+        <!-- 
+          Banner Header: 
+          1. 使用 no-repeat center center / cover 確保海報正中央的「日本場標題白字」完美置中並填滿。
+          2. 漸層修改為上下微遮罩 (5% 到 90%)，完全不擋住中間的白色官方文字。
+        -->
+        <div class="relative h-64 md:h-96 flex flex-col justify-end p-6 border-b border-gray-800" style="background: linear-gradient(180deg, rgba(26,29,36,0.3) 5%, rgba(26,29,36,0) 40%, rgba(26,29,36,0.85) 90%), url('banner_japan.jpg') no-repeat center center / cover;">
+            <!-- 右下角繁中指南徽章 -->
             <div class="absolute bottom-4 right-4 bg-red-600 text-white text-[10px] font-bold px-2.5 py-1 rounded shadow-lg tracking-wider">日本公演繁中指南 (台灣時間版)</div>
         </div>
 
