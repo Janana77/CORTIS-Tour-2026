@@ -1,5 +1,5 @@
 
-<html data-type="html" data-identifier="245a165f-d5c9-43e8-a9ac-cf25b57419d5" data-title="CORTIS Tour Incheon 售票資訊 (自動更新日曆版)" data-version="18"><head>
+<html data-type="html" data-identifier="245a165f-d5c9-43e8-a9ac-cf25b57419d5" data-title="CORTIS Tour Incheon 售票資訊 (純中文標題版)" data-version="22"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -71,6 +71,24 @@
             本頁面的<span class="text-yellow-400 font-bold">「線上搶票/認證日程」已全面換算為台灣時間 (UTC+8)</span>。但請注意，演出當天的<span class="text-red-400 font-bold">「現場營運/整隊/開演時間」仍為韓國當地時間 (UTC+9)</span>，前往現場觀演時請務必留意時差，以免遲到！
         </div>
 
+        <!-- ⏱️ 仁川場多階段自動接檔倒數計時器 UI 區 -->
+        <div id="countdown-container" class="bg-gradient-to-r from-red-950/20 via-red-900/5 to-transparent px-6 py-3 border-b border-gray-800 flex flex-col md:flex-row items-center justify-between gap-3 text-xs">
+            <div class="flex items-center space-x-2">
+                <span class="w-2 h-2 rounded-full bg-[#e03e3e] animate-ping"></span>
+                <span id="countdown-title" class="font-bold text-gray-300">正在讀取最新搶票進度...</span>
+            </div>
+            <div id="countdown-timer-box" class="font-mono text-white text-sm font-black flex items-center space-x-1">
+                <span id="timer-days" class="bg-gray-950 px-2 py-0.5 rounded border border-gray-800 text-[#e03e3e]">00</span>
+                <span class="text-gray-500 font-normal text-[10px] md:text-xs">天</span>
+                <span id="timer-hours" class="bg-gray-950 px-2 py-0.5 rounded border border-gray-800 text-[#e03e3e]">00</span>
+                <span class="text-gray-500 font-normal text-[10px] md:text-xs">時</span>
+                <span id="timer-minutes" class="bg-gray-950 px-2 py-0.5 rounded border border-gray-800 text-[#e03e3e]">00</span>
+                <span class="text-gray-500 font-normal text-[10px] md:text-xs">分</span>
+                <span id="timer-seconds" class="bg-gray-950 px-2 py-0.5 rounded border border-gray-800 text-yellow-500">00</span>
+                <span class="text-gray-500 font-normal text-[10px] md:text-xs">秒</span>
+            </div>
+        </div>
+
         <!-- Interactive Tabs -->
         <div class="flex border-b border-gray-800 overflow-x-auto bg-[#15181e] scrollbar-none">
             <button id="btn-info" class="tab-btn px-6 py-4 text-sm text-gray-400 hover:text-white transition whitespace-nowrap tab-active">📊 演出資訊</button>
@@ -84,11 +102,12 @@
         <!-- Content Area -->
         <div class="p-6">
             
-            <!-- Tab 1: 演出資訊 (略) -->
+            <!-- Tab 1: 演出資訊 -->
             <div id="content-info" class="tab-content space-y-6">
                 <div class="flex items-center mb-4">
                     <span class="red-bullet"></span>
-                    <h2 class="text-xl font-bold text-white">演出基本資訊 (공연정보)</h2>
+                    <!-- 💡 已完美將括號與韓文 (공연정보) 刪除 -->
+                    <h2 class="text-xl font-bold text-white">演出基本資訊</h2>
                 </div>
                 
                 <div class="overflow-hidden border border-gray-800 rounded-lg">
@@ -139,11 +158,12 @@
                 </div>
             </div>
 
-            <!-- Tab 2: 座位圖與票價 (略) -->
+            <!-- Tab 2: 座位圖與票價 -->
             <div id="content-seats" class="tab-content hidden space-y-6">
                 <div class="flex items-center mb-4">
                     <span class="red-bullet"></span>
-                    <h2 class="text-xl font-bold text-white">現場座位配置圖 (좌석배치도)</h2>
+                    <!-- 💡 已完美將括號與韓文 (좌석배치도) 刪除 -->
+                    <h2 class="text-xl font-bold text-white">現場座位配置圖</h2>
                 </div>
 
                 <div class="bg-[#111317] p-4 md:p-6 rounded-lg border border-gray-800 flex flex-col items-center relative">
@@ -251,7 +271,7 @@
                     </div>
                 </div>
                 <div class="bg-gray-900/50 p-4 rounded-lg text-xs text-gray-400 space-y-2 leading-relaxed">
-                    <p>• 本次公演分為 <span class="text-red-400 font-bold">STANDING (S1、S2、S3、S4)</span> 及 <span class="text-blue-300 font-bold">SEATED (2F 看台、3F 看台)</span>。</p>
+                    <p>• 本次公演分為 <span class="text-red-400 font-bold">STANDING (S1、S2、S3, S4)</span> 及 <span class="text-blue-300 font-bold">SEATED (2F 看台、3F 看台)</span>。</p>
                     <p>• 中央備有十字型交叉延伸舞台 (Catwalk)，讓 S1~S4 區皆能近距離觀賞表演。</p>
                     <p>• 210 及 206 看台最前緣設有標記 <span class="text-[#00b4d8] font-bold">♿ 青綠色線條</span> 的輪椅專用座席區。</p>
                     <p>• 部分座位旁設有金色標記為現場移動式安全階梯，演出中請留意通行安全。</p>
@@ -260,12 +280,14 @@
 
             <!-- Tab 3: 購票時程 -->
             <div id="content-schedule" class="tab-content hidden space-y-6">
-                <!-- 原購票時程卡片 (略) -->
                 <div class="flex items-center mb-4">
                     <span class="red-bullet"></span>
                     <h2 class="text-xl font-bold text-white">購票日程表</h2>
                 </div>
+
+                <!-- Process Flow Cards (已替換為 韓國內 字眼) -->
                 <div class="space-y-4">
+                    <!-- Step 1: Membership Verification -->
                     <div class="bg-gradient-to-r from-[#e03e3e]/10 to-transparent p-5 rounded-lg border-l-4 border-[#e03e3e] border-y border-r border-gray-800">
                         <span class="text-xs bg-[#e03e3e] text-white px-2 py-0.5 rounded-full font-bold">1. 官方會員優先認證</span>
                         <h3 class="text-md font-bold text-white mt-2">COER MEMBERSHIP 會員認證 (韓國內及全球頁面)</h3>
@@ -281,6 +303,8 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Step 2: Member Pre-sale -->
                     <div class="bg-gray-900 p-5 rounded-lg border border-gray-800">
                         <span class="text-xs bg-gray-700 text-white px-2 py-0.5 rounded-full font-bold">2. 官方會員優先購票</span>
                         <h3 class="text-md font-bold text-white mt-2">COER MEMBERSHIP 優先售票</h3>
@@ -297,6 +321,8 @@
                         </div>
                         <p class="text-[10px] text-red-400 mt-2">⚠️ 購票張數限制：每人每場次限購 1 張，兩場演出共限購 2 張。</p>
                     </div>
+
+                    <!-- Step 3: General Sale -->
                     <div class="bg-gray-900 p-5 rounded-lg border border-gray-800">
                         <span class="text-xs bg-blue-600 text-white px-2 py-0.5 rounded-full font-bold">3. 一般售票</span>
                         <h3 class="text-md font-bold text-white mt-2">一般全面開賣</h3>
@@ -310,7 +336,8 @@
                 </div>
             </div>
 
-            <!-- 📅 售票日程表 (自動計算今日，並以 JavaScript 高亮 2026年6月份對應日期) -->
+            <!-- 📅 售票日程表 (已加上 6/12~6/16 認證期間的「視覺藍色色帶連線」) -->
+            <!-- 🛠️ 滿版 Edge-to-Edge 優化：-mx-6 md:mx-0 移除多餘Padding，不需滑動一目了然！ -->
             <div id="content-calendar" class="tab-content hidden space-y-6 relative">
                 <!-- 🛡️ 內嵌防截圖浮水印 -->
                 <div class="absolute bottom-4 right-6 text-[10px] text-gray-600 select-none pointer-events-none font-bold tracking-widest opacity-60">Made by Threads @janana_avatar</div>
@@ -322,7 +349,7 @@
 
                 <!-- 滿版極致放大外框，手機貼邊 (-mx-6 md:mx-0 p-2 md:p-6 rounded-none md:rounded-lg) -->
                 <div class="bg-[#111317] -mx-6 md:mx-0 p-2 md:p-6 rounded-none md:rounded-lg border-y md:border border-gray-800">
-                    <!-- 今日日期標記：由 JavaScript 自動寫入目前時間與星期 -->
+                    <!-- 今日日期標記 -->
                     <div class="mb-4 bg-yellow-500/10 border border-yellow-500/30 p-3 rounded-lg flex items-center justify-between text-xs mx-1">
                         <div>
                             <span id="current-date-text" class="text-yellow-400 font-bold block">📅 今日日期：讀取中...</span>
@@ -334,7 +361,7 @@
                     <!-- 6月份月曆 -->
                     <div class="text-center font-bold text-sm text-gray-400 mb-2">2026年 6月 (June)</div>
                     
-                    <!-- 網格容器：手機不縮小，全部在一個畫面露出 -->
+                    <!-- 💡 網格容器：手機不縮小，全部在一個畫面露出，配合極簡純文字標籤 -->
                     <div class="grid grid-cols-7 gap-1 text-center text-xs md:text-sm w-full">
                         <div class="font-bold text-gray-500 py-1 text-[10px] md:text-sm">日</div>
                         <div class="font-bold text-gray-500 py-1 text-[10px] md:text-sm">一</div>
@@ -383,7 +410,7 @@
                             <span class="day-num text-gray-500 font-semibold text-[10px] md:text-sm">7</span>
                             <div class="badge-container w-full"></div>
                         </div>
-                        <!-- 6/8 (JS 自動動態高亮，HTML中先設為一般格) -->
+                        <!-- 6/8 -->
                         <div id="day-6-8" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
                             <span class="day-num text-gray-500 font-semibold text-[10px] md:text-sm">8</span>
                             <div class="badge-container w-full"></div>
@@ -403,35 +430,35 @@
                             <span class="day-num text-gray-500 font-semibold text-[10px] md:text-sm">11</span>
                             <div class="badge-container w-full"></div>
                         </div>
-                        <!-- 6/12 會籍認證開始 (認證連線起點) -->
+                        <!-- 🔵 6/12 會籍認證開始 (已優化為 🔵認證開始) -->
                         <div id="day-6-12" class="py-1 bg-blue-600/20 rounded border-y border-l border-blue-500 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
                             <span class="day-num text-blue-400 font-bold text-[10px] md:text-sm">12</span>
                             <div class="badge-container w-full">
                                 <span class="bg-blue-600 text-white text-[7px] md:text-[8px] font-semibold py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">會員認證</span>
                             </div>
                         </div>
-                        <!-- 6/13 會籍認證中 -->
+                        <!-- 🔵 6/13 會籍認證中 -->
                         <div id="day-6-13" class="py-1 bg-blue-600/10 rounded border-y border-blue-500/30 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
                             <span class="day-num text-blue-300 font-semibold text-[10px] md:text-sm">13</span>
                             <div class="badge-container w-full">
                                 <span class="text-blue-400 text-[7px] md:text-[8px] font-bold scale-90 origin-center">認證中</span>
                             </div>
                         </div>
-                        <!-- 6/14 會籍認證中 -->
+                        <!-- 🔵 6/14 會籍認證中 -->
                         <div id="day-6-14" class="py-1 bg-blue-600/10 rounded border-y border-blue-500/30 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
                             <span class="day-num text-blue-300 font-semibold text-[10px] md:text-sm">14</span>
                             <div class="badge-container w-full">
                                 <span class="text-blue-400 text-[7px] md:text-[8px] font-bold scale-90 origin-center">認證中</span>
                             </div>
                         </div>
-                        <!-- 6/15 韓國內優先售票 / 認證截止 -->
+                        <!-- 🔵🔴 6/15 韓國內優先售票 / 韓國內認證截止 (已精簡為 🔴韓國內) -->
                         <div id="day-6-15" class="py-1 bg-gradient-to-r from-blue-600/10 to-red-600/10 rounded border-y border-red-500/40 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
                             <span class="day-num text-[#e03e3e] font-bold text-[10px] md:text-sm">15</span>
                             <div class="badge-container w-full">
                                 <span class="bg-[#e03e3e] text-white text-[7px] md:text-[8px] font-semibold py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">韓國售票</span>
                             </div>
                         </div>
-                        <!-- 6/16 全球優先售票 / 認證截止 -->
+                        <!-- 🔵🔴 6/16 全球優先售票 / 全球認證截止 (已精簡為 🔴全球) -->
                         <div id="day-6-16" class="py-1 bg-red-600/20 rounded border-y border-r border-red-500 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
                             <span class="day-num text-[#e03e3e] font-bold text-[10px] md:text-sm">16</span>
                             <div class="badge-container w-full">
@@ -443,7 +470,7 @@
                             <span class="day-num text-gray-500 font-semibold text-[10px] md:text-sm">17</span>
                             <div class="badge-container w-full"></div>
                         </div>
-                        <!-- 6/18 一般售票開始 -->
+                        <!-- 6/18 一般售票開始 (已精簡為 🎟️一般) -->
                         <div id="day-6-18" class="py-1 bg-blue-600/10 rounded border border-blue-500/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
                             <span class="day-num text-blue-400 font-bold text-[10px] md:text-sm">18</span>
                             <div class="badge-container w-full">
@@ -502,7 +529,7 @@
                         </div>
                         <!-- 6/29 -->
                         <div id="day-6-29" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                            <span class="day-num text-gray-500 font-semibold text-[10px] md:text-sm">29</span>
+                            <span class="text-gray-500 font-semibold text-[10px] md:text-sm">29</span>
                             <div class="badge-container w-full"></div>
                         </div>
                         <!-- 6/30 -->
@@ -529,93 +556,98 @@
                     <span class="red-bullet"></span>
                     <h2 class="text-xl font-bold text-white">行動票券使用須知</h2>
                 </div>
-                <div class="bg-[#1f242e] p-4 rounded-lg border border-gray-800 text-xs text-gray-300 leading-relaxed space-y-2">
+                <div class="bg-[#1f242e] p-4 rounded-lg border border-[#1a1d24] text-xs text-gray-300 leading-relaxed space-y-2">
                     <p class="text-red-400 font-bold">• 本公演僅提供「行動電子票券」服務，不提供實體紙本票券寄送或現場領取。</p>
                     <p>• 入場時，必須出示 NOL App 內的 QR Code 電子票券。截圖、螢幕錄影、或列印成紙張 of QR Code 均視為無效票券，無法入場。</p>
                     <p>• 如果您是替親友購買，由於實名制政策，所有入場者必須進行本人身份核對（實名驗證），不可轉讓他人。</p>
                 </div>
             </div>
 
-            <!-- Tab 5: 觀演須知 & 交通 (略) -->
-            <div id="content-rules" class="tab-content hidden space-y-6">
+            <!-- Tab 5: 觀演須知 & 交通 (精緻減壓、時間表保留大廳開放、搖滾站區整隊之純中文) -->
+            <div id="content-rules" class="tab-content hidden space-y-8">
+                <!-- 現場營運時間表卡片 (已成功將 Lobby 和 Standing，並保持精緻雙欄高度對齊) -->
                 <div class="space-y-4">
                     <div class="flex items-center">
                         <span class="red-bullet"></span>
                         <h2 class="text-xl font-bold text-white">現場營運時間表 <span class="text-[#e03e3e] text-sm">(🚨注意：以下為韓國當地時間)</span></h2>
                     </div>
-                    <div class="overflow-hidden border border-gray-800 rounded-lg text-xs">
-                        <table class="w-full text-left border-collapse">
+                    <div class="overflow-hidden border border-gray-800 rounded-lg text-[13px]">
+                        <table class="w-full border-collapse text-left">
                             <thead>
                                 <tr class="bg-gray-900 text-gray-300 font-semibold border-b border-gray-800">
-                                    <th class="p-3">項目</th>
-                                    <th class="p-3">7/18 (六) 18:00 場 (韓國時間)</th>
-                                    <th class="p-3">7/19 (日) 17:00 場 (韓國時間)</th>
+                                    <th class="py-3 px-3">項目</th>
+                                    <th class="py-3 px-3">7/18 (六) 18:00 場</th>
+                                    <th class="py-3 px-3">7/19 (日) 17:00 場</th>
                                 </tr>
                             </thead>
-                            <tbody class="text-gray-300">
+                            <tbody class="text-gray-300 leading-relaxed">
                                 <tr class="border-b border-gray-800 bg-[#1f242e]">
-                                    <td class="p-3 font-semibold text-white">IN-PASS快速通道 &amp; 搖滾區手環發放</td>
-                                    <td class="p-3">12:00 - 18:30 <span class="text-[10px] text-gray-500">(11:00-17:30 台時)</span></td>
-                                    <td class="p-3">12:00 - 17:30 <span class="text-[10px] text-gray-500">(11:00-16:30 台時)</span></td>
+                                    <td class="py-3 px-3 font-semibold text-white">IN-PASS快速通道 &amp; 搖滾區手環發放</td>
+                                    <td class="py-3 px-3">12:00 - 18:30 <span class="text-[11px] text-gray-500 block">(11:00-17:30 台時)</span></td>
+                                    <td class="py-3 px-3">12:00 - 17:30 <span class="text-[11px] text-gray-500 block">(11:00-16:30 台時)</span></td>
                                 </tr>
                                 <tr class="border-b border-gray-800">
-                                    <td class="p-3 font-semibold text-white">寄物處開放 (物品保管所)</td>
-                                    <td class="p-3">12:00 開放 <span class="text-[10px] text-gray-500">(11:00 台時)</span></td>
-                                    <td class="p-3">12:00 開放 <span class="text-[10px] text-gray-500">(11:00 台時)</span></td>
+                                    <td class="py-3 px-3 font-semibold text-white">寄物處開放 (物品保管所)</td>
+                                    <td class="py-3 px-3">12:00 開放 <span class="text-[11px] text-gray-500 block">(11:00 台時)</span></td>
+                                    <td class="py-3 px-3">12:00 開放 <span class="text-[11px] text-gray-500 block">(11:00 台時)</span></td>
                                 </tr>
+                                <!-- 💡 大廳開放與整隊已完美復原，且完全移除英文備註 (Lobby/Standing) -->
                                 <tr class="border-b border-gray-800 bg-[#1f242e]">
-                                    <td class="p-3 font-semibold text-white">大廳 (Lobby) 開放</td>
-                                    <td class="p-3">15:00 <span class="text-[10px] text-gray-500">(14:00 台時)</span></td>
-                                    <td class="p-3">14:00 <span class="text-[10px] text-gray-500">(13:00 台時)</span></td>
+                                    <td class="py-3 px-3 font-semibold text-white">大廳開放</td>
+                                    <td class="py-3 px-3">15:00 <span class="text-[11px] text-gray-500 block">(14:00 台時)</span></td>
+                                    <td class="py-3 px-3">14:00 <span class="text-[11px] text-gray-500 block">(13:00 台時)</span></td>
                                 </tr>
                                 <tr class="border-b border-gray-800">
-                                    <td class="p-3 font-semibold text-white">搖滾站區整隊 (Standing)</td>
-                                    <td class="p-3">15:00 - 16:00 <span class="text-[10px] text-gray-500">(14:00-15:00 台時)</span></td>
-                                    <td class="p-3">14:00 - 15:00 <span class="text-[10px] text-gray-500">(13:00-14:00 台時)</span></td>
+                                    <td class="py-3 px-3 font-semibold text-white">搖滾站區整隊</td>
+                                    <td class="py-3 px-3">15:00 - 16:00 <span class="text-[11px] text-gray-500 block">(14:00-15:00 台時)</span></td>
+                                    <td class="py-3 px-3">14:00 - 15:00 <span class="text-[11px] text-gray-500 block">(13:00-14:00 台時)</span></td>
                                 </tr>
                                 <tr class="border-b border-gray-800 bg-[#1f242e]">
-                                    <td class="p-3 font-semibold text-white">觀眾入場 (門票驗證)</td>
-                                    <td class="p-3">16:00 起 <span class="text-[10px] text-gray-500">(15:00 起 台時)</span></td>
-                                    <td class="p-3">15:00 起 <span class="text-[10px] text-gray-500">(14:00 起 台時)</span></td>
+                                    <td class="py-3 px-3 font-semibold text-white">觀眾入場 (門票驗證)</td>
+                                    <td class="py-3 px-3">16:00 起 <span class="text-[11px] text-gray-500 block">(15:00 起 台時)</span></td>
+                                    <td class="py-3 px-3">15:00 起 <span class="text-[11px] text-gray-500 block">(14:00 起 台時)</span></td>
                                 </tr>
                                 <tr class="text-[#e03e3e] font-bold">
-                                    <td class="p-3">演出正式開始</td>
-                                    <td class="p-3">18:00 <span class="text-[10px] text-gray-500">(17:00 台時)</span></td>
-                                    <td class="p-3">17:00 <span class="text-[10px] text-gray-500">(16:00 台時)</span></td>
+                                    <td class="py-3 px-3">演出正式開始</td>
+                                    <td class="py-3 px-3">18:00 <span class="text-[11px] text-gray-500 block">(17:00 台時)</span></td>
+                                    <td class="py-3 px-3">17:00 <span class="text-[11px] text-gray-500 block">(16:00 台時)</span></td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
 
-                <div class="bg-gray-900 p-4 rounded-lg text-xs space-y-2">
-                    <h3 class="font-bold text-white">🎒 寄物處規範</h3>
-                    <p class="text-gray-400">• 費用：5,000 韓元 (可刷卡、付現) / 再次寄物費用：5,000 韓元</p>
-                    <p class="text-gray-400">• 營運時間：公演開始前 6 小時開放，直至公演結束後半小時關閉。</p>
-                    <p class="text-red-400">• 貴重物品、易碎品及寵物不接受寄放。因個人保管不當造成的遺失 or 損壞，主辦方恕不負責。</p>
+                <!-- 寄物處卡片 -->
+                <div class="bg-gray-900 p-5 md:p-6 rounded-lg border border-gray-800 text-[13px] md:text-sm leading-relaxed space-y-3.5">
+                    <h3 class="font-bold text-white text-sm flex items-center"><span class="w-1.5 h-3.5 bg-yellow-500 inline-block mr-2 rounded-sm"></span>🎒 寄物處規範</h3>
+                    <p class="text-gray-300 border-b border-gray-800/40 pb-2">• 費用：<span class="text-white font-bold">5,000 韓元</span> (現場可刷信用卡或付現金) / 再次取出寄放費用亦為 5,000 韓元。</p>
+                    <p class="text-gray-300 border-b border-gray-800/40 pb-2">• 營運時間：公演正式開始前 6 小時開放，直至公演結束後半小時關閉。</p>
+                    <p class="text-red-400 font-bold">• ⚠️ 貴重物品、易碎品及寵物一律不接受寄放。因個人保管不當造成的遺失 or 損壞，主辦方恕不負責。</p>
                 </div>
 
-                <div class="bg-[#1a1d24] border border-red-600/30 p-4 rounded-lg text-xs space-y-2">
-                    <h3 class="font-bold text-red-400">🚫 嚴禁行為</h3>
-                    <p class="text-gray-400">• 嚴禁攜帶瓶裝水以外的所有食物 and 飲料進入場館。</p>
-                    <p class="text-gray-400">• 嚴禁攜帶 glass 瓶、煙火、爆裂物、雷射筆、大型行李箱、腳架及自拍棒。</p>
-                    <p class="text-red-400 font-bold">• <span class="font-bold">「手機與相機錄影政策」</span>：本公演裝備嚴禁進行錄影、錄音、語音直播 or 高規格專業攝影。一經發現，將被強制刪除素材並請離現場，且不予退票。</p>
+                <!-- 嚴禁行為卡片 -->
+                <div class="bg-[#1a1d24] border border-red-600/30 p-5 md:p-6 rounded-lg text-[13px] md:text-sm leading-relaxed space-y-3.5">
+                    <h3 class="font-bold text-red-400 text-sm flex items-center"><span class="w-1.5 h-3.5 bg-red-500 inline-block mr-2 rounded-sm"></span>🚫 嚴禁行為</h3>
+                    <p class="text-gray-300 border-b border-gray-800/40 pb-2">• 嚴禁攜帶瓶裝礦泉水以外的所有食物、飲料、酒精飲料進入場館。</p>
+                    <p class="text-gray-300 border-b border-gray-800/40 pb-2">• 嚴禁攜帶玻璃瓶、煙火、爆裂物、雷射筆、大型行李箱、相機三腳架及自拍棒。</p>
+                    <p class="text-red-400 font-bold">• 【手機與相機錄影政策】：本公演裝備嚴禁進行錄影、錄音、語音直播或高規格專業攝影。一經工作人員發現，將會被強制刪除素材並即刻請離現場，且門票不予退款。</p>
                 </div>
 
+                <!-- 交通指南卡片 -->
                 <div class="space-y-4">
                     <div class="flex items-center">
                         <span class="red-bullet"></span>
                         <h2 class="text-xl font-bold text-white">交通指南</h2>
                     </div>
-                    <div class="bg-gray-900 p-4 rounded-lg border border-gray-800 text-xs space-y-3 text-gray-300">
-                        <p><span class="font-bold text-white">📍 地址：</span> 仁川廣域市中區空港文化路127，仁川迎仕跨綜合競技館 (인스파イヤー アレナ)</p>
-                        <a href="https://www.google.com/maps/search/?api=1&amp;query=INSPIRE+Arena,+Jung-gu,+Incheon" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs bg-red-600/20 hover:bg-red-600 text-[#e03e3e] hover:text-white border border-red-600/30 px-2.5 py-1 rounded transition duration-200">
-                            🗺️ 點此查看 Google 地圖導航
+                    <div class="bg-gray-900 p-5 md:p-6 rounded-lg border border-gray-800 text-[13px] md:text-sm leading-relaxed space-y-3.5 text-gray-300">
+                        <p class="border-b border-gray-800/40 pb-2"><span class="font-bold text-white">📍 場館地址：</span> 韓國仁川廣域市中區空港文化路127，仁川迎仕跨綜合競技館 (INSPIRE ARENA)</p>
+                        <a href="https://www.google.com/maps/search/?api=1&amp;query=INSPIRE+Arena,+Jung-gu,+Incheon" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs bg-red-600/20 hover:bg-red-600 text-[#e03e3e] hover:text-white border border-red-600/30 px-3 py-1.5 rounded transition duration-200">
+                            🗺️ 開啟 Google 地圖導航
                         </a>
-                        <p class="mt-4"><span class="font-bold text-white">🚌 免費接駁車：</span></p>
-                        <div class="pl-4 space-y-1 text-gray-400">
-                            <p>1. 仁川國際機場 (T1 &amp; T2) ↔ 迎仕柏度假村 (約 20 分鐘一班)</p>
-                            <p>2. 大林站、明洞站等首爾主要站點提供觀演專屬收費巴士（需提前預約）</p>
+                        <p class="mt-4 font-bold text-white flex items-center"><span class="w-1.5 h-3.5 bg-blue-500 inline-block mr-2 rounded-sm"></span>🚌 免費接駁車指南：</p>
+                        <div class="pl-4 space-y-2 text-gray-400">
+                            <p>1. <span class="text-white font-semibold">仁川國際機場 ↔ 迎仕柏度假村</span>：提供免費接駁車，航廈 (T1 &amp; T2) 往返，每約 20 分鐘一班。</p>
+                            <p>2. <span class="text-white font-semibold">首爾主要站點 ↔ 會場</span>：大林站、明洞站等首爾主要站點提供觀演專屬收費接駁專車（需提前於售票官網進行預約）。</p>
                         </div>
                     </div>
                 </div>
@@ -638,7 +670,7 @@
         </div>
     </div>
 
-    <!-- Tab Logic Script (內含自動化「今日日期高亮與寫入」腳本) -->
+    <!-- Tab Logic Script (內含自動化「今日日期高亮與寫入」+ 多階段自動接檔倒數計時引擎) -->
     <script>
         const buttons = {
             'btn-info': 'content-info',
@@ -670,7 +702,7 @@
             }
         });
 
-        // 🌟 自動化動態時間引擎 🌟
+        // 🌟 自動化動態時間與多階段倒數計時引擎 🌟
         (function() {
             const today = new Date();
             const year = today.getFullYear();
@@ -679,54 +711,117 @@
             const dayNames = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
             const dayName = dayNames[today.getDay()];
 
-            // 1. 自動寫入目前時間與星期
             const dateTextEl = document.getElementById('current-date-text');
             if (dateTextEl) {
                 dateTextEl.innerText = `📅 今日日期：${year}年 ${month}月 ${date}日 (${dayName})`;
             }
 
-            // 2. 自動判斷目前搶票進度並給予提示
-            const hintTextEl = document.getElementById('current-date-hint');
-            if (hintTextEl) {
-                if (year === 2026 && month === 6) {
-                    if (date < 12) {
-                        hintTextEl.innerText = "目前處於：等待認證階段。請確保您已加入 COER 會員。";
-                    } else if (date >= 12 && date <= 14) {
-                        hintTextEl.innerText = "目前正處於：【會員優先認證期間】。請前往售票頁面認證！";
-                    } else if (date === 15) {
-                        hintTextEl.innerText = "🚨 今天 19:00：【韓國內會員優先購票】開放！(認證於 22:59 截止)";
-                    } else if (date === 16) {
-                        hintTextEl.innerText = "🚨 今天 19:00：【全球會員優先購票】開放！(認證於 22:59 截止)";
-                    } else if (date === 17) {
-                        hintTextEl.innerText = "目前處於：優先售票已結束。等待明日一般售票開放。";
-                    } else if (date === 18) {
-                        hintTextEl.innerText = "🚨 今天 19:00：【一般全面開賣】開放！(先搶先贏)";
-                    } else {
-                        hintTextEl.innerText = "仁川場售票已全部結束。祝大家觀演順利！";
-                    }
-                } else {
-                    hintTextEl.innerText = "售票活動尚未開始，或已全數圓滿結束。";
+            // 定義仁川場四大購票事件之 UTC 時間戳記
+            const events = [
+                {
+                    name: "【會籍優先認證】開始",
+                    target: Date.UTC(2026, 5, 12, 5, 0, 0), // 2026/06/12 13:00 (TST) = 05:00 UTC
+                    hint: "目前處於：等待認證階段。請確保您已加入 COER 會員。"
+                },
+                {
+                    name: "【韓國內會員優先購票】開始",
+                    target: Date.UTC(2026, 5, 15, 11, 0, 0), // 2026/06/15 19:00 (TST) = 11:00 UTC
+                    hint: "目前正處於：【會員優先認證期間】。請前往售票頁面進行認證！"
+                },
+                {
+                    name: "【全球會員優先購票】開始",
+                    target: Date.UTC(2026, 5, 16, 11, 0, 0), // 2026/06/16 19:00 (TST) = 11:00 UTC
+                    hint: "目前處於：【韓國內會員優先購票】進行中。全球會員優先將於明日開啟。"
+                },
+                {
+                    name: "【一般全面開賣】開始",
+                    target: Date.UTC(2026, 5, 18, 11, 0, 0), // 2026/06/18 19:00 (TST) = 11:00 UTC
+                    hint: "目前處於：【全球會員優先購票】進行中。一般售票將於 6/18 開放。"
+                }
+            ];
+
+            let activeEventIndex = -1;
+            const nowMs = Date.now();
+
+            for (let i = 0; i < events.length; i++) {
+                if (nowMs < events[i].target) {
+                    activeEventIndex = i;
+                    break;
                 }
             }
 
-            // 3. 自動高亮今天的月曆格子 (限 2026 年 6 月)
+            const hintTextEl = document.getElementById('current-date-hint');
+            if (hintTextEl) {
+                if (activeEventIndex !== -1) {
+                    hintTextEl.innerText = events[activeEventIndex].hint;
+                } else {
+                    if (year === 2026 && month === 6 && date <= 19) {
+                        hintTextEl.innerText = "目前正處於：【一般全面售票】熱賣中！祝大家都順利買到票！";
+                    } else {
+                        hintTextEl.innerText = "仁川場售票已全部結束。祝大家觀演順利，現場玩得開心！";
+                    }
+                }
+            }
+
+            const titleEl = document.getElementById('countdown-title');
+            const dEl = document.getElementById('timer-days');
+            const hEl = document.getElementById('timer-hours');
+            const mEl = document.getElementById('timer-minutes');
+            const sEl = document.getElementById('timer-seconds');
+            const timerBox = document.getElementById('countdown-timer-box');
+
+            function updateTimer() {
+                const currentNow = Date.now();
+                let foundIndex = -1;
+                for (let i = 0; i < events.length; i++) {
+                    if (currentNow < events[i].target) {
+                        foundIndex = i;
+                        break;
+                    }
+                }
+
+                if (foundIndex !== -1) {
+                    const currentEvent = events[foundIndex];
+                    if (titleEl) {
+                        titleEl.innerText = `距離 ${currentEvent.name} 還剩：`;
+                    }
+
+                    const diffMs = currentEvent.target - currentNow;
+
+                    const days = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((diffMs % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((diffMs % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((diffMs % (1000 * 60)) / 1000);
+
+                    if (dEl) dEl.innerText = String(days).padStart(2, '0');
+                    if (hEl) hEl.innerText = String(hours).padStart(2, '0');
+                    if (mEl) mEl.innerText = String(minutes).padStart(2, '0');
+                    if (sEl) sEl.innerText = String(seconds).padStart(2, '0');
+                } else {
+                    if (titleEl) {
+                        titleEl.innerHTML = `<span class="text-green-400 font-bold">🎉 2026 CORTIS 仁川場搶票活動已圓滿落幕！</span>`;
+                    }
+                    if (timerBox) {
+                        timerBox.classList.add('hidden');
+                    }
+                }
+            }
+
+            updateTimer();
+            setInterval(updateTimer, 1000);
+
             if (year === 2026 && month === 6) {
                 const todayCell = document.getElementById(`day-6-${date}`);
                 if (todayCell) {
-                    // 移除普通的灰色背景與邊框
                     todayCell.classList.remove('bg-gray-900/40', 'border-gray-800/50');
-                    
-                    // 披上金黃色閃爍高亮與陰影外框
                     todayCell.classList.add('bg-yellow-500/10', 'border-yellow-500', 'ring-1', 'ring-yellow-500', 'shadow-lg', 'shadow-yellow-500/10');
                     
-                    // 修改數字顏色為鮮艷金黃
                     const dateNumSpan = todayCell.querySelector('.day-num');
                     if (dateNumSpan) {
                         dateNumSpan.classList.remove('text-gray-500');
                         dateNumSpan.classList.add('text-yellow-400', 'font-bold');
                     }
 
-                    // 動態將格內的小字更換成「📅 今天」標籤
                     const badgeContainer = todayCell.querySelector('.badge-container');
                     if (badgeContainer) {
                         badgeContainer.innerHTML = `<span class="bg-yellow-500 text-black text-[7px] md:text-[8px] font-black py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">📅 今天</span>`;
