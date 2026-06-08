@@ -1,5 +1,5 @@
 
-<html data-type="html" data-identifier="245a165f-d5c9-43e8-a9ac-cf25b57419d5" data-title="CORTIS Tour Incheon 售票資訊 (滑動大框框月曆版)" data-version="15"><head>
+<html data-type="html" data-identifier="245a165f-d5c9-43e8-a9ac-cf25b57419d5" data-title="CORTIS Tour Incheon 售票資訊 (精緻純文字月曆版)" data-version="17"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -109,7 +109,7 @@
                             <tr class="border-b border-gray-800 bg-[#1f242e]">
                                 <td class="p-4 font-semibold text-gray-400">演出場館</td>
                                 <td class="p-4 text-white">
-                                    仁川迎仕柏綜合競技館 (INSPIRE ARENA)<br>
+                                    仁川迎仕跨綜合競技館 (INSPIRE ARENA)<br>
                                     <a href="https://www.google.com/maps/search/?api=1&amp;query=INSPIRE+Arena,+Jung-gu,+Incheon" target="_blank" rel="noopener noreferrer" class="inline-flex items-center mt-2 text-xs bg-red-600/20 hover:bg-red-600 text-[#e03e3e] hover:text-white border border-red-600/30 px-2.5 py-1 rounded transition duration-200">
                                         🗺️ 開啟 Google 地圖導航
                                     </a>
@@ -311,12 +311,13 @@
                             <span class="text-blue-400 font-semibold">【一般售票開放時間】</span><br>
                             6月 18日(四) 20:00 (KST) 開放
                         </div>
-                        <p class="text-[11px] text-gray-400 mt-2">⚠️ 一般售票僅限「會員優先購票」剩餘 of 未售完票券開放購買。若會員優先售票已售罄，一般售票 may 無票券可供購買。</p>
+                        <p class="text-[11px] text-gray-400 mt-2">⚠️ 一般售票僅限「會員優先購票」售完票券開放購買。若會員優先售票已售罄，一般售票 may 無票券可供購買。</p>
                     </div>
                 </div>
             </div>
 
             <!-- 📅 售票日程表 -->
+            <!-- 🛠️ 滿版 Edge-to-Edge 優化：-mx-6 md:mx-0 移除多餘Padding，不需滑動一目了然！ -->
             <div id="content-calendar" class="tab-content hidden space-y-6 relative">
                 <!-- 🛡️ 內嵌防截圖浮水印 -->
                 <div class="absolute bottom-4 right-6 text-[10px] text-gray-600 select-none pointer-events-none font-bold tracking-widest opacity-60">Made by Threads @janana_avatar</div>
@@ -326,9 +327,10 @@
                     <h2 class="text-xl font-bold text-white">2026 CORTIS TOUR 售票日程表 (台灣時間)</h2>
                 </div>
 
-                <div class="bg-[#111317] p-4 md:p-6 rounded-lg border border-gray-800">
+                <!-- 滿版極致放大容器：-mx-6 md:mx-0 p-2 md:p-6 圓角在手機端消除，最大化利用螢幕寬度 -->
+                <div class="bg-[#111317] -mx-6 md:mx-0 p-2 md:p-6 rounded-none md:rounded-lg border-y md:border border-gray-800">
                     <!-- 今日日期標記 -->
-                    <div class="mb-4 bg-yellow-500/10 border border-yellow-500/30 p-3 rounded-lg flex items-center justify-between text-xs">
+                    <div class="mb-4 bg-yellow-500/10 border border-yellow-500/30 p-3 rounded-lg flex items-center justify-between text-xs mx-1">
                         <div>
                             <span class="text-yellow-400 font-bold block">📅 今日日期：2026年 6月 8日 (星期一)</span>
                             <span class="text-gray-400">目前處於：等待認證階段。請確保您已加入 COER 會員。</span>
@@ -339,133 +341,129 @@
                     <!-- 6月份月曆 -->
                     <div class="text-center font-bold text-sm text-gray-400 mb-2">2026年 6月 (June)</div>
                     
-                    <div class="text-center text-[10px] text-gray-500 mb-3 block md:hidden">📱 左右滑動可查看完整月曆</div>
-                    
-                    <!-- 橫向滾動容器 -->
-                    <div class="overflow-x-auto pb-2 scrollbar-none">
-                        <div class="grid grid-cols-7 gap-1 md:gap-2 text-center text-xs md:text-sm w-full min-w-[550px] md:min-w-0">
-                            <div class="font-bold text-gray-500 py-1 text-[10px] md:text-sm">日</div>
-                            <div class="font-bold text-gray-500 py-1 text-[10px] md:text-sm">一</div>
-                            <div class="font-bold text-gray-500 py-1 text-[10px] md:text-sm">二</div>
-                            <div class="font-bold text-gray-500 py-1 text-[10px] md:text-sm">三</div>
-                            <div class="font-bold text-gray-500 py-1 text-[10px] md:text-sm">四</div>
-                            <div class="font-bold text-gray-500 py-1 text-[10px] md:text-sm">五</div>
-                            <div class="font-bold text-gray-500 py-1 text-[10px] md:text-sm">六</div>
+                    <!-- 💡 刪除橫向滾動，改為極窄字型 text-[7px] md:text-sm 加上極致縮寫標籤，保證 100% 不折行 -->
+                    <div class="grid grid-cols-7 gap-1 text-center text-xs md:text-sm w-full">
+                        <div class="font-bold text-gray-500 py-1 text-[10px] md:text-sm">日</div>
+                        <div class="font-bold text-gray-500 py-1 text-[10px] md:text-sm">一</div>
+                        <div class="font-bold text-gray-500 py-1 text-[10px] md:text-sm">二</div>
+                        <div class="font-bold text-gray-500 py-1 text-[10px] md:text-sm">三</div>
+                        <div class="font-bold text-gray-500 py-1 text-[10px] md:text-sm">四</div>
+                        <div class="font-bold text-gray-500 py-1 text-[10px] md:text-sm">五</div>
+                        <div class="font-bold text-gray-500 py-1 text-[10px] md:text-sm">六</div>
 
-                            <!-- 5/31 空欄 -->
-                            <div class="py-2 bg-transparent"></div>
-                            
-                            <!-- 6/1 ~ 6/7 -->
-                            <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                                <span class="text-gray-500 font-semibold text-[10px] md:text-sm">1</span>
-                            </div>
-                            <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                                <span class="text-gray-500 font-semibold text-[10px] md:text-sm">2</span>
-                            </div>
-                            <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                                <span class="text-gray-500 font-semibold text-[10px] md:text-sm">3</span>
-                            </div>
-                            <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                                <span class="text-gray-500 font-semibold text-[10px] md:text-sm">4</span>
-                            </div>
-                            <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                                <span class="text-gray-500 font-semibold text-[10px] md:text-sm">5</span>
-                            </div>
-                            <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                                <span class="text-gray-500 font-semibold text-[10px] md:text-sm">6</span>
-                            </div>
+                        <!-- 5/31 空欄 -->
+                        <div class="py-2 bg-transparent"></div>
+                        
+                        <!-- 6/1 ~ 6/7 -->
+                        <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="text-gray-500 font-semibold text-[10px] md:text-sm">1</span>
+                        </div>
+                        <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="text-gray-500 font-semibold text-[10px] md:text-sm">2</span>
+                        </div>
+                        <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="text-gray-500 font-semibold text-[10px] md:text-sm">3</span>
+                        </div>
+                        <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="text-gray-500 font-semibold text-[10px] md:text-sm">4</span>
+                        </div>
+                        <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="text-gray-500 font-semibold text-[10px] md:text-sm">5</span>
+                        </div>
+                        <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="text-gray-500 font-semibold text-[10px] md:text-sm">6</span>
+                        </div>
 
-                            <!-- 6/7 ~ 6/13 -->
-                            <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                                <span class="text-gray-500 font-semibold text-[10px] md:text-sm">7</span>
-                            </div>
-                            <!-- 6/8 今日高亮 -->
-                            <div class="py-1 bg-yellow-500/10 rounded border border-yellow-500 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1 relative ring-1 ring-yellow-500 shadow-lg shadow-yellow-500/10">
-                                <span class="text-yellow-400 font-bold text-[10px] md:text-sm">8</span>
-                                <span class="bg-yellow-500 text-black text-[7px] md:text-[8px] font-black py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">📅 今天</span>
-                            </div>
-                            <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                                <span class="text-gray-500 font-semibold text-[10px] md:text-sm">9</span>
-                            </div>
-                            <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                                <span class="text-gray-500 font-semibold text-[10px] md:text-sm">10</span>
-                            </div>
-                            <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                                <span class="text-gray-500 font-semibold text-[10px] md:text-sm">11</span>
-                            </div>
-                            <!-- 🔵 6/12 會籍認證開始 -->
-                            <div class="py-1 bg-blue-600/20 rounded border-y border-l border-blue-500 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                                <span class="text-blue-400 font-bold text-[10px] md:text-sm">12</span>
-                                <span class="bg-blue-600 text-white text-[7px] md:text-[8px] font-semibold py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">🔵會員認證開始</span>
-                            </div>
-                            <!-- 🔵 6/13 會籍認證中 -->
-                            <div class="py-1 bg-blue-600/10 rounded border-y border-blue-500/30 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                                <span class="text-blue-300 font-semibold text-[10px] md:text-sm">13</span>
-                                <span class="text-blue-400 text-[7px] md:text-[8px] font-bold scale-90 origin-center">認證中</span>
-                            </div>
+                        <!-- 6/7 ~ 6/13 -->
+                        <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="text-gray-500 font-semibold text-[10px] md:text-sm">7</span>
+                        </div>
+                        <!-- 6/8 今日高亮 -->
+                        <div class="py-1 bg-yellow-500/10 rounded border border-yellow-500 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1 relative ring-1 ring-yellow-500 shadow-lg shadow-yellow-500/10">
+                            <span class="text-yellow-400 font-bold text-[10px] md:text-sm">8</span>
+                            <span class="bg-yellow-500 text-black text-[7px] md:text-[8px] font-black py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">📅 今天</span>
+                        </div>
+                        <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="text-gray-500 font-semibold text-[10px] md:text-sm">9</span>
+                        </div>
+                        <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="text-gray-500 font-semibold text-[10px] md:text-sm">10</span>
+                        </div>
+                        <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="text-gray-500 font-semibold text-[10px] md:text-sm">11</span>
+                        </div>
+                        <!-- 🔵 6/12 會籍認證開始 (已優化為 🔵認證開始) -->
+                        <div class="py-1 bg-blue-600/20 rounded border-y border-l border-blue-500 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="text-blue-400 font-bold text-[10px] md:text-sm">12</span>
+                            <span class="bg-blue-600 text-white text-[7px] md:text-[8px] font-semibold py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">會員認證</span>
+                        </div>
+                        <!-- 🔵 6/13 會籍認證中 -->
+                        <div class="py-1 bg-blue-600/10 rounded border-y border-blue-500/30 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="text-blue-300 font-semibold text-[10px] md:text-sm">13</span>
+                            <span class="text-blue-400 text-[7px] md:text-[8px] font-bold scale-90 origin-center">認證中</span>
+                        </div>
 
-                            <!-- 6/14 ~ 6/20 -->
-                            <!-- 🔵 6/14 會籍認證中 -->
-                            <div class="py-1 bg-blue-600/10 rounded border-y border-blue-500/30 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                                <span class="text-blue-300 font-semibold text-[10px] md:text-sm">14</span>
-                                <span class="text-blue-400 text-[7px] md:text-[8px] font-bold scale-90 origin-center">認證中</span>
-                            </div>
-                            <!-- 🔵🔴 6/15 韓國內優先售票 / 韓國內認證截止 -->
-                            <div class="py-1 bg-gradient-to-r from-blue-600/10 to-red-600/10 rounded border-y border-red-500/40 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                                <span class="text-[#e03e3e] font-bold text-[10px] md:text-sm">15</span>
-                                <span class="bg-[#e03e3e] text-white text-[7px] md:text-[8px] font-semibold py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">🔴韓國優先購票</span>
-                            </div>
-                            <!-- 🔵🔴 6/16 全球優先售票 / 全球認證截止 -->
-                            <div class="py-1 bg-red-600/20 rounded border-y border-r border-red-500 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                                <span class="text-[#e03e3e] font-bold text-[10px] md:text-sm">16</span>
-                                <span class="bg-[#e03e3e] text-white text-[7px] md:text-[8px] font-semibold py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">🔴全球優先購票</span>
-                            </div>
-                            <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                                <span class="text-gray-500 font-semibold text-[10px] md:text-sm">17</span>
-                            </div>
-                            <!-- 6/18 一般售票開始 -->
-                            <div class="py-1 bg-blue-600/10 rounded border border-blue-500/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                                <span class="text-blue-400 font-bold text-[10px] md:text-sm">18</span>
-                                <span class="bg-blue-600 text-white text-[7px] md:text-[8px] font-semibold py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">🎟️一般售票</span>
-                            </div>
-                            <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                                <span class="text-gray-500 font-semibold text-[10px] md:text-sm">19</span>
-                            </div>
-                            <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                                <span class="text-gray-500 font-semibold text-[10px] md:text-sm">20</span>
-                            </div>
+                        <!-- 6/14 ~ 6/20 -->
+                        <!-- 🔵 6/14 會籍認證中 -->
+                        <div class="py-1 bg-blue-600/10 rounded border-y border-blue-500/30 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="text-blue-300 font-semibold text-[10px] md:text-sm">14</span>
+                            <span class="text-blue-400 text-[7px] md:text-[8px] font-bold scale-90 origin-center">認證中</span>
+                        </div>
+                        <!-- 🔵🔴 6/15 韓國內優先售票 / 韓國內認證截止 (已精簡為 🔴韓國內) -->
+                        <div class="py-1 bg-gradient-to-r from-blue-600/10 to-red-600/10 rounded border-y border-red-500/40 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="text-[#e03e3e] font-bold text-[10px] md:text-sm">15</span>
+                            <span class="bg-[#e03e3e] text-white text-[7px] md:text-[8px] font-semibold py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">韓國售票</span>
+                        </div>
+                        <!-- 🔵🔴 6/16 全球優先售票 / 全球認證截止 (已精簡為 🔴全球) -->
+                        <div class="py-1 bg-red-600/20 rounded border-y border-r border-red-500 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="text-[#e03e3e] font-bold text-[10px] md:text-sm">16</span>
+                            <span class="bg-[#e03e3e] text-white text-[7px] md:text-[8px] font-semibold py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">全球售票</span>
+                        </div>
+                        <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="text-gray-500 font-semibold text-[10px] md:text-sm">17</span>
+                        </div>
+                        <!-- 6/18 一般售票開始 (已精簡為 🎟️一般) -->
+                        <div class="py-1 bg-blue-600/10 rounded border border-blue-500/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="text-blue-400 font-bold text-[10px] md:text-sm">18</span>
+                            <span class="bg-blue-600 text-white text-[7px] md:text-[8px] font-semibold py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">一般售票</span>
+                        </div>
+                        <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="text-gray-500 font-semibold text-[10px] md:text-sm">19</span>
+                        </div>
+                        <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="text-gray-500 font-semibold text-[10px] md:text-sm">20</span>
+                        </div>
 
-                            <!-- 6/21 ~ 6/30 -->
-                            <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                                <span class="text-gray-500 font-semibold text-[10px] md:text-sm">21</span>
-                            </div>
-                            <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                                <span class="text-gray-500 font-semibold text-[10px] md:text-sm">22</span>
-                            </div>
-                            <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                                <span class="text-gray-500 font-semibold text-[10px] md:text-sm">23</span>
-                            </div>
-                            <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                                <span class="text-gray-500 font-semibold text-[10px] md:text-sm">24</span>
-                            </div>
-                            <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                                <span class="text-gray-500 font-semibold text-[10px] md:text-sm">25</span>
-                            </div>
-                            <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                                <span class="text-gray-500 font-semibold text-[10px] md:text-sm">26</span>
-                            </div>
-                            <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                                <span class="text-gray-500 font-semibold text-[10px] md:text-sm">27</span>
-                            </div>
-                            <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                                <span class="text-gray-500 font-semibold text-[10px] md:text-sm">28</span>
-                            </div>
-                            <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                                <span class="text-gray-500 font-semibold text-[10px] md:text-sm">29</span>
-                            </div>
-                            <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                                <span class="text-gray-500 font-semibold text-[10px] md:text-sm">30</span>
-                            </div>
+                        <!-- 6/21 ~ 6/30 -->
+                        <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="text-gray-500 font-semibold text-[10px] md:text-sm">21</span>
+                        </div>
+                        <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="text-gray-500 font-semibold text-[10px] md:text-sm">22</span>
+                        </div>
+                        <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="text-gray-500 font-semibold text-[10px] md:text-sm">23</span>
+                        </div>
+                        <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="text-gray-500 font-semibold text-[10px] md:text-sm">24</span>
+                        </div>
+                        <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="text-gray-500 font-semibold text-[10px] md:text-sm">25</span>
+                        </div>
+                        <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="text-gray-500 font-semibold text-[10px] md:text-sm">26</span>
+                        </div>
+                        <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="text-gray-500 font-semibold text-[10px] md:text-sm">27</span>
+                        </div>
+                        <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="text-gray-500 font-semibold text-[10px] md:text-sm">28</span>
+                        </div>
+                        <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="text-gray-500 font-semibold text-[10px] md:text-sm">29</span>
+                        </div>
+                        <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="text-gray-500 font-semibold text-[10px] md:text-sm">30</span>
                         </div>
                     </div>
                 </div>
@@ -558,7 +556,7 @@
                     <h3 class="font-bold text-red-400">🚫 嚴禁行為</h3>
                     <p class="text-gray-400">• 嚴禁攜帶瓶裝水以外的所有食物 and 飲料進入場館。</p>
                     <p class="text-gray-400">• 嚴禁攜帶 glass 瓶、煙火、爆裂物、雷射筆、大型行李箱、腳架及自拍棒。</p>
-                    <p class="text-red-400 font-bold">• <span class="font-bold">「手機與相機錄影政策」</span>：本公演嚴禁進行錄影、錄音、語音直播 or 高規格專業攝影。一經發現，將被強制刪除素材並請離現場，且不予退票。</p>
+                    <p class="text-red-400 font-bold">• <span class="font-bold">「手機與相機錄影政策」</span>：本公演裝備嚴禁進行錄影、錄音、語音直播 or 高規格專業攝影。一經發現，將被強制刪除素材並請離現場，且不予退票。</p>
                 </div>
 
                 <!-- Transportation -->
@@ -568,7 +566,7 @@
                         <h2 class="text-xl font-bold text-white">交通指南</h2>
                     </div>
                     <div class="bg-gray-900 p-4 rounded-lg border border-gray-800 text-xs space-y-3 text-gray-300">
-                        <p><span class="font-bold text-white">📍 地址：</span> 仁川廣域市中區空港文化路127，仁川迎仕柏綜合競技館 (인스파イヤー 아레나)</p>
+                        <p><span class="font-bold text-white">📍 地址：</span> 仁川廣域市中區空港文化路127，仁川迎仕跨綜合競技館 (인스파イヤー アレナ)</p>
                         <a href="https://www.google.com/maps/search/?api=1&amp;query=INSPIRE+Arena,+Jung-gu,+Incheon" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs bg-red-600/20 hover:bg-red-600 text-[#e03e3e] hover:text-white border border-red-600/30 px-2.5 py-1 rounded transition duration-200">
                             🗺️ 點此查看 Google 地圖導航
                         </a>
