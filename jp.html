@@ -1,5 +1,5 @@
 
-<html data-type="html" data-identifier="0bbdfcb0-23a1-4357-96bf-a8647a407fa2" data-title="CORTIS Tour Japan 售票資訊 (手機排版修正版)" data-version="9"><head>
+<html data-type="html" data-identifier="0bbdfcb0-23a1-4357-96bf-a8647a407fa2" data-title="CORTIS Tour Japan 售票資訊 (手機排版修正版)" data-version="11"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -81,6 +81,8 @@
             <button id="btn-info" class="tab-btn px-6 py-4 text-sm text-gray-400 hover:text-white transition whitespace-nowrap tab-active">📊 演出資訊</button>
             <button id="btn-seats" class="tab-btn px-6 py-4 text-sm text-gray-400 hover:text-white transition whitespace-nowrap">🗺️ 票價與VIP福利</button>
             <button id="btn-schedule" class="tab-btn px-6 py-4 text-sm text-gray-400 hover:text-white transition whitespace-nowrap">📅 抽選日程</button>
+            <!-- 🌟 新增的日程月曆標籤頁 -->
+            <button id="btn-calendar" class="tab-btn px-6 py-4 text-sm text-gray-400 hover:text-white transition whitespace-nowrap">📅 售票日程表</button>
             <button id="btn-entry" class="tab-btn px-6 py-4 text-sm text-gray-400 hover:text-white transition whitespace-nowrap">🎫 購票與枚數限制</button>
             <button id="btn-rules" class="tab-btn px-6 py-4 text-sm text-gray-400 hover:text-white transition whitespace-nowrap">📋 實名身份驗證規範</button>
         </div>
@@ -205,7 +207,7 @@
                                 <span class="text-gray-400 block mt-1 text-[9px]">依 Weverse 公告之連結至 Lawson 系統申請</span>
                             </div>
                             <div class="bg-gray-900 p-3 rounded border border-gray-800">
-                                <span class="text-blue-400 font-semibold">【3. 抽選結果公佈】</span><br>
+                                <span class="text-blue-400 font-semibold">【3. 抽籤結果公佈】</span><br>
                                 <span class="text-yellow-400 font-bold block mt-1">7/3 (五) 17:00 開放確認</span>
                                 <span class="text-[10px] text-gray-500">/* 原日時：7/3 18:00 */</span>
                                 <span class="text-gray-400 block mt-1 text-[9px]">※ 繳費方式與 VIP 升級日後另行通知</span>
@@ -233,7 +235,7 @@
                                 <span class="text-[10px] text-gray-500">/* 原日時：6/5 13:00 ~ 6/11 23:59 */</span>
                             </div>
                             <div class="bg-gray-950 p-3 rounded border border-gray-800">
-                                <span class="text-[#e03e3e] font-semibold">【2. 結果公佈與入金期間】</span><br>
+                                <span class="text-[#e03e3e] font-semibold">【2. 抽籤結果公佈與入金期間】</span><br>
                                 <span class="text-white font-bold block mt-1">6/22 (一) 10:00 ~ 6/26 (五) 22:00</span>
                                 <span class="text-[10px] text-gray-500">/* 原日時：6/22 11:00 ~ 6/26 23:00 */</span>
                             </div>
@@ -250,6 +252,253 @@
                             </a>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <!-- 📅 新增的日曆 Tab 內容區 (日本橫濱場 - 雙月曆滿版一目了然版) -->
+            <!-- 🛠️ 滿版 Edge-to-Edge 優化：-mx-6 md:mx-0 移除多餘Padding，不需滑動一目了然！ -->
+            <div id="content-calendar" class="tab-content hidden space-y-6 relative">
+                <!-- 🛡️ 內嵌防截圖浮水印 -->
+                <div class="absolute bottom-4 right-6 text-[10px] text-gray-600 select-none pointer-events-none font-bold tracking-widest opacity-60">Made by Threads @janana_avatar</div>
+                
+                <div class="flex items-center mb-4">
+                    <span class="red-bullet"></span>
+                    <h2 class="text-xl font-bold text-white">2026 CORTIS TOUR 日本抽選日程表 (台灣時間)</h2>
+                </div>
+
+                <!-- 今日日期標記 -->
+                <div class="bg-yellow-500/10 border border-yellow-500/30 p-3 rounded-lg flex items-center justify-between text-xs mb-4">
+                    <div>
+                        <span class="text-yellow-400 font-bold block">📅 今日日期：2026年 6月 8日 (星期一)</span>
+                        <span class="text-gray-400">目前正處於：【JP 日本會員】抽選申請期間。</span>
+                    </div>
+                    <span class="bg-yellow-500 text-black font-black px-2 py-0.5 rounded text-[10px] animate-pulse">TODAY</span>
+                </div>
+
+                <!-- 雙月曆排版 (電腦版並排，手機版垂直排列並全面貼邊最大化) -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    
+                    <!-- 1. 六月份月曆 (已加上 6/5~6/11 JP、6/20~6/22 藍、6/22~6/26 紫、6/26~6/29 藍之彩虹色帶連線) -->
+                    <div class="bg-[#111317] -mx-6 lg:mx-0 p-2 md:p-4 rounded-none lg:rounded-lg border-y lg:border border-gray-800">
+                        <div class="text-center font-bold text-sm text-gray-400 mb-2">2026年 6月 (June)</div>
+                        <div class="grid grid-cols-7 gap-1 text-center text-xs w-full">
+                            <!-- 星期欄頭 -->
+                            <div class="font-bold text-gray-500 py-1 text-[10px] md:text-xs">日</div>
+                            <div class="font-bold text-gray-500 py-1 text-[10px] md:text-xs">一</div>
+                            <div class="font-bold text-gray-500 py-1 text-[10px] md:text-xs">二</div>
+                            <div class="font-bold text-gray-500 py-1 text-[10px] md:text-xs">三</div>
+                            <div class="font-bold text-gray-500 py-1 text-[10px] md:text-xs">四</div>
+                            <div class="font-bold text-gray-500 py-1 text-[10px] md:text-xs">五</div>
+                            <div class="font-bold text-gray-500 py-1 text-[10px] md:text-xs">六</div>
+
+                            <!-- 第一週空欄 (6/1 是星期一) -->
+                            <div class="py-2 bg-transparent"></div>
+                            
+                            <!-- 6/1 ~ 6/4 -->
+                            <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                                <span class="text-gray-500 font-semibold text-[10px] md:text-xs">1</span>
+                            </div>
+                            <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                                <span class="text-gray-500 font-semibold text-[10px] md:text-xs">2</span>
+                            </div>
+                            <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                                <span class="text-gray-500 font-semibold text-[10px] md:text-xs">3</span>
+                            </div>
+                            <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                                <span class="text-gray-500 font-semibold text-[10px] md:text-xs">4</span>
+                            </div>
+                            <!-- 🔴 6/5 JP 抽選開始 (JP優先連線起點，精簡純文字為 JP開始) -->
+                            <div class="py-1 bg-red-600/20 rounded border-y border-l border-red-500 flex flex-col justify-between h-14 p-0.5">
+                                <span class="text-red-400 font-bold text-[10px] md:text-xs">5</span>
+                                <span class="bg-red-600 text-white text-[7px] md:text-[8px] font-semibold py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">JP開始</span>
+                            </div>
+                            <!-- 🔴 6/6 JP 抽選中 (JP優先連線中) -->
+                            <div class="py-1 bg-red-600/10 rounded border-y border-red-500/30 flex flex-col justify-between h-14 p-0.5">
+                                <span class="text-red-300 font-semibold text-[10px] md:text-xs">6</span>
+                                <span class="text-red-400 text-[7px] md:text-[8px] font-bold scale-90 origin-center">抽選中</span>
+                            </div>
+
+                            <!-- 6/7 ~ 6/13 -->
+                            <!-- 🔴 6/7 JP 抽選中 (JP優先連線中) -->
+                            <div class="py-1 bg-red-600/10 rounded border-y border-red-500/30 flex flex-col justify-between h-14 p-0.5">
+                                <span class="text-red-300 font-semibold text-[10px] md:text-xs">7</span>
+                                <span class="text-red-400 text-[7px] md:text-[8px] font-bold scale-90 origin-center">抽選中</span>
+                            </div>
+                            <!-- 🔴 6/8 今日高亮 & JP抽選中 (JP優先連線中) -->
+                            <div class="py-1 bg-red-600/10 rounded border border-yellow-500 flex flex-col justify-between h-14 p-0.5 relative ring-1 ring-yellow-500 shadow-lg">
+                                <span class="text-yellow-400 font-bold text-[10px] md:text-xs">8</span>
+                                <span class="bg-yellow-500 text-black text-[7px] md:text-[8px] font-black py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">📅 今天</span>
+                            </div>
+                            <!-- 🔴 6/9 JP 抽選中 (JP優先連線中) -->
+                            <div class="py-1 bg-red-600/10 rounded border-y border-red-500/30 flex flex-col justify-between h-14 p-0.5">
+                                <span class="text-red-300 font-semibold text-[10px] md:text-xs">9</span>
+                                <span class="text-red-400 text-[7px] md:text-[8px] font-bold scale-90 origin-center">抽選中</span>
+                            </div>
+                            <!-- 🔴 6/10 JP 抽選中 (JP優先連線中) -->
+                            <div class="py-1 bg-red-600/10 rounded border-y border-red-500/30 flex flex-col justify-between h-14 p-0.5">
+                                <span class="text-red-300 font-semibold text-[10px] md:text-xs">10</span>
+                                <span class="text-red-400 text-[7px] md:text-[8px] font-bold scale-90 origin-center">抽選中</span>
+                            </div>
+                            <!-- 🔴 6/11 JP截止 (JP優先連線終點，精簡純文字為 JP截止) -->
+                            <div class="py-1 bg-red-600/20 rounded border-y border-r border-red-500 flex flex-col justify-between h-14 p-0.5">
+                                <span class="text-red-400 font-bold text-[10px] md:text-xs">11</span>
+                                <span class="bg-red-600 text-white text-[7px] md:text-[8px] font-semibold py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">JP截止</span>
+                            </div>
+                            <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                                <span class="text-gray-500 font-semibold text-[10px] md:text-xs">12</span>
+                            </div>
+                            <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                                <span class="text-gray-500 font-semibold text-[10px] md:text-xs">13</span>
+                            </div>
+
+                            <!-- 6/14 ~ 6/20 -->
+                            <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                                <span class="text-gray-500 font-semibold text-[10px] md:text-xs">14</span>
+                            </div>
+                            <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                                <span class="text-gray-500 font-semibold text-[10px] md:text-xs">15</span>
+                            </div>
+                            <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                                <span class="text-gray-500 font-semibold text-[10px] md:text-xs">16</span>
+                            </div>
+                            <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                                <span class="text-gray-500 font-semibold text-[10px] md:text-xs">17</span>
+                            </div>
+                            <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                                <span class="text-gray-500 font-semibold text-[10px] md:text-xs">18</span>
+                            </div>
+                            <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                                <span class="text-gray-500 font-semibold text-[10px] md:text-xs">19</span>
+                            </div>
+                            <!-- 🔵 6/20 GLOBAL Weverse 開始 (Weverse連線起點，精簡為 全球登記) -->
+                            <div class="py-1 bg-blue-600/20 rounded border-y border-l border-blue-500 flex flex-col justify-between h-14 p-0.5">
+                                <span class="text-blue-400 font-bold text-[10px] md:text-xs">20</span>
+                                <span class="bg-blue-600 text-white text-[7px] md:text-[8px] font-semibold py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">全球登記</span>
+                            </div>
+
+                            <!-- 6/21 ~ 6/27 -->
+                            <!-- 🔵 6/21 GLOBAL Weverse 登記中 (Weverse連線中) -->
+                            <div class="py-1 bg-blue-600/10 rounded border-y border-blue-500/30 flex flex-col justify-between h-14 p-0.5">
+                                <span class="text-blue-300 font-semibold text-[10px] md:text-xs">21</span>
+                                <span class="text-blue-400 text-[7px] md:text-[8px] font-bold scale-90 origin-center">登記中</span>
+                            </div>
+                            <!-- 🔵🟣 6/22 JP中籤公佈/繳費開始 & GLOBAL Weverse截止 (Weverse連線終點 / 繳費連線起點，精簡為 中籤公佈) -->
+                            <div class="py-1 bg-purple-600/20 rounded border border-purple-500 flex flex-col justify-between h-14 p-0.5">
+                                <span class="text-purple-400 font-bold text-[10px] md:text-xs">22</span>
+                                <span class="bg-purple-600 text-white text-[7px] md:text-[8px] font-semibold py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">中籤公佈</span>
+                            </div>
+                            <!-- 🟣 6/23 JP 繳費中 (繳費連線中) -->
+                            <div class="py-1 bg-purple-600/10 rounded border-y border-purple-500/30 flex flex-col justify-between h-14 p-0.5">
+                                <span class="text-purple-300 font-semibold text-[10px] md:text-xs">23</span>
+                                <span class="text-purple-400 text-[7px] md:text-[8px] font-bold scale-90 origin-center">超商繳費</span>
+                            </div>
+                            <!-- 🟣 6/24 JP 繳費中 (繳費連線中) -->
+                            <div class="py-1 bg-purple-600/10 rounded border-y border-purple-500/30 flex flex-col justify-between h-14 p-0.5">
+                                <span class="text-purple-300 font-semibold text-[10px] md:text-xs">24</span>
+                                <span class="text-purple-400 text-[7px] md:text-[8px] font-bold scale-90 origin-center">超商繳費</span>
+                            </div>
+                            <!-- 🟣 6/25 JP 繳費中 (繳費連線中) -->
+                            <div class="py-1 bg-purple-600/10 rounded border-y border-purple-500/30 flex flex-col justify-between h-14 p-0.5">
+                                <span class="text-purple-300 font-semibold text-[10px] md:text-xs">25</span>
+                                <span class="text-purple-400 text-[7px] md:text-[8px] font-bold scale-90 origin-center">超商繳費</span>
+                            </div>
+                            <!-- 🟣🔵 6/26 JP繳費截止 & GLOBAL Lawson申請開始 (繳費連線終點 / Lawson連線起點，精簡為 全球抽籤) -->
+                            <div class="py-1 bg-purple-600/20 rounded border border-purple-500 flex flex-col justify-between h-14 p-0.5">
+                                <span class="text-purple-400 font-bold text-[10px] md:text-xs">26</span>
+                                <span class="bg-purple-600 text-white text-[7px] md:text-[8px] font-semibold py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">全球抽籤</span>
+                            </div>
+                            <!-- 🔵 6/27 GLOBAL Lawson 申請中 (Lawson連線中) -->
+                            <div class="py-1 bg-blue-600/10 rounded border-y border-blue-500/30 flex flex-col justify-between h-14 p-0.5">
+                                <span class="text-blue-300 font-semibold text-[10px] md:text-xs">27</span>
+                                <span class="text-blue-400 text-[7px] md:text-[8px] font-bold scale-90 origin-center">申請中</span>
+                            </div>
+
+                            <!-- 6/28 ~ 6/30 -->
+                            <!-- 🔵 6/28 GLOBAL Lawson 申請中 (Lawson連線中) -->
+                            <div class="py-1 bg-blue-600/10 rounded border-y border-blue-500/30 flex flex-col justify-between h-14 p-0.5">
+                                <span class="text-blue-300 font-semibold text-[10px] md:text-xs">28</span>
+                                <span class="text-blue-400 text-[7px] md:text-[8px] font-bold scale-90 origin-center">申請中</span>
+                            </div>
+                            <!-- 🔵 6/29 GLOBAL Lawson 申請截止 (Lawson連線終點，精簡為 全球截止) -->
+                            <div class="py-1 bg-blue-600/20 rounded border-y border-r border-blue-500 flex flex-col justify-between h-14 p-0.5">
+                                <span class="text-blue-400 font-bold text-[10px] md:text-xs">29</span>
+                                <span class="bg-blue-600 text-white text-[7px] md:text-[8px] font-semibold py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">全球截止</span>
+                            </div>
+                            <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                                <span class="text-gray-500 font-semibold text-[10px] md:text-xs">30</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. 七月份月曆 -->
+                    <div class="bg-[#111317] -mx-6 lg:mx-0 p-2 md:p-4 rounded-none lg:rounded-lg border-y lg:border border-gray-800">
+                        <div class="text-center font-bold text-sm text-gray-400 mb-2">2026年 7月 (July)</div>
+                        <div class="grid grid-cols-7 gap-1 text-center text-xs w-full">
+                            <!-- 星期欄頭 -->
+                            <div class="font-bold text-gray-500 py-1 text-[10px] md:text-xs">日</div>
+                            <div class="font-bold text-gray-500 py-1 text-[10px] md:text-xs">一</div>
+                            <div class="font-bold text-gray-500 py-1 text-[10px] md:text-xs">二</div>
+                            <div class="font-bold text-gray-500 py-1 text-[10px] md:text-xs">三</div>
+                            <div class="font-bold text-gray-500 py-1 text-[10px] md:text-xs">四</div>
+                            <div class="font-bold text-gray-500 py-1 text-[10px] md:text-xs">五</div>
+                            <div class="font-bold text-gray-500 py-1 text-[10px] md:text-xs">六</div>
+
+                            <!-- 第一週空欄 (7/1 是星期三) -->
+                            <div class="py-2 bg-transparent"></div>
+                            <div class="py-2 bg-transparent"></div>
+                            <div class="py-2 bg-transparent"></div>
+                            
+                            <!-- 7/1 ~ 7/4 -->
+                            <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                                <span class="text-gray-500 font-semibold text-[10px] md:text-xs">1</span>
+                            </div>
+                            <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                                <span class="text-gray-500 font-semibold text-[10px] md:text-xs">2</span>
+                            </div>
+                            <!-- 🔵 7/3 GLOBAL 中籤公佈 (極重要單日高亮藍，精簡為 結果公佈) -->
+                            <div class="py-1 bg-blue-600/20 rounded border border-blue-500 flex flex-col justify-between h-14 p-0.5">
+                                <span class="text-blue-400 font-bold text-[10px] md:text-xs">3</span>
+                                <span class="bg-blue-600 text-white text-[7px] md:text-[8px] font-semibold py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">結果公佈</span>
+                            </div>
+                            <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                                <span class="text-gray-500 font-semibold text-[10px] md:text-xs">4</span>
+                            </div>
+
+                            <!-- 7/5 以後 (略) -->
+                            <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                                <span class="text-gray-500 font-semibold text-[10px] md:text-xs">5</span>
+                            </div>
+                            <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                                <span class="text-gray-500 font-semibold text-[10px] md:text-xs">6</span>
+                            </div>
+                            <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                                <span class="text-gray-500 font-semibold text-[10px] md:text-xs">7</span>
+                            </div>
+                            <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                                <span class="text-gray-500 font-semibold text-[10px] md:text-xs">8</span>
+                            </div>
+                            <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                                <span class="text-gray-500 font-semibold text-[10px] md:text-xs">9</span>
+                            </div>
+                            <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                                <span class="text-gray-500 font-semibold text-[10px] md:text-xs">10</span>
+                            </div>
+                            <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                                <span class="text-gray-500 font-semibold text-[10px] md:text-xs">11</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 備忘 timeline 清單 -->
+                <div class="bg-gray-900/50 p-4 rounded-lg text-xs text-gray-400 space-y-2 leading-relaxed mt-4">
+                    <p class="font-bold text-white">📋 日本場重要日程備忘 (台灣時間)：</p>
+                    <p>• <span class="text-red-400 font-bold">6月 5日 (五) 12:00 ~ 6月 11日 (四) 22:59</span>：【JP 會員】優先抽選申請</p>
+                    <p>• <span class="text-blue-400 font-bold">6月 20日 (六) 12:00 ~ 6月 22日 (一) 22:59</span>：【GLOBAL 會員】Weverse 搶先參加登記</p>
+                    <p>• <span class="text-purple-400 font-bold">6月 22日 (一) 10:00</span>：【JP 會員】中籤結果公佈 &amp; 繳費開始</p>
+                    <p>• <span class="text-blue-400 font-bold">6月 26日 (五) 12:00 ~ 6月 29日 (一) 22:59</span>：【GLOBAL 會員】Lawson 抽選申請期間</p>
+                    <p>• <span class="text-purple-400 font-bold">6月 26日 (五) 22:00</span>：【JP 會員】中籤超商入金繳費截止</p>
+                    <p>• <span class="text-blue-400 font-bold">7月 3日 (五) 17:00</span>：【GLOBAL 會員】抽籤結果公佈</p>
                 </div>
             </div>
 
@@ -307,7 +556,7 @@
                         <div class="space-y-3">
                             <div class="bg-gray-950 p-3 rounded">
                                 <span class="text-blue-400 font-bold">① Weverse 全球會員卡 (ONLINE MEMBERSHIP CARD)</span>
-                                <p class="text-gray-400 mt-1">需現場用手機開啟 Weverse App，顯示以 <span class="text-yellow-400 font-bold">「CO」</span> 開頭的 9 位數全球會員卡畫面。<span class="text-red-400 font-bold">※ 嚴禁出示螢幕截圖！</span></p>
+                                <p class="text-gray-400 mt-1">需現場用手機開啟 Weverse App，顯示以 <span class="text-yellow-400 font-bold">「BR」</span> 開頭的 9 位數全球會員卡畫面。<span class="text-red-400 font-bold">※ 嚴禁出示螢幕截圖！</span></p>
                             </div>
 
                             <div class="bg-gray-950 p-3 rounded">
@@ -328,7 +577,7 @@
                         <h3 class="font-bold text-[#e03e3e] text-sm mb-2">🇯🇵 JP 會員入場查驗物品：</h3>
                         <p class="text-gray-400 mb-2">日本會員需於事前在超商印好實體門票，並在現場核對以下兩樣物品（VIP 席 100% 查驗；指定席隨機抽查）：</p>
                         <ul class="list-disc pl-4 space-y-1 text-gray-400">
-                            <li>Weverse 行動會員卡：手機顯示以 <span class="text-yellow-400 font-bold">「CO」</span> 開頭的日本會員卡畫面（不可截圖）。</li>
+                            <li>Weverse 行動會員卡：手機顯示以 <span class="text-yellow-400 font-bold">["CO"]</span> 開頭的日本會員卡畫面（不可截圖）。</li>
                             <li>護照 (Passport) 正本。</li>
                         </ul>
                     </div>
@@ -359,6 +608,7 @@
             'btn-info': 'content-info',
             'btn-seats': 'content-seats',
             'btn-schedule': 'content-schedule',
+            'btn-calendar': 'content-calendar', // 🌟 日曆分頁連動啟用
             'btn-entry': 'content-entry',
             'btn-rules': 'content-rules'
         };
