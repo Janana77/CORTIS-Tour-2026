@@ -1,5 +1,5 @@
 
-<html data-type="html" data-identifier="245a165f-d5c9-43e8-a9ac-cf25b57419d5" data-title="CORTIS Tour Incheon 售票資訊 (精緻純文字月曆版)" data-version="17"><head>
+<html data-type="html" data-identifier="245a165f-d5c9-43e8-a9ac-cf25b57419d5" data-title="CORTIS Tour Incheon 售票資訊 (自動更新日曆版)" data-version="18"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -84,7 +84,7 @@
         <!-- Content Area -->
         <div class="p-6">
             
-            <!-- Tab 1: 演出資訊 -->
+            <!-- Tab 1: 演出資訊 (略) -->
             <div id="content-info" class="tab-content space-y-6">
                 <div class="flex items-center mb-4">
                     <span class="red-bullet"></span>
@@ -139,7 +139,7 @@
                 </div>
             </div>
 
-            <!-- Tab 2: 座位圖與票價 -->
+            <!-- Tab 2: 座位圖與票價 (略) -->
             <div id="content-seats" class="tab-content hidden space-y-6">
                 <div class="flex items-center mb-4">
                     <span class="red-bullet"></span>
@@ -260,14 +260,12 @@
 
             <!-- Tab 3: 購票時程 -->
             <div id="content-schedule" class="tab-content hidden space-y-6">
+                <!-- 原購票時程卡片 (略) -->
                 <div class="flex items-center mb-4">
                     <span class="red-bullet"></span>
                     <h2 class="text-xl font-bold text-white">購票日程表</h2>
                 </div>
-
-                <!-- Process Flow Cards (已替換為 韓國內 字眼) -->
                 <div class="space-y-4">
-                    <!-- Step 1: Membership Verification -->
                     <div class="bg-gradient-to-r from-[#e03e3e]/10 to-transparent p-5 rounded-lg border-l-4 border-[#e03e3e] border-y border-r border-gray-800">
                         <span class="text-xs bg-[#e03e3e] text-white px-2 py-0.5 rounded-full font-bold">1. 官方會員優先認證</span>
                         <h3 class="text-md font-bold text-white mt-2">COER MEMBERSHIP 會員認證 (韓國內及全球頁面)</h3>
@@ -283,8 +281,6 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- Step 2: Member Pre-sale -->
                     <div class="bg-gray-900 p-5 rounded-lg border border-gray-800">
                         <span class="text-xs bg-gray-700 text-white px-2 py-0.5 rounded-full font-bold">2. 官方會員優先購票</span>
                         <h3 class="text-md font-bold text-white mt-2">COER MEMBERSHIP 優先售票</h3>
@@ -301,8 +297,6 @@
                         </div>
                         <p class="text-[10px] text-red-400 mt-2">⚠️ 購票張數限制：每人每場次限購 1 張，兩場演出共限購 2 張。</p>
                     </div>
-
-                    <!-- Step 3: General Sale -->
                     <div class="bg-gray-900 p-5 rounded-lg border border-gray-800">
                         <span class="text-xs bg-blue-600 text-white px-2 py-0.5 rounded-full font-bold">3. 一般售票</span>
                         <h3 class="text-md font-bold text-white mt-2">一般全面開賣</h3>
@@ -316,8 +310,7 @@
                 </div>
             </div>
 
-            <!-- 📅 售票日程表 -->
-            <!-- 🛠️ 滿版 Edge-to-Edge 優化：-mx-6 md:mx-0 移除多餘Padding，不需滑動一目了然！ -->
+            <!-- 📅 售票日程表 (自動計算今日，並以 JavaScript 高亮 2026年6月份對應日期) -->
             <div id="content-calendar" class="tab-content hidden space-y-6 relative">
                 <!-- 🛡️ 內嵌防截圖浮水印 -->
                 <div class="absolute bottom-4 right-6 text-[10px] text-gray-600 select-none pointer-events-none font-bold tracking-widest opacity-60">Made by Threads @janana_avatar</div>
@@ -327,13 +320,13 @@
                     <h2 class="text-xl font-bold text-white">2026 CORTIS TOUR 售票日程表 (台灣時間)</h2>
                 </div>
 
-                <!-- 滿版極致放大容器：-mx-6 md:mx-0 p-2 md:p-6 圓角在手機端消除，最大化利用螢幕寬度 -->
+                <!-- 滿版極致放大外框，手機貼邊 (-mx-6 md:mx-0 p-2 md:p-6 rounded-none md:rounded-lg) -->
                 <div class="bg-[#111317] -mx-6 md:mx-0 p-2 md:p-6 rounded-none md:rounded-lg border-y md:border border-gray-800">
-                    <!-- 今日日期標記 -->
+                    <!-- 今日日期標記：由 JavaScript 自動寫入目前時間與星期 -->
                     <div class="mb-4 bg-yellow-500/10 border border-yellow-500/30 p-3 rounded-lg flex items-center justify-between text-xs mx-1">
                         <div>
-                            <span class="text-yellow-400 font-bold block">📅 今日日期：2026年 6月 8日 (星期一)</span>
-                            <span class="text-gray-400">目前處於：等待認證階段。請確保您已加入 COER 會員。</span>
+                            <span id="current-date-text" class="text-yellow-400 font-bold block">📅 今日日期：讀取中...</span>
+                            <span id="current-date-hint" class="text-gray-400">目前處於售票準備期。</span>
                         </div>
                         <span class="bg-yellow-500 text-black font-black px-2 py-0.5 rounded text-[10px] animate-pulse">TODAY</span>
                     </div>
@@ -341,7 +334,7 @@
                     <!-- 6月份月曆 -->
                     <div class="text-center font-bold text-sm text-gray-400 mb-2">2026年 6月 (June)</div>
                     
-                    <!-- 💡 刪除橫向滾動，改為極窄字型 text-[7px] md:text-sm 加上極致縮寫標籤，保證 100% 不折行 -->
+                    <!-- 網格容器：手機不縮小，全部在一個畫面露出 -->
                     <div class="grid grid-cols-7 gap-1 text-center text-xs md:text-sm w-full">
                         <div class="font-bold text-gray-500 py-1 text-[10px] md:text-sm">日</div>
                         <div class="font-bold text-gray-500 py-1 text-[10px] md:text-sm">一</div>
@@ -354,116 +347,168 @@
                         <!-- 5/31 空欄 -->
                         <div class="py-2 bg-transparent"></div>
                         
-                        <!-- 6/1 ~ 6/7 -->
-                        <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                            <span class="text-gray-500 font-semibold text-[10px] md:text-sm">1</span>
+                        <!-- 6/1 ~ 6/30 的每個單元格皆定義獨立 ID 供 JS 讀取與動態高亮 -->
+                        <!-- 6/1 -->
+                        <div id="day-6-1" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="day-num text-gray-500 font-semibold text-[10px] md:text-sm">1</span>
+                            <div class="badge-container w-full"></div>
                         </div>
-                        <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                            <span class="text-gray-500 font-semibold text-[10px] md:text-sm">2</span>
+                        <!-- 6/2 -->
+                        <div id="day-6-2" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="day-num text-gray-500 font-semibold text-[10px] md:text-sm">2</span>
+                            <div class="badge-container w-full"></div>
                         </div>
-                        <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                            <span class="text-gray-500 font-semibold text-[10px] md:text-sm">3</span>
+                        <!-- 6/3 -->
+                        <div id="day-6-3" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="day-num text-gray-500 font-semibold text-[10px] md:text-sm">3</span>
+                            <div class="badge-container w-full"></div>
                         </div>
-                        <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                            <span class="text-gray-500 font-semibold text-[10px] md:text-sm">4</span>
+                        <!-- 6/4 -->
+                        <div id="day-6-4" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="day-num text-gray-500 font-semibold text-[10px] md:text-sm">4</span>
+                            <div class="badge-container w-full"></div>
                         </div>
-                        <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                            <span class="text-gray-500 font-semibold text-[10px] md:text-sm">5</span>
+                        <!-- 6/5 -->
+                        <div id="day-6-5" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="day-num text-gray-500 font-semibold text-[10px] md:text-sm">5</span>
+                            <div class="badge-container w-full"></div>
                         </div>
-                        <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                            <span class="text-gray-500 font-semibold text-[10px] md:text-sm">6</span>
+                        <!-- 6/6 -->
+                        <div id="day-6-6" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="day-num text-gray-500 font-semibold text-[10px] md:text-sm">6</span>
+                            <div class="badge-container w-full"></div>
                         </div>
-
-                        <!-- 6/7 ~ 6/13 -->
-                        <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                            <span class="text-gray-500 font-semibold text-[10px] md:text-sm">7</span>
+                        <!-- 6/7 -->
+                        <div id="day-6-7" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="day-num text-gray-500 font-semibold text-[10px] md:text-sm">7</span>
+                            <div class="badge-container w-full"></div>
                         </div>
-                        <!-- 6/8 今日高亮 -->
-                        <div class="py-1 bg-yellow-500/10 rounded border border-yellow-500 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1 relative ring-1 ring-yellow-500 shadow-lg shadow-yellow-500/10">
-                            <span class="text-yellow-400 font-bold text-[10px] md:text-sm">8</span>
-                            <span class="bg-yellow-500 text-black text-[7px] md:text-[8px] font-black py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">📅 今天</span>
+                        <!-- 6/8 (JS 自動動態高亮，HTML中先設為一般格) -->
+                        <div id="day-6-8" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="day-num text-gray-500 font-semibold text-[10px] md:text-sm">8</span>
+                            <div class="badge-container w-full"></div>
                         </div>
-                        <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                            <span class="text-gray-500 font-semibold text-[10px] md:text-sm">9</span>
+                        <!-- 6/9 -->
+                        <div id="day-6-9" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="day-num text-gray-500 font-semibold text-[10px] md:text-sm">9</span>
+                            <div class="badge-container w-full"></div>
                         </div>
-                        <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                            <span class="text-gray-500 font-semibold text-[10px] md:text-sm">10</span>
+                        <!-- 6/10 -->
+                        <div id="day-6-10" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="day-num text-gray-500 font-semibold text-[10px] md:text-sm">10</span>
+                            <div class="badge-container w-full"></div>
                         </div>
-                        <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                            <span class="text-gray-500 font-semibold text-[10px] md:text-sm">11</span>
+                        <!-- 6/11 -->
+                        <div id="day-6-11" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="day-num text-gray-500 font-semibold text-[10px] md:text-sm">11</span>
+                            <div class="badge-container w-full"></div>
                         </div>
-                        <!-- 🔵 6/12 會籍認證開始 (已優化為 🔵認證開始) -->
-                        <div class="py-1 bg-blue-600/20 rounded border-y border-l border-blue-500 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                            <span class="text-blue-400 font-bold text-[10px] md:text-sm">12</span>
-                            <span class="bg-blue-600 text-white text-[7px] md:text-[8px] font-semibold py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">會員認證</span>
+                        <!-- 6/12 會籍認證開始 (認證連線起點) -->
+                        <div id="day-6-12" class="py-1 bg-blue-600/20 rounded border-y border-l border-blue-500 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="day-num text-blue-400 font-bold text-[10px] md:text-sm">12</span>
+                            <div class="badge-container w-full">
+                                <span class="bg-blue-600 text-white text-[7px] md:text-[8px] font-semibold py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">會員認證</span>
+                            </div>
                         </div>
-                        <!-- 🔵 6/13 會籍認證中 -->
-                        <div class="py-1 bg-blue-600/10 rounded border-y border-blue-500/30 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                            <span class="text-blue-300 font-semibold text-[10px] md:text-sm">13</span>
-                            <span class="text-blue-400 text-[7px] md:text-[8px] font-bold scale-90 origin-center">認證中</span>
+                        <!-- 6/13 會籍認證中 -->
+                        <div id="day-6-13" class="py-1 bg-blue-600/10 rounded border-y border-blue-500/30 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="day-num text-blue-300 font-semibold text-[10px] md:text-sm">13</span>
+                            <div class="badge-container w-full">
+                                <span class="text-blue-400 text-[7px] md:text-[8px] font-bold scale-90 origin-center">認證中</span>
+                            </div>
                         </div>
-
-                        <!-- 6/14 ~ 6/20 -->
-                        <!-- 🔵 6/14 會籍認證中 -->
-                        <div class="py-1 bg-blue-600/10 rounded border-y border-blue-500/30 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                            <span class="text-blue-300 font-semibold text-[10px] md:text-sm">14</span>
-                            <span class="text-blue-400 text-[7px] md:text-[8px] font-bold scale-90 origin-center">認證中</span>
+                        <!-- 6/14 會籍認證中 -->
+                        <div id="day-6-14" class="py-1 bg-blue-600/10 rounded border-y border-blue-500/30 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="day-num text-blue-300 font-semibold text-[10px] md:text-sm">14</span>
+                            <div class="badge-container w-full">
+                                <span class="text-blue-400 text-[7px] md:text-[8px] font-bold scale-90 origin-center">認證中</span>
+                            </div>
                         </div>
-                        <!-- 🔵🔴 6/15 韓國內優先售票 / 韓國內認證截止 (已精簡為 🔴韓國內) -->
-                        <div class="py-1 bg-gradient-to-r from-blue-600/10 to-red-600/10 rounded border-y border-red-500/40 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                            <span class="text-[#e03e3e] font-bold text-[10px] md:text-sm">15</span>
-                            <span class="bg-[#e03e3e] text-white text-[7px] md:text-[8px] font-semibold py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">韓國售票</span>
+                        <!-- 6/15 韓國內優先售票 / 認證截止 -->
+                        <div id="day-6-15" class="py-1 bg-gradient-to-r from-blue-600/10 to-red-600/10 rounded border-y border-red-500/40 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="day-num text-[#e03e3e] font-bold text-[10px] md:text-sm">15</span>
+                            <div class="badge-container w-full">
+                                <span class="bg-[#e03e3e] text-white text-[7px] md:text-[8px] font-semibold py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">韓國售票</span>
+                            </div>
                         </div>
-                        <!-- 🔵🔴 6/16 全球優先售票 / 全球認證截止 (已精簡為 🔴全球) -->
-                        <div class="py-1 bg-red-600/20 rounded border-y border-r border-red-500 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                            <span class="text-[#e03e3e] font-bold text-[10px] md:text-sm">16</span>
-                            <span class="bg-[#e03e3e] text-white text-[7px] md:text-[8px] font-semibold py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">全球售票</span>
+                        <!-- 6/16 全球優先售票 / 認證截止 -->
+                        <div id="day-6-16" class="py-1 bg-red-600/20 rounded border-y border-r border-red-500 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="day-num text-[#e03e3e] font-bold text-[10px] md:text-sm">16</span>
+                            <div class="badge-container w-full">
+                                <span class="bg-[#e03e3e] text-white text-[7px] md:text-[8px] font-semibold py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">全球售票</span>
+                            </div>
                         </div>
-                        <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                            <span class="text-gray-500 font-semibold text-[10px] md:text-sm">17</span>
+                        <!-- 6/17 -->
+                        <div id="day-6-17" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="day-num text-gray-500 font-semibold text-[10px] md:text-sm">17</span>
+                            <div class="badge-container w-full"></div>
                         </div>
-                        <!-- 6/18 一般售票開始 (已精簡為 🎟️一般) -->
-                        <div class="py-1 bg-blue-600/10 rounded border border-blue-500/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                            <span class="text-blue-400 font-bold text-[10px] md:text-sm">18</span>
-                            <span class="bg-blue-600 text-white text-[7px] md:text-[8px] font-semibold py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">一般售票</span>
+                        <!-- 6/18 一般售票開始 -->
+                        <div id="day-6-18" class="py-1 bg-blue-600/10 rounded border border-blue-500/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="day-num text-blue-400 font-bold text-[10px] md:text-sm">18</span>
+                            <div class="badge-container w-full">
+                                <span class="bg-blue-600 text-white text-[7px] md:text-[8px] font-semibold py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">一般售票</span>
+                            </div>
                         </div>
-                        <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                            <span class="text-gray-500 font-semibold text-[10px] md:text-sm">19</span>
+                        <!-- 6/19 -->
+                        <div id="day-6-19" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="day-num text-gray-500 font-semibold text-[10px] md:text-sm">19</span>
+                            <div class="badge-container w-full"></div>
                         </div>
-                        <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                            <span class="text-gray-500 font-semibold text-[10px] md:text-sm">20</span>
+                        <!-- 6/20 -->
+                        <div id="day-6-20" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="day-num text-gray-500 font-semibold text-[10px] md:text-sm">20</span>
+                            <div class="badge-container w-full"></div>
                         </div>
-
-                        <!-- 6/21 ~ 6/30 -->
-                        <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                            <span class="text-gray-500 font-semibold text-[10px] md:text-sm">21</span>
+                        <!-- 6/21 -->
+                        <div id="day-6-21" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="day-num text-gray-500 font-semibold text-[10px] md:text-sm">21</span>
+                            <div class="badge-container w-full"></div>
                         </div>
-                        <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                            <span class="text-gray-500 font-semibold text-[10px] md:text-sm">22</span>
+                        <!-- 6/22 -->
+                        <div id="day-6-22" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="day-num text-gray-500 font-semibold text-[10px] md:text-sm">22</span>
+                            <div class="badge-container w-full"></div>
                         </div>
-                        <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                            <span class="text-gray-500 font-semibold text-[10px] md:text-sm">23</span>
+                        <!-- 6/23 -->
+                        <div id="day-6-23" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="day-num text-gray-500 font-semibold text-[10px] md:text-sm">23</span>
+                            <div class="badge-container w-full"></div>
                         </div>
-                        <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                            <span class="text-gray-500 font-semibold text-[10px] md:text-sm">24</span>
+                        <!-- 6/24 -->
+                        <div id="day-6-24" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="day-num text-gray-500 font-semibold text-[10px] md:text-sm">24</span>
+                            <div class="badge-container w-full"></div>
                         </div>
-                        <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                            <span class="text-gray-500 font-semibold text-[10px] md:text-sm">25</span>
+                        <!-- 6/25 -->
+                        <div id="day-6-25" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="day-num text-gray-500 font-semibold text-[10px] md:text-sm">25</span>
+                            <div class="badge-container w-full"></div>
                         </div>
-                        <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                            <span class="text-gray-500 font-semibold text-[10px] md:text-sm">26</span>
+                        <!-- 6/26 -->
+                        <div id="day-6-26" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="day-num text-gray-500 font-semibold text-[10px] md:text-sm">26</span>
+                            <div class="badge-container w-full"></div>
                         </div>
-                        <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                            <span class="text-gray-500 font-semibold text-[10px] md:text-sm">27</span>
+                        <!-- 6/27 -->
+                        <div id="day-6-27" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="day-num text-gray-500 font-semibold text-[10px] md:text-sm">27</span>
+                            <div class="badge-container w-full"></div>
                         </div>
-                        <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                            <span class="text-gray-500 font-semibold text-[10px] md:text-sm">28</span>
+                        <!-- 6/28 -->
+                        <div id="day-6-28" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="day-num text-gray-500 font-semibold text-[10px] md:text-sm">28</span>
+                            <div class="badge-container w-full"></div>
                         </div>
-                        <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                            <span class="text-gray-500 font-semibold text-[10px] md:text-sm">29</span>
+                        <!-- 6/29 -->
+                        <div id="day-6-29" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="day-num text-gray-500 font-semibold text-[10px] md:text-sm">29</span>
+                            <div class="badge-container w-full"></div>
                         </div>
-                        <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
-                            <span class="text-gray-500 font-semibold text-[10px] md:text-sm">30</span>
+                        <!-- 6/30 -->
+                        <div id="day-6-30" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 md:h-20 p-0.5 md:p-1">
+                            <span class="day-num text-gray-500 font-semibold text-[10px] md:text-sm">30</span>
+                            <div class="badge-container w-full"></div>
                         </div>
                     </div>
                 </div>
@@ -478,7 +523,7 @@
                 </div>
             </div>
 
-            <!-- Tab 4: 入場與實名制 -->
+            <!-- Tab 4: 入場與實名制 (略) -->
             <div id="content-entry" class="tab-content hidden space-y-6">
                 <div class="flex items-center">
                     <span class="red-bullet"></span>
@@ -491,7 +536,7 @@
                 </div>
             </div>
 
-            <!-- Tab 5: 觀演須知 & 交通 -->
+            <!-- Tab 5: 觀演須知 & 交通 (略) -->
             <div id="content-rules" class="tab-content hidden space-y-6">
                 <div class="space-y-4">
                     <div class="flex items-center">
@@ -543,15 +588,13 @@
                     </div>
                 </div>
 
-                <!-- Luggage Storage -->
-                <div class="bg-gray-900 p-4 rounded-lg border border-gray-800 text-xs space-y-2">
+                <div class="bg-gray-900 p-4 rounded-lg text-xs space-y-2">
                     <h3 class="font-bold text-white">🎒 寄物處規範</h3>
                     <p class="text-gray-400">• 費用：5,000 韓元 (可刷卡、付現) / 再次寄物費用：5,000 韓元</p>
                     <p class="text-gray-400">• 營運時間：公演開始前 6 小時開放，直至公演結束後半小時關閉。</p>
                     <p class="text-red-400">• 貴重物品、易碎品及寵物不接受寄放。因個人保管不當造成的遺失 or 損壞，主辦方恕不負責。</p>
                 </div>
 
-                <!-- Venue Rules -->
                 <div class="bg-[#1a1d24] border border-red-600/30 p-4 rounded-lg text-xs space-y-2">
                     <h3 class="font-bold text-red-400">🚫 嚴禁行為</h3>
                     <p class="text-gray-400">• 嚴禁攜帶瓶裝水以外的所有食物 and 飲料進入場館。</p>
@@ -559,7 +602,6 @@
                     <p class="text-red-400 font-bold">• <span class="font-bold">「手機與相機錄影政策」</span>：本公演裝備嚴禁進行錄影、錄音、語音直播 or 高規格專業攝影。一經發現，將被強制刪除素材並請離現場，且不予退票。</p>
                 </div>
 
-                <!-- Transportation -->
                 <div class="space-y-4">
                     <div class="flex items-center">
                         <span class="red-bullet"></span>
@@ -596,7 +638,7 @@
         </div>
     </div>
 
-    <!-- Tab Logic Script -->
+    <!-- Tab Logic Script (內含自動化「今日日期高亮與寫入」腳本) -->
     <script>
         const buttons = {
             'btn-info': 'content-info',
@@ -627,5 +669,70 @@
                 });
             }
         });
+
+        // 🌟 自動化動態時間引擎 🌟
+        (function() {
+            const today = new Date();
+            const year = today.getFullYear();
+            const month = today.getMonth() + 1; // 1-12
+            const date = today.getDate();
+            const dayNames = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+            const dayName = dayNames[today.getDay()];
+
+            // 1. 自動寫入目前時間與星期
+            const dateTextEl = document.getElementById('current-date-text');
+            if (dateTextEl) {
+                dateTextEl.innerText = `📅 今日日期：${year}年 ${month}月 ${date}日 (${dayName})`;
+            }
+
+            // 2. 自動判斷目前搶票進度並給予提示
+            const hintTextEl = document.getElementById('current-date-hint');
+            if (hintTextEl) {
+                if (year === 2026 && month === 6) {
+                    if (date < 12) {
+                        hintTextEl.innerText = "目前處於：等待認證階段。請確保您已加入 COER 會員。";
+                    } else if (date >= 12 && date <= 14) {
+                        hintTextEl.innerText = "目前正處於：【會員優先認證期間】。請前往售票頁面認證！";
+                    } else if (date === 15) {
+                        hintTextEl.innerText = "🚨 今天 19:00：【韓國內會員優先購票】開放！(認證於 22:59 截止)";
+                    } else if (date === 16) {
+                        hintTextEl.innerText = "🚨 今天 19:00：【全球會員優先購票】開放！(認證於 22:59 截止)";
+                    } else if (date === 17) {
+                        hintTextEl.innerText = "目前處於：優先售票已結束。等待明日一般售票開放。";
+                    } else if (date === 18) {
+                        hintTextEl.innerText = "🚨 今天 19:00：【一般全面開賣】開放！(先搶先贏)";
+                    } else {
+                        hintTextEl.innerText = "仁川場售票已全部結束。祝大家觀演順利！";
+                    }
+                } else {
+                    hintTextEl.innerText = "售票活動尚未開始，或已全數圓滿結束。";
+                }
+            }
+
+            // 3. 自動高亮今天的月曆格子 (限 2026 年 6 月)
+            if (year === 2026 && month === 6) {
+                const todayCell = document.getElementById(`day-6-${date}`);
+                if (todayCell) {
+                    // 移除普通的灰色背景與邊框
+                    todayCell.classList.remove('bg-gray-900/40', 'border-gray-800/50');
+                    
+                    // 披上金黃色閃爍高亮與陰影外框
+                    todayCell.classList.add('bg-yellow-500/10', 'border-yellow-500', 'ring-1', 'ring-yellow-500', 'shadow-lg', 'shadow-yellow-500/10');
+                    
+                    // 修改數字顏色為鮮艷金黃
+                    const dateNumSpan = todayCell.querySelector('.day-num');
+                    if (dateNumSpan) {
+                        dateNumSpan.classList.remove('text-gray-500');
+                        dateNumSpan.classList.add('text-yellow-400', 'font-bold');
+                    }
+
+                    // 動態將格內的小字更換成「📅 今天」標籤
+                    const badgeContainer = todayCell.querySelector('.badge-container');
+                    if (badgeContainer) {
+                        badgeContainer.innerHTML = `<span class="bg-yellow-500 text-black text-[7px] md:text-[8px] font-black py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">📅 今天</span>`;
+                    }
+                }
+            }
+        })();
     </script>
 </body></html>
