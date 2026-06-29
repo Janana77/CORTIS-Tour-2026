@@ -1,5 +1,5 @@
 
-<html data-type="html" data-identifier="0bbdfcb0-23a1-4357-96bf-a8647a407fa2" data-title="CORTIS Tour Japan 售票資訊 (PWAApp極致穩定版)" data-version="17"><head>
+<html data-type="html" data-identifier="0bbdfcb0-23a1-4357-96bf-a8647a407fa2" data-title="CORTIS Tour Japan 售票資訊 (日本會員第二輪抽選修正版)" data-version="18"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -161,7 +161,7 @@
                 </div>
             </div>
 
-            <!-- Tab 2: 票價與VIP福利 -->
+            <!-- Tab 2: 票價與VIP福利 (已加入防呆提醒 ⚠️) -->
             <div id="content-seats" class="tab-content hidden space-y-6">
                 <div class="flex items-center mb-4">
                     <span class="red-bullet"></span>
@@ -176,6 +176,7 @@
                     </div>
                     <p class="text-xs md:text-sm text-gray-300 leading-relaxed">
                         VIP 席僅開放給擁有 <span class="text-[#e03e3e] font-bold">COER MEMBERSHIP (JP 或 GLOBAL) 官方會員</span> 進行第二階段的「加價抽選升級」。不提供一般販售！
+                        <span class="text-yellow-400 font-bold block mt-1">⚠️ 注意：於「日本會員2次優先抽選」中籤之指定席【不提供】後續升級 VIP 席之資格。</span>
                     </p>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-[13px] text-gray-300 leading-relaxed">
                         <div class="bg-gray-900/80 p-4 rounded border border-gray-800">
@@ -239,10 +240,11 @@
                         </div>
                     </div>
 
-                    <!-- 🇯🇵 新增：JP FC 日本會員第二輪抽選 (2次先行) 專區 -->
+                    <!-- 🇯🇵 JP FC 日本會員第二輪抽選 (2次先行) 專區 (已補上無 VIP 升級警語 ⚠️) -->
                     <div class="bg-gradient-to-r from-red-900/10 to-transparent p-5 rounded-lg border-l-4 border-red-500 border-y border-r border-gray-800">
                         <div class="flex items-center space-x-2">
                             <span class="text-xs bg-red-600 text-white px-2 py-0.5 rounded-full font-bold">🇯🇵 JP 日本會員 2次優先抽選 (第二輪)</span>
+                            <span class="text-xs bg-yellow-500 text-black px-2 py-0.5 rounded-full font-bold animate-pulse">🎉 支援線上刷卡</span>
                         </div>
                         <h3 class="text-md font-bold text-white mt-2">COER MEMBERSHIP (JP) 日本會員第 2 輪抽選時程</h3>
                         <p class="text-xs text-gray-400 mt-1">※ 已中籤且付清相同公演的會員，再度申請將被視為落選對象。</p>
@@ -261,9 +263,10 @@
                         </div>
 
                         <!-- 2次抽選專屬通知 -->
-                        <div class="mt-3 bg-red-950/20 border border-red-800/40 p-3 rounded-lg text-xs">
-                            <span class="text-yellow-400 font-bold">💳 2次開放海外付款：</span>
-                            <span class="text-gray-300">本階段抽選付款方式<span class="text-white font-bold underline">支援「信用卡線上刷卡」與「手機代付」</span>！中籤後可以直接用台灣信用卡完成扣款，不需跑 Lawson 超商</span>
+                        <div class="mt-3 bg-red-950/20 border border-red-800/40 p-3 rounded-lg text-xs space-y-2">
+                            <p class="text-gray-300 font-semibold"><span class="text-yellow-400 font-bold">💳 2次開放海外付款：</span>本階段抽選付款方式支援「信用卡線上刷卡」與「手機代付」！中籤後可以直接用台灣信用卡完成扣款，不需跑 Lawson 超商</p>
+                            <!-- ⚠️ 關鍵防呆警語 -->
+                            <p class="text-red-400 font-bold">🚨 2次重大限制：中籤且入金之指定席，官方規定【不提供】後續升級為 VIP 席之抽選資格，敬請注意！</p>
                         </div>
 
                         <!-- 🎟️ JP 2次售票直達按鈕 -->
@@ -313,7 +316,7 @@
                 </div>
 
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                    <!-- 1. 六月份月曆 -->
+                    <!-- 1. 六月份月曆 (已串聯 6/30 JP會員二輪開始之紅色背景連線) -->
                     <div class="bg-[#111317] -mx-6 lg:mx-0 p-2 md:p-4 rounded-none lg:rounded-lg border-y lg:border border-gray-800">
                         <div class="text-center font-bold text-sm text-gray-400 mb-2">2026年 6月 (June)</div>
                         <div class="grid grid-cols-7 gap-1 text-center text-xs w-full">
@@ -327,7 +330,6 @@
 
                             <div class="py-2 bg-transparent"></div>
                             
-                            <!-- 6/1 ~ 6/4 -->
                             <div id="day-6-1" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
                                 <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">1</span>
                                 <div class="badge-container w-full"></div>
@@ -344,11 +346,11 @@
                                 <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">4</span>
                                 <div class="badge-container w-full"></div>
                             </div>
-                            <!-- 🔴 6/5 JP 抽選開始 -->
+                            <!-- 🔴 6/5 JP 抽選開始 (JP優先連線起點) -->
                             <div id="day-6-5" class="py-1 bg-red-600/20 rounded border-y border-l border-red-500 flex flex-col justify-between h-14 p-0.5">
                                 <span class="day-num text-red-400 font-bold text-[10px] md:text-xs">5</span>
                                 <div class="badge-container w-full">
-                                    <span class="bg-red-600 text-white text-[7px] md:text-[8px] font-semibold py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">JP開始</span>
+                                    <span class="bg-red-600/30 text-red-300 text-[7px] md:text-[8px] font-semibold py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">JP開始</span>
                                 </div>
                             </div>
                             <!-- 🔴 6/6 JP 優先抽選中 -->
@@ -429,7 +431,7 @@
                                 <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">19</span>
                                 <div class="badge-container w-full"></div>
                             </div>
-                            <!-- 🔵 6/20 GLOBAL Weverse 開始 (Weverse連線起點) -->
+                            <!-- 🔵 6/20 GLOBAL Weverse 開始 -->
                             <div id="day-6-20" class="py-1 bg-blue-600/20 rounded border-y border-l border-blue-500 flex flex-col justify-between h-14 p-0.5">
                                 <span class="day-num text-blue-400 font-bold text-[10px] md:text-xs">20</span>
                                 <div class="badge-container w-full">
@@ -438,49 +440,49 @@
                             </div>
 
                             <!-- 6/21 ~ 6/27 -->
-                            <!-- 🔵 6/21 GLOBAL Weverse 登記中 (Weverse連線中) -->
+                            <!-- 🔵 6/21 GLOBAL Weverse 登記中 -->
                             <div id="day-6-21" class="py-1 bg-blue-600/10 rounded border-y border-blue-500/30 flex flex-col justify-between h-14 p-0.5">
                                 <span class="text-blue-300 font-semibold text-[10px] md:text-xs">21</span>
                                 <div class="badge-container w-full">
                                     <span class="text-blue-400 text-[7px] md:text-[8px] font-bold scale-90 origin-center">登記中</span>
                                 </div>
                             </div>
-                            <!-- 🔵🟣 6/22 JP 1次中籤結果公佈/繳費開始 & GLOBAL Weverse截止 (Weverse連線終點 / 繳費連線起點) -->
+                            <!-- 🔵🟣 6/22 JP 1次中籤結果公佈/繳費開始 & GLOBAL Weverse截止 -->
                             <div id="day-6-22" class="py-1 bg-purple-600/20 rounded border border-purple-500 flex flex-col justify-between h-14 p-0.5">
                                 <span class="day-num text-purple-400 font-bold text-[10px] md:text-xs">22</span>
                                 <div class="badge-container w-full">
                                     <span class="bg-purple-600 text-white text-[7px] md:text-[8px] font-semibold py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">結果公佈</span>
                                 </div>
                             </div>
-                            <!-- 🟣 6/23 JP 1次繳費中 (繳費連線中) -->
+                            <!-- 🟣 6/23 JP 1次繳費中 -->
                             <div id="day-6-23" class="py-1 bg-purple-600/10 rounded border-y border-purple-500/30 flex flex-col justify-between h-14 p-0.5">
                                 <span class="day-num text-purple-300 font-semibold text-[10px] md:text-xs">23</span>
                                 <div class="badge-container w-full">
                                     <span class="text-purple-400 text-[7px] md:text-[8px] font-bold scale-90 origin-center">超商繳費</span>
                                 </div>
                             </div>
-                            <!-- 🟣 6/24 JP 1次繳費中 (繳費連線中) -->
+                            <!-- 🟣 6/24 JP 1次繳費中 -->
                             <div id="day-6-24" class="py-1 bg-purple-600/10 rounded border-y border-purple-500/30 flex flex-col justify-between h-14 p-0.5">
                                 <span class="day-num text-purple-300 font-semibold text-[10px] md:text-xs">24</span>
                                 <div class="badge-container w-full">
                                     <span class="text-purple-400 text-[7px] md:text-[8px] font-bold scale-90 origin-center">超商繳費</span>
                                 </div>
                             </div>
-                            <!-- 🟣 6/25 JP 1次繳費中 (繳費連線中) -->
+                            <!-- 🟣 6/25 JP 1次繳費中 -->
                             <div id="day-6-25" class="py-1 bg-purple-600/10 rounded border-y border-purple-500/30 flex flex-col justify-between h-14 p-0.5">
                                 <span class="day-num text-purple-300 font-semibold text-[10px] md:text-xs">25</span>
                                 <div class="badge-container w-full">
                                     <span class="text-purple-400 text-[7px] md:text-[8px] font-bold scale-90 origin-center">超商繳費</span>
                                 </div>
                             </div>
-                            <!-- 🟣🔵 6/26 JP 1次繳費截止 & GLOBAL Lawson申請開始 (繳費連線終點 / Lawson連線起點) -->
+                            <!-- 🟣🔵 6/26 JP 1次繳費截止 & GLOBAL Lawson申請開始 -->
                             <div id="day-6-26" class="py-1 bg-purple-600/20 rounded border border-purple-500 flex flex-col justify-between h-14 p-0.5">
                                 <span class="day-num text-purple-400 font-bold text-[10px] md:text-xs">26</span>
                                 <div class="badge-container w-full">
                                     <span class="bg-purple-600 text-white text-[7px] md:text-[8px] font-semibold py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">全球抽籤</span>
                                 </div>
                             </div>
-                            <!-- 🔵 6/27 GLOBAL Lawson 申請中 (Lawson連線中) -->
+                            <!-- 🔵 6/27 GLOBAL Lawson 申請中 -->
                             <div id="day-6-27" class="py-1 bg-blue-600/10 rounded border-y border-blue-500/30 flex flex-col justify-between h-14 p-0.5">
                                 <span class="day-num text-blue-300 font-semibold text-[10px] md:text-xs">27</span>
                                 <div class="badge-container w-full">
@@ -496,14 +498,14 @@
                                     <span class="text-blue-400 text-[7px] md:text-[8px] font-bold scale-90 origin-center">申請中</span>
                                 </div>
                             </div>
-                            <!-- 🔵 6/29 GLOBAL Lawson 申請截止 (Lawson連線終點) -->
+                            <!-- 🔵 6/29 GLOBAL Lawson 申請截止 -->
                             <div id="day-6-29" class="py-1 bg-blue-600/20 rounded border-y border-r border-blue-500 flex flex-col justify-between h-14 p-0.5">
                                 <span class="day-num text-blue-400 font-bold text-[10px] md:text-xs">29</span>
                                 <div class="badge-container w-full">
                                     <span class="bg-blue-600 text-white text-[7px] md:text-[8px] font-semibold py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">全球截止</span>
                                 </div>
                             </div>
-                            <!-- 🔴 6/30 【JP會員2次優先抽選】開始！(JP2次連線起點) -->
+                            <!-- 🔴 6/30 【JP會員2次優先抽選】開始！ -->
                             <div id="day-6-30" class="py-1 bg-red-600/20 rounded border-y border-l border-red-500 flex flex-col justify-between h-14 p-0.5">
                                 <span class="day-num text-red-400 font-bold text-[10px] md:text-xs">30</span>
                                 <div class="badge-container w-full">
@@ -531,34 +533,34 @@
                             <div class="py-2 bg-transparent"></div>
                             
                             <!-- 7/1 ~ 7/4 -->
-                            <!-- 🔴 7/1 JP 2次 抽選中 (JP2次連線中) -->
+                            <!-- 🔴 7/1 JP 2次 抽選中 -->
                             <div id="day-7-1" class="py-1 bg-red-600/10 rounded border-y border-red-500/30 flex flex-col justify-between h-14 p-0.5">
                                 <span class="day-num text-red-300 font-semibold text-[10px] md:text-xs">1</span>
                                 <div class="badge-container w-full">
                                     <span class="text-red-400 text-[7px] md:text-[8px] font-bold scale-90 origin-center">2次抽選中</span>
                                 </div>
                             </div>
-                            <!-- 🔴 7/2 JP 2次 抽選中 (JP2次連線中) -->
+                            <!-- 🔴 7/2 JP 2次 抽選中 -->
                             <div id="day-7-2" class="py-1 bg-red-600/10 rounded border-y border-red-500/30 flex flex-col justify-between h-14 p-0.5">
                                 <span class="day-num text-red-300 font-semibold text-[10px] md:text-xs">2</span>
                                 <div class="badge-container w-full">
                                     <span class="text-red-400 text-[7px] md:text-[8px] font-bold scale-90 origin-center">2次抽選中</span>
                                 </div>
                             </div>
-                            <!-- 🔵🔴 7/3 GLOBAL 1次當落 & JP 2次抽選中 (Weverse 1次結果公佈) -->
+                            <!-- 🔵🔴 7/3 GLOBAL 1次當落 & JP 2次抽選中 -->
                             <div id="day-7-3" class="py-1 bg-gradient-to-r from-blue-600/15 to-red-600/10 rounded border border-blue-500 flex flex-col justify-between h-14 p-0.5">
                                 <span class="day-num text-blue-400 font-bold text-[10px] md:text-xs">3</span>
                                 <div class="badge-container w-full">
                                     <span class="bg-blue-600 text-white text-[7px] md:text-[8px] font-semibold py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">結果公佈</span>
                                 </div>
                             </div>
-                            <!-- 🔴 7/4 JP 2次 抽選中 (JP2次連線中) -->
+                            <!-- 🔴 7/4 JP 2次 抽選中 -->
                             <div id="day-7-4" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
                                 <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">4</span>
                                 <div class="badge-container w-full"></div>
                             </div>
 
-                            <!-- 7/5 JP 2次 抽選截止 (JP2次連線終點) -->
+                            <!-- 7/5 JP 2次 抽選截止 -->
                             <div id="day-7-5" class="py-1 bg-red-600/20 rounded border-y border-r border-red-500 flex flex-col justify-between h-14 p-0.5">
                                 <span class="day-num text-red-400 font-bold text-[10px] md:text-xs">5</span>
                                 <div class="badge-container w-full">
@@ -593,7 +595,7 @@
                                 <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">12</span>
                                 <div class="badge-container w-full"></div>
                             </div>
-                            <!-- 🟣 7/13 【JP會員2次優先抽選】中籤公佈 (單日夾帶高亮紫) -->
+                            <!-- 🟣 7/13 【JP會員2次優先抽選】中籤公佈 -->
                             <div id="day-7-13" class="py-1 bg-purple-600/20 rounded border border-purple-500 flex flex-col justify-between h-14 p-0.5">
                                 <span class="day-num text-purple-400 font-bold text-[10px] md:text-xs">13</span>
                                 <div class="badge-container w-full">
@@ -632,9 +634,9 @@
                     <div class="bg-gray-900 p-5 md:p-6 rounded-lg border border-gray-800 text-[13px] md:text-sm leading-relaxed space-y-3.5">
                         <h3 class="font-bold text-blue-400 text-sm border-b border-gray-800 pb-2">🌍 GLOBAL 全球會員專屬規則</h3>
                         <p class="text-red-400 font-bold">• 【嚴格限制】1 位會員每場公演最多只能購買 1 張門票（僅限本人，無同行者票）。</p>
-                        <p class="text-gray-400">• <span class="text-white font-bold">會員判定基準</span>：必須在 <span class="text-yellow-400 font-bold">6/22 (一) 22:59 (台灣時間)</span> 前完成全球會員購買（購入確定）。</p>
-                        <p class="text-gray-400">• <span class="text-white font-bold">重要提醒</span>：若您同時擁有 GLOBAL 與 JP 會員，參與全球抽選時必須填寫 GLOBAL 的註冊資訊，否則將直接被列為落選對象。</p>
-                        <p class="text-gray-400">• <span class="text-white font-bold">VIP 升級資格</span>：全球會員指定席中籤且完成付款後，同樣可參與後續的 VIP 升級席抽選。</p>
+                        <p class="text-gray-300">• <span class="text-white font-bold">會員判定基準</span>：必須在 <span class="text-yellow-400 font-bold">6/22 (一) 22:59 (台灣時間)</span> 前完成全球會員購買（購入確定）。</p>
+                        <p class="text-gray-300">• <span class="text-white font-bold">重要提醒</span>：若您同時擁有 GLOBAL 與 JP 會員，參與全球抽選時必須填寫 GLOBAL 的註冊資訊，否則將直接被列為落選對象。</p>
+                        <p class="text-gray-300">• <span class="text-white font-bold">VIP 升級資格</span>：全球會員指定席中籤且完成付款後，同樣可參與後續的 VIP 升級席抽選。</p>
                     </div>
 
                     <!-- JP 1次 Member rules -->
@@ -646,7 +648,7 @@
                         <p class="text-gray-400">• <span class="text-white font-bold">超商付現限制</span>：1次中籤者僅能在日本當地 Lawson/Ministop 機台付現，不接受海外信用卡。</p>
                     </div>
 
-                    <!-- 🆕 3. 新增：JP 2次會員 購票與張數限制卡片 -->
+                    <!-- 🆕 3. 新增：JP 2次會員 購票與張數限制卡片 (已修正 6/29 最新官方規則：無 VIP 升級資格 ❌) -->
                     <div class="bg-gradient-to-br from-red-950/20 to-transparent p-5 md:p-6 rounded-lg border border-red-500/30 text-[13px] md:text-sm leading-relaxed space-y-3.5 col-span-1 md:col-span-2 lg:col-span-1">
                         <h3 class="font-bold text-yellow-500 text-sm border-b border-red-800/40 pb-2 flex items-center">
                             <span class="w-1.5 h-3.5 bg-yellow-500 inline-block mr-2 rounded-sm"></span>🇯🇵 JP 日本會員【2次優先抽選】
@@ -654,7 +656,8 @@
                         <p class="text-gray-300">• <span class="text-white font-bold">張數限制</span>：1 位會員每場公演最多可購買 2 張門票（可含 1 位非會員同行者）。</p>
                         <p class="text-red-400 font-bold">• 【限信用卡扣款 💳】2次中籤付款僅支援「信用卡線上扣款」與「電信帳單」線上付款。中籤當下系統會直接自動刷卡，不需去日本超商！</p>
                         <p class="text-gray-300">• <span class="text-white font-bold">會員判定基準</span>：最晚必須在 <span class="text-yellow-400 font-bold">7/5 (日) 22:59 (台灣時間)</span> 前完成 JP 官方會員的入金入會手續。</p>
-                        <p class="text-gray-400">• <span class="text-white font-bold">VIP 升級限制</span>：若 2 張票要申請 VIP 席升級，同行夥伴也必須在升級截止前加入 JP 會員。</p>
+                        <!-- ⚠️ 6/29 最新政策修正 -->
+                        <p class="text-red-400 font-bold">• ❌ 無 VIP 升級資格：官方於 6 月 29 日明文宣佈，於本階段 (2次優先抽選) 中籤並入金之指定席，將【不提供】任何後續 VIP 升級席的抽選機會。</p>
                     </div>
                 </div>
             </div>
