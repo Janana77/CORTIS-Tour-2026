@@ -1,5 +1,5 @@
 
-<html data-type="html" data-identifier="0bbdfcb0-23a1-4357-96bf-a8647a407fa2" data-title="CORTIS Tour Japan 售票資訊 (日本會員第二輪抽選版)" data-version="16"><head>
+<html data-type="html" data-identifier="0bbdfcb0-23a1-4357-96bf-a8647a407fa2" data-title="CORTIS Tour Japan 售票資訊 (PWAApp極致穩定版)" data-version="17"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -100,7 +100,6 @@
             <button id="btn-seats" class="tab-btn px-6 py-4 text-sm text-gray-400 hover:text-white transition whitespace-nowrap">🗺️ 票價與VIP福利</button>
             <button id="btn-schedule" class="tab-btn px-6 py-4 text-sm text-gray-400 hover:text-white transition whitespace-nowrap">📅 抽選日程</button>
             <button id="btn-calendar" class="tab-btn px-6 py-4 text-sm text-gray-400 hover:text-white transition whitespace-nowrap">📅 售票日程表</button>
-            <!-- 💡 標籤更名為：購票與張數限制 -->
             <button id="btn-entry" class="tab-btn px-6 py-4 text-sm text-gray-400 hover:text-white transition whitespace-nowrap">🎫 購票與張數限制</button>
             <button id="btn-rules" class="tab-btn px-6 py-4 text-sm text-gray-400 hover:text-white transition whitespace-nowrap">📋 實名身份驗證規範</button>
         </div>
@@ -294,7 +293,333 @@
                 </div>
             </div>
 
-            <!-- Tab 4: 購票與張數限制 (更名並新增日本二輪抽選規則 🎯) -->
+            <!-- 📅 售票日程表 -->
+            <div id="content-calendar" class="tab-content hidden space-y-6 relative">
+                <!-- 🛡️ 內嵌防截圖浮水印 -->
+                <div class="absolute bottom-4 right-6 text-[10px] text-gray-600 select-none pointer-events-none font-bold tracking-widest opacity-60">Made by Threads @janana_avatar</div>
+                
+                <div class="flex items-center mb-4">
+                    <span class="red-bullet"></span>
+                    <h2 class="text-xl font-bold text-white">2026 CORTIS TOUR 日本抽選日程表 (台灣時間)</h2>
+                </div>
+
+                <!-- 今日日期標記 -->
+                <div class="mb-4 bg-yellow-500/10 border border-yellow-500/30 p-3 rounded-lg flex items-center justify-between text-xs mb-4">
+                    <div>
+                        <span id="current-date-text" class="text-yellow-400 font-bold block">📅 今日日期：讀取中...</span>
+                        <span id="current-date-hint" class="text-gray-400">目前正處於售票期間。</span>
+                    </div>
+                    <span class="bg-yellow-500 text-black font-black px-2 py-0.5 rounded text-[10px] animate-pulse">TODAY</span>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <!-- 1. 六月份月曆 -->
+                    <div class="bg-[#111317] -mx-6 lg:mx-0 p-2 md:p-4 rounded-none lg:rounded-lg border-y lg:border border-gray-800">
+                        <div class="text-center font-bold text-sm text-gray-400 mb-2">2026年 6月 (June)</div>
+                        <div class="grid grid-cols-7 gap-1 text-center text-xs w-full">
+                            <div class="font-bold text-gray-500 py-1 text-[10px] md:text-xs">日</div>
+                            <div class="font-bold text-gray-500 py-1 text-[10px] md:text-xs">一</div>
+                            <div class="font-bold text-gray-500 py-1 text-[10px] md:text-xs">二</div>
+                            <div class="font-bold text-gray-500 py-1 text-[10px] md:text-xs">三</div>
+                            <div class="font-bold text-gray-500 py-1 text-[10px] md:text-xs">四</div>
+                            <div class="font-bold text-gray-500 py-1 text-[10px] md:text-xs">五</div>
+                            <div class="font-bold text-gray-500 py-1 text-[10px] md:text-xs">六</div>
+
+                            <div class="py-2 bg-transparent"></div>
+                            
+                            <!-- 6/1 ~ 6/4 -->
+                            <div id="day-6-1" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                                <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">1</span>
+                                <div class="badge-container w-full"></div>
+                            </div>
+                            <div id="day-6-2" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                                <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">2</span>
+                                <div class="badge-container w-full"></div>
+                            </div>
+                            <div id="day-6-3" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                                <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">3</span>
+                                <div class="badge-container w-full"></div>
+                            </div>
+                            <div id="day-6-4" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                                <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">4</span>
+                                <div class="badge-container w-full"></div>
+                            </div>
+                            <!-- 🔴 6/5 JP 抽選開始 -->
+                            <div id="day-6-5" class="py-1 bg-red-600/20 rounded border-y border-l border-red-500 flex flex-col justify-between h-14 p-0.5">
+                                <span class="day-num text-red-400 font-bold text-[10px] md:text-xs">5</span>
+                                <div class="badge-container w-full">
+                                    <span class="bg-red-600 text-white text-[7px] md:text-[8px] font-semibold py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">JP開始</span>
+                                </div>
+                            </div>
+                            <!-- 🔴 6/6 JP 優先抽選中 -->
+                            <div id="day-6-6" class="py-1 bg-red-600/10 rounded border-y border-red-500/30 flex flex-col justify-between h-14 p-0.5">
+                                <span class="day-num text-red-300 font-semibold text-[10px] md:text-xs">6</span>
+                                <div class="badge-container w-full">
+                                    <span class="text-red-400 text-[7px] md:text-[8px] font-bold scale-90 origin-center">抽選中</span>
+                                </div>
+                            </div>
+
+                            <!-- 6/7 ~ 6/13 -->
+                            <!-- 🔴 6/7 JP 優先抽選中 -->
+                            <div id="day-6-7" class="py-1 bg-red-600/10 rounded border-y border-red-500/30 flex flex-col justify-between h-14 p-0.5">
+                                <span class="day-num text-red-300 font-semibold text-[10px] md:text-xs">7</span>
+                                <div class="badge-container w-full">
+                                    <span class="text-red-400 text-[7px] md:text-[8px] font-bold scale-90 origin-center">抽選中</span>
+                                </div>
+                            </div>
+                            <!-- 🔴 6/8 今日高亮 & JP優先抽選中 -->
+                            <div id="day-6-8" class="py-1 bg-red-600/10 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5 relative">
+                                <span class="day-num text-red-300 font-semibold text-[10px] md:text-xs">8</span>
+                                <div class="badge-container w-full">
+                                    <span class="text-red-400 text-[7px] md:text-[8px] font-bold scale-90 origin-center">抽選中</span>
+                                </div>
+                            </div>
+                            <!-- 🔴 6/9 JP 優先抽選中 -->
+                            <div id="day-6-9" class="py-1 bg-red-600/10 rounded border-y border-red-500/30 flex flex-col justify-between h-14 p-0.5">
+                                <span class="day-num text-red-300 font-semibold text-[10px] md:text-xs">9</span>
+                                <div class="badge-container w-full">
+                                    <span class="text-red-400 text-[7px] md:text-[8px] font-bold scale-90 origin-center">抽選中</span>
+                                </div>
+                            </div>
+                            <!-- 🔴 6/10 JP 優先抽選中 -->
+                            <div id="day-6-10" class="py-1 bg-red-600/10 rounded border-y border-red-500/30 flex flex-col justify-between h-14 p-0.5">
+                                <span class="day-num text-red-300 font-semibold text-[10px] md:text-xs">10</span>
+                                <div class="badge-container w-full">
+                                    <span class="text-red-400 text-[7px] md:text-[8px] font-bold scale-90 origin-center">抽選中</span>
+                                </div>
+                            </div>
+                            <!-- 🔴 6/11 JP 優先抽選截止 -->
+                            <div id="day-6-11" class="py-1 bg-red-600/20 rounded border-y border-r border-red-500 flex flex-col justify-between h-14 p-0.5">
+                                <span class="day-num text-red-400 font-bold text-[10px] md:text-xs">11</span>
+                                <div class="badge-container w-full">
+                                    <span class="bg-red-600 text-white text-[7px] md:text-[8px] font-semibold py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">JP截止</span>
+                                </div>
+                            </div>
+                            <div id="day-6-12" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                                <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">12</span>
+                                <div class="badge-container w-full"></div>
+                            </div>
+                            <div id="day-6-13" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                                <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">13</span>
+                                <div class="badge-container w-full"></div>
+                            </div>
+
+                            <!-- 6/14 ~ 6/20 -->
+                            <div id="day-6-14" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                                <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">14</span>
+                                <div class="badge-container w-full"></div>
+                            </div>
+                            <div id="day-6-15" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                                <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">15</span>
+                                <div class="badge-container w-full"></div>
+                            </div>
+                            <div id="day-6-16" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                                <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">16</span>
+                                <div class="badge-container w-full"></div>
+                            </div>
+                            <div id="day-6-17" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                                <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">17</span>
+                                <div class="badge-container w-full"></div>
+                            </div>
+                            <div id="day-6-18" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                                <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">18</span>
+                                <div class="badge-container w-full"></div>
+                            </div>
+                            <div id="day-6-19" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                                <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">19</span>
+                                <div class="badge-container w-full"></div>
+                            </div>
+                            <!-- 🔵 6/20 GLOBAL Weverse 開始 (Weverse連線起點) -->
+                            <div id="day-6-20" class="py-1 bg-blue-600/20 rounded border-y border-l border-blue-500 flex flex-col justify-between h-14 p-0.5">
+                                <span class="day-num text-blue-400 font-bold text-[10px] md:text-xs">20</span>
+                                <div class="badge-container w-full">
+                                    <span class="bg-blue-600 text-white text-[7px] md:text-[8px] font-semibold py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">全球登記</span>
+                                </div>
+                            </div>
+
+                            <!-- 6/21 ~ 6/27 -->
+                            <!-- 🔵 6/21 GLOBAL Weverse 登記中 (Weverse連線中) -->
+                            <div id="day-6-21" class="py-1 bg-blue-600/10 rounded border-y border-blue-500/30 flex flex-col justify-between h-14 p-0.5">
+                                <span class="text-blue-300 font-semibold text-[10px] md:text-xs">21</span>
+                                <div class="badge-container w-full">
+                                    <span class="text-blue-400 text-[7px] md:text-[8px] font-bold scale-90 origin-center">登記中</span>
+                                </div>
+                            </div>
+                            <!-- 🔵🟣 6/22 JP 1次中籤結果公佈/繳費開始 & GLOBAL Weverse截止 (Weverse連線終點 / 繳費連線起點) -->
+                            <div id="day-6-22" class="py-1 bg-purple-600/20 rounded border border-purple-500 flex flex-col justify-between h-14 p-0.5">
+                                <span class="day-num text-purple-400 font-bold text-[10px] md:text-xs">22</span>
+                                <div class="badge-container w-full">
+                                    <span class="bg-purple-600 text-white text-[7px] md:text-[8px] font-semibold py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">結果公佈</span>
+                                </div>
+                            </div>
+                            <!-- 🟣 6/23 JP 1次繳費中 (繳費連線中) -->
+                            <div id="day-6-23" class="py-1 bg-purple-600/10 rounded border-y border-purple-500/30 flex flex-col justify-between h-14 p-0.5">
+                                <span class="day-num text-purple-300 font-semibold text-[10px] md:text-xs">23</span>
+                                <div class="badge-container w-full">
+                                    <span class="text-purple-400 text-[7px] md:text-[8px] font-bold scale-90 origin-center">超商繳費</span>
+                                </div>
+                            </div>
+                            <!-- 🟣 6/24 JP 1次繳費中 (繳費連線中) -->
+                            <div id="day-6-24" class="py-1 bg-purple-600/10 rounded border-y border-purple-500/30 flex flex-col justify-between h-14 p-0.5">
+                                <span class="day-num text-purple-300 font-semibold text-[10px] md:text-xs">24</span>
+                                <div class="badge-container w-full">
+                                    <span class="text-purple-400 text-[7px] md:text-[8px] font-bold scale-90 origin-center">超商繳費</span>
+                                </div>
+                            </div>
+                            <!-- 🟣 6/25 JP 1次繳費中 (繳費連線中) -->
+                            <div id="day-6-25" class="py-1 bg-purple-600/10 rounded border-y border-purple-500/30 flex flex-col justify-between h-14 p-0.5">
+                                <span class="day-num text-purple-300 font-semibold text-[10px] md:text-xs">25</span>
+                                <div class="badge-container w-full">
+                                    <span class="text-purple-400 text-[7px] md:text-[8px] font-bold scale-90 origin-center">超商繳費</span>
+                                </div>
+                            </div>
+                            <!-- 🟣🔵 6/26 JP 1次繳費截止 & GLOBAL Lawson申請開始 (繳費連線終點 / Lawson連線起點) -->
+                            <div id="day-6-26" class="py-1 bg-purple-600/20 rounded border border-purple-500 flex flex-col justify-between h-14 p-0.5">
+                                <span class="day-num text-purple-400 font-bold text-[10px] md:text-xs">26</span>
+                                <div class="badge-container w-full">
+                                    <span class="bg-purple-600 text-white text-[7px] md:text-[8px] font-semibold py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">全球抽籤</span>
+                                </div>
+                            </div>
+                            <!-- 🔵 6/27 GLOBAL Lawson 申請中 (Lawson連線中) -->
+                            <div id="day-6-27" class="py-1 bg-blue-600/10 rounded border-y border-blue-500/30 flex flex-col justify-between h-14 p-0.5">
+                                <span class="day-num text-blue-300 font-semibold text-[10px] md:text-xs">27</span>
+                                <div class="badge-container w-full">
+                                    <span class="text-blue-400 text-[7px] md:text-[8px] font-bold scale-90 origin-center">申請中</span>
+                                </div>
+                            </div>
+
+                            <!-- 6/28 ~ 6/30 -->
+                            <!-- 🔵 6/28 GLOBAL Lawson 申請中 -->
+                            <div id="day-6-28" class="py-1 bg-blue-600/10 rounded border-y border-blue-500/30 flex flex-col justify-between h-14 p-0.5">
+                                <span class="day-num text-blue-300 font-semibold text-[10px] md:text-xs">28</span>
+                                <div class="badge-container w-full">
+                                    <span class="text-blue-400 text-[7px] md:text-[8px] font-bold scale-90 origin-center">申請中</span>
+                                </div>
+                            </div>
+                            <!-- 🔵 6/29 GLOBAL Lawson 申請截止 (Lawson連線終點) -->
+                            <div id="day-6-29" class="py-1 bg-blue-600/20 rounded border-y border-r border-blue-500 flex flex-col justify-between h-14 p-0.5">
+                                <span class="day-num text-blue-400 font-bold text-[10px] md:text-xs">29</span>
+                                <div class="badge-container w-full">
+                                    <span class="bg-blue-600 text-white text-[7px] md:text-[8px] font-semibold py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">全球截止</span>
+                                </div>
+                            </div>
+                            <!-- 🔴 6/30 【JP會員2次優先抽選】開始！(JP2次連線起點) -->
+                            <div id="day-6-30" class="py-1 bg-red-600/20 rounded border-y border-l border-red-500 flex flex-col justify-between h-14 p-0.5">
+                                <span class="day-num text-red-400 font-bold text-[10px] md:text-xs">30</span>
+                                <div class="badge-container w-full">
+                                    <span class="bg-red-600 text-white text-[7px] md:text-[8px] font-semibold py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">JP2次開</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. 七月份月曆 -->
+                    <div class="bg-[#111317] -mx-6 lg:mx-0 p-2 md:p-4 rounded-none lg:rounded-lg border-y lg:border border-gray-800">
+                        <div class="text-center font-bold text-sm text-gray-400 mb-2">2026年 7月 (July)</div>
+                        <div class="grid grid-cols-7 gap-1 text-center text-xs w-full">
+                            <div class="font-bold text-gray-500 py-1 text-[10px] md:text-xs">日</div>
+                            <div class="font-bold text-gray-500 py-1 text-[10px] md:text-xs">一</div>
+                            <div class="font-bold text-gray-500 py-1 text-[10px] md:text-xs">二</div>
+                            <div class="font-bold text-gray-500 py-1 text-[10px] md:text-xs">三</div>
+                            <div class="font-bold text-gray-500 py-1 text-[10px] md:text-xs">四</div>
+                            <div class="font-bold text-gray-500 py-1 text-[10px] md:text-xs">五</div>
+                            <div class="font-bold text-gray-500 py-1 text-[10px] md:text-xs">六</div>
+
+                            <!-- 第一週空欄 (7/1 是星期三) -->
+                            <div class="py-2 bg-transparent"></div>
+                            <div class="py-2 bg-transparent"></div>
+                            <div class="py-2 bg-transparent"></div>
+                            
+                            <!-- 7/1 ~ 7/4 -->
+                            <!-- 🔴 7/1 JP 2次 抽選中 (JP2次連線中) -->
+                            <div id="day-7-1" class="py-1 bg-red-600/10 rounded border-y border-red-500/30 flex flex-col justify-between h-14 p-0.5">
+                                <span class="day-num text-red-300 font-semibold text-[10px] md:text-xs">1</span>
+                                <div class="badge-container w-full">
+                                    <span class="text-red-400 text-[7px] md:text-[8px] font-bold scale-90 origin-center">2次抽選中</span>
+                                </div>
+                            </div>
+                            <!-- 🔴 7/2 JP 2次 抽選中 (JP2次連線中) -->
+                            <div id="day-7-2" class="py-1 bg-red-600/10 rounded border-y border-red-500/30 flex flex-col justify-between h-14 p-0.5">
+                                <span class="day-num text-red-300 font-semibold text-[10px] md:text-xs">2</span>
+                                <div class="badge-container w-full">
+                                    <span class="text-red-400 text-[7px] md:text-[8px] font-bold scale-90 origin-center">2次抽選中</span>
+                                </div>
+                            </div>
+                            <!-- 🔵🔴 7/3 GLOBAL 1次當落 & JP 2次抽選中 (Weverse 1次結果公佈) -->
+                            <div id="day-7-3" class="py-1 bg-gradient-to-r from-blue-600/15 to-red-600/10 rounded border border-blue-500 flex flex-col justify-between h-14 p-0.5">
+                                <span class="day-num text-blue-400 font-bold text-[10px] md:text-xs">3</span>
+                                <div class="badge-container w-full">
+                                    <span class="bg-blue-600 text-white text-[7px] md:text-[8px] font-semibold py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">結果公佈</span>
+                                </div>
+                            </div>
+                            <!-- 🔴 7/4 JP 2次 抽選中 (JP2次連線中) -->
+                            <div id="day-7-4" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                                <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">4</span>
+                                <div class="badge-container w-full"></div>
+                            </div>
+
+                            <!-- 7/5 JP 2次 抽選截止 (JP2次連線終點) -->
+                            <div id="day-7-5" class="py-1 bg-red-600/20 rounded border-y border-r border-red-500 flex flex-col justify-between h-14 p-0.5">
+                                <span class="day-num text-red-400 font-bold text-[10px] md:text-xs">5</span>
+                                <div class="badge-container w-full">
+                                    <span class="bg-red-600 text-white text-[7px] md:text-[8px] font-semibold py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">JP2次止</span>
+                                </div>
+                            </div>
+                            <div id="day-7-6" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                                <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">6</span>
+                                <div class="badge-container w-full"></div>
+                            </div>
+                            <div id="day-7-7" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                                <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">7</span>
+                                <div class="badge-container w-full"></div>
+                            </div>
+                            <div id="day-7-8" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                                <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">8</span>
+                                <div class="badge-container w-full"></div>
+                            </div>
+                            <div id="day-7-9" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                                <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">9</span>
+                                <div class="badge-container w-full"></div>
+                            </div>
+                            <div id="day-7-10" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                                <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">10</span>
+                                <div class="badge-container w-full"></div>
+                            </div>
+                            <div id="day-7-11" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                                <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">11</span>
+                                <div class="badge-container w-full"></div>
+                            </div>
+                            <div id="day-7-12" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                                <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">12</span>
+                                <div class="badge-container w-full"></div>
+                            </div>
+                            <!-- 🟣 7/13 【JP會員2次優先抽選】中籤公佈 (單日夾帶高亮紫) -->
+                            <div id="day-7-13" class="py-1 bg-purple-600/20 rounded border border-purple-500 flex flex-col justify-between h-14 p-0.5">
+                                <span class="day-num text-purple-400 font-bold text-[10px] md:text-xs">13</span>
+                                <div class="badge-container w-full">
+                                    <span class="bg-purple-600 text-white text-[7px] md:text-[8px] font-semibold py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">2次結果</span>
+                                </div>
+                            </div>
+                            <div class="py-1 bg-transparent"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 備忘 timeline 清單 -->
+                <div class="bg-gray-900/50 p-4 rounded-lg text-xs text-gray-400 space-y-2 leading-relaxed mt-4">
+                    <p class="font-bold text-white">📋 日本場重要日程備忘 (台灣時間)：</p>
+                    <p>• <span class="text-red-400 font-bold">6月 5日 (五) 12:00 ~ 6月 11日 (四) 22:59</span>：【JP 會員 1次】優先抽選申請 (已截止)</p>
+                    <p>• <span class="text-blue-400 font-bold">6月 20日 (六) 12:00 ~ 6月 22日 (一) 22:59</span>：【GLOBAL 會員】Weverse 搶先登記</p>
+                    <p>• <span class="text-purple-400 font-bold">6月 22日 (一) 10:00</span>：【JP 會員 1次】中籤結果公佈 &amp; 繳費開始</p>
+                    <p>• <span class="text-blue-400 font-bold">6月 26日 (五) 12:00 ~ 6月 29日 (一) 22:59</span>：【GLOBAL 會員】Lawson 抽選申請期間</p>
+                    <p>• <span class="text-purple-400 font-bold">6月 26日 (五) 22:00</span>：【JP 會員 1次】中籤超商入金繳費截止</p>
+                    <p>• <span class="text-red-400 font-bold">6月 30日 (二) 12:00 ~ 7月 5日 (日) 22:59</span>：【JP 會員 2次】優先抽選申請 <span class="text-yellow-400 font-semibold">(★開放海外信用卡線上刷卡)</span></p>
+                    <p>• <span class="text-blue-400 font-bold">7月 3日 (五) 17:00</span>：【GLOBAL 會員】抽籤結果公佈</p>
+                    <p>• <span class="text-purple-400 font-bold">7月 13日 (一) 17:00</span>：【JP 會員 2次】中籤結果公佈 &amp; 自動扣款</p>
+                </div>
+            </div>
+
+            <!-- Tab 4: 購票與張數限制 (更名、優化、並新增日本二輪抽選規則 🎯) -->
             <div id="content-entry" class="tab-content hidden space-y-6">
                 <!-- 💡 標題更名為：購票與張數限制 -->
                 <div class="flex items-center mb-4">
@@ -327,7 +652,7 @@
                             <span class="w-1.5 h-3.5 bg-yellow-500 inline-block mr-2 rounded-sm"></span>🇯🇵 JP 日本會員【2次優先抽選】
                         </h3>
                         <p class="text-gray-300">• <span class="text-white font-bold">張數限制</span>：1 位會員每場公演最多可購買 2 張門票（可含 1 位非會員同行者）。</p>
-                        <p class="text-red-400 font-bold">• 【限信用卡扣款 💳】2次中籤付款僅支援「信用卡線上扣款」與「電信代付」。中籤當下系統會直接自動刷卡，不需去日本超商！</p>
+                        <p class="text-red-400 font-bold">• 【限信用卡扣款 💳】2次中籤付款僅支援「信用卡線上扣款」與「電信帳單」線上付款。中籤當下系統會直接自動刷卡，不需去日本超商！</p>
                         <p class="text-gray-300">• <span class="text-white font-bold">會員判定基準</span>：最晚必須在 <span class="text-yellow-400 font-bold">7/5 (日) 22:59 (台灣時間)</span> 前完成 JP 官方會員的入金入會手續。</p>
                         <p class="text-gray-400">• <span class="text-white font-bold">VIP 升級限制</span>：若 2 張票要申請 VIP 席升級，同行夥伴也必須在升級截止前加入 JP 會員。</p>
                     </div>
@@ -407,7 +732,7 @@
         </div>
     </div>
 
-    <!-- Tab Logic Script -->
+    <!-- Tab Logic Script (內含防死鎖、Try-catch 沙盒與最上層優先執行之極致穩定版 🛡️) -->
     <script>
         const buttons = {
             'btn-info': 'content-info',
@@ -418,6 +743,7 @@
             'btn-rules': 'content-rules'
         };
 
+        // 🛡️ 1. 最優先執行：標籤頁切換點擊事件（放在最頂端防卡死）
         Object.keys(buttons).forEach(btnId => {
             const button = document.getElementById(btnId);
             if (button) {
@@ -439,158 +765,160 @@
             }
         });
 
-        // 🌟 自動化動態時間與多階段倒數計時引擎 (日本場：雙月連線、六大事件自動切換，已全新加入2次抽選時程！🚀) 🌟
-        (function() {
-            const today = new Date();
-            const year = today.getFullYear();
-            const month = today.getMonth() + 1; // 1-12
-            const date = today.getDate();
-            const dayNames = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
-            const dayName = dayNames[today.getDay()];
+        // 🛡️ 2. 放在 Try-Catch 沙盒內的自動更新日曆與倒數引擎，確保絕對防死鎖！
+        try {
+            // 🌟 自動化動態時間與多階段倒數計時引擎 (日本場：雙月連線、六大事件自動切換，已全新加入2次抽選時程！🚀) 🌟
+            (function() {
+                const today = new Date();
+                const year = today.getFullYear();
+                const month = today.getMonth() + 1; // 1-12
+                const date = today.getDate();
+                const dayNames = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+                const dayName = dayNames[today.getDay()];
 
-            // 1. 自動寫入目前時間與星期
-            const dateTextEl = document.getElementById('current-date-text');
-            if (dateTextEl) {
-                dateTextEl.innerText = `📅 今日日期：${year}年 ${month}月 ${date}日 (${dayName})`;
-            }
-
-            // 定義日本場八大重要售票/抽選事件 (JST 換算為 台灣 TST，並以 UTC 絕對秒數對齊)
-            const events = [
-                {
-                    name: "【JP 日本會員 1次抽選】截止",
-                    target: Date.UTC(2026, 5, 11, 14, 59, 0), // 2026/06/11 22:59 (TST) = 14:59 UTC
-                    hint: "目前正處於：【JP 日本會員 1次】優先抽選申請期間！"
-                },
-                {
-                    name: "【GLOBAL 全球會員】Weverse 登記開始",
-                    target: Date.UTC(2026, 5, 20, 4, 0, 0), // 2026/06/20 12:00 (TST) = 04:00 UTC
-                    hint: "目前處於：【JP 1次會籍抽選】已截止，等待 6/22 公佈抽籤結果。"
-                },
-                {
-                    name: "【JP 1次】中籤結果公佈 &【GLOBAL】Weverse登記截止",
-                    target: Date.UTC(2026, 5, 22, 2, 0, 0), // 2026/06/22 10:00 (TST) = 02:00 UTC
-                    hint: "🚨 【GLOBAL 全球會員】Weverse 搶先參加登記進行中！(截止至 6/22 22:59)"
-                },
-                {
-                    name: "【GLOBAL 會員】Lawson 抽選開始",
-                    target: Date.UTC(2026, 5, 26, 4, 0, 0), // 2026/06/26 12:00 (TST) = 04:00 UTC
-                    hint: "目前處於：【JP 1次會籍】超商入金繳費期。請中籤者務必在 6/26 21:00 前往日本門市完成付款！"
-                },
-                {
-                    name: "【GLOBAL 會員】Lawson 抽選申請截止",
-                    target: Date.UTC(2026, 5, 29, 14, 59, 0), // 2026/06/29 22:59 (TST) = 14:59 UTC
-                    hint: "目前正處於：【GLOBAL 會員】Lawson 抽選申請期間！"
-                },
-                {
-                    name: "【JP 日本會員 2次優先抽選 (第二輪)】開始",
-                    target: Date.UTC(2026, 5, 30, 4, 0, 0), // 2026/06/30 12:00 (TST) = 04:00 UTC
-                    hint: "目前處於：【GLOBAL 抽選】已截止，等待 6/30 開放【JP 會員 2次抽選】。"
-                },
-                {
-                    name: "【GLOBAL 1次中籤】公佈",
-                    target: Date.UTC(2026, 6, 3, 9, 0, 0), // 2026/07/03 17:00 (TST) = 09:00 UTC
-                    hint: "🚨 【JP 會員 2次優先抽選】全速進行中！(本階段開放海外信用卡線上刷卡 💳)"
-                },
-                {
-                    name: "【JP 會員 2次抽選】截止",
-                    target: Date.UTC(2026, 6, 5, 14, 59, 0), // 2026/07/05 22:59 (TST) = 14:59 UTC
-                    hint: "🚨 7/3 17:00 GLOBAL 抽選公佈！同時【JP會員2次優先抽選】仍在申請期間中。"
-                },
-                {
-                    name: "【JP 會員 2次】中籤結果公佈",
-                    target: Date.UTC(2026, 6, 13, 9, 0, 0), // 2026/07/13 17:00 (TST) = 09:00 UTC
-                    hint: "目前處於：所有抽選已截止，等待 7/13 【JP 會員 2次抽選】公佈中籤結果。"
+                // 1. 自動寫入目前時間與星期
+                const dateTextEl = document.getElementById('current-date-text');
+                if (dateTextEl) {
+                    dateTextEl.innerText = `📅 今日日期：${year}年 ${month}月 ${date}日 (${dayName})`;
                 }
-            ];
 
-            let activeEventIndex = -1;
-            const nowMs = Date.now();
+                // 定義日本場八大重要售票/抽選事件 (JST 換算為 台灣 TST，並以 UTC 絕對秒數對齊)
+                const events = [
+                    {
+                        name: "【JP 日本會員 1次抽選】截止",
+                        target: Date.UTC(2026, 5, 11, 14, 59, 0), // 2026/06/11 22:59 (TST) = 14:59 UTC
+                        hint: "目前正處於：【JP 日本會員 1次】優先抽選申請期間！"
+                    },
+                    {
+                        name: "【GLOBAL 全球會員】Weverse 登記開始",
+                        target: Date.UTC(2026, 5, 20, 4, 0, 0), // 2026/06/20 12:00 (TST) = 04:00 UTC
+                        hint: "目前處於：【JP 1次會籍抽選】已截止，等待 6/22 公佈抽籤結果。"
+                    },
+                    {
+                        name: "【JP 1次】中籤結果公佈 &【GLOBAL】Weverse登記截止",
+                        target: Date.UTC(2026, 5, 22, 2, 0, 0), // 2026/06/22 10:00 (TST) = 02:00 UTC
+                        hint: "🚨 【GLOBAL 全球會員】Weverse 搶先參加登記進行中！(截止至 6/22 22:59)"
+                    },
+                    {
+                        name: "【GLOBAL 會員】Lawson 抽選開始",
+                        target: Date.UTC(2026, 5, 26, 4, 0, 0), // 2026/06/26 12:00 (TST) = 04:00 UTC
+                        hint: "目前處於：【JP 1次會籍】超商入金繳費期。請中籤者務必在 6/26 21:00 前往日本門市完成付款！"
+                    },
+                    {
+                        name: "【GLOBAL 會員】Lawson 抽選申請截止",
+                        target: Date.UTC(2026, 5, 29, 14, 59, 0), // 2026/06/29 22:59 (TST) = 14:59 UTC
+                        hint: "目前正處於：【GLOBAL 會員】Lawson 抽選申請期間！"
+                    },
+                    {
+                        name: "【JP 日本會員 2次優先抽選 (第二輪)】開始",
+                        target: Date.UTC(2026, 5, 30, 4, 0, 0), // 2026/06/30 12:00 (TST) = 04:00 UTC
+                        hint: "目前處於：【GLOBAL 抽選】已截止，等待 6/30 開放【JP 會員 2次抽選】。"
+                    },
+                    {
+                        name: "【GLOBAL 1次中籤】公佈",
+                        target: Date.UTC(2026, 6, 3, 9, 0, 0), // 2026/07/03 17:00 (TST) = 09:00 UTC
+                        hint: "🚨 【JP 會員 2次優先抽選】全速進行中！(本階段開放海外信用卡線上刷卡 💳)"
+                    },
+                    {
+                        name: "【JP 會員 2次抽選】截止",
+                        target: Date.UTC(2026, 6, 5, 14, 59, 0), // 2026/07/05 22:59 (TST) = 14:59 UTC
+                        hint: "🚨 7/3 17:00 GLOBAL 抽選公佈！同時【JP會員2次優先抽選】仍在申請期間中。"
+                    },
+                    {
+                        name: "【JP 會員 2次】中籤結果公佈",
+                        target: Date.UTC(2026, 6, 13, 9, 0, 0), // 2026/07/13 17:00 (TST) = 09:00 UTC
+                        hint: "目前處於：所有抽選已截止，等待 7/13 【JP 會員 2次抽選】公佈中籤結果。"
+                    }
+                ];
 
-            for (let i = 0; i < events.length; i++) {
-                if (nowMs < events[i].target) {
-                    activeEventIndex = i;
-                    break;
-                }
-            }
+                let activeEventIndex = -1;
+                const nowMs = Date.now();
 
-            const hintTextEl = document.getElementById('current-date-hint');
-            if (hintTextEl) {
-                if (activeEventIndex !== -1) {
-                    hintTextEl.innerText = events[activeEventIndex].hint;
-                } else {
-                    hintTextEl.innerText = "日本場抽選活動已全數圓滿結束。祝大家中籤去橫濱！";
-                }
-            }
-
-            const titleEl = document.getElementById('countdown-title');
-            const dEl = document.getElementById('timer-days');
-            const hEl = document.getElementById('timer-hours');
-            const mEl = document.getElementById('timer-minutes');
-            const sEl = document.getElementById('timer-seconds');
-            const timerBox = document.getElementById('countdown-timer-box');
-
-            function updateTimer() {
-                const currentNow = Date.now();
-                let foundIndex = -1;
                 for (let i = 0; i < events.length; i++) {
-                    if (currentNow < events[i].target) {
-                        foundIndex = i;
+                    if (nowMs < events[i].target) {
+                        activeEventIndex = i;
                         break;
                     }
                 }
 
-                if (foundIndex !== -1) {
-                    const currentEvent = events[foundIndex];
-                    if (titleEl) {
-                        titleEl.innerText = `距離 ${currentEvent.name} 還剩：`;
-                    }
-
-                    const diffMs = currentEvent.target - currentNow;
-
-                    const days = Math.floor(diffMs / (1000 * 60 * 60 * 24));
-                    const hours = Math.floor((diffMs % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                    const minutes = Math.floor((diffMs % (1000 * 60 * 60)) / (1000 * 60));
-                    const seconds = Math.floor((diffMs % (1000 * 60)) / 1000);
-
-                    if (dEl) dEl.innerText = String(days).padStart(2, '0');
-                    if (hEl) hEl.innerText = String(hours).padStart(2, '0');
-                    if (mEl) mEl.innerText = String(minutes).padStart(2, '0');
-                    if (sEl) sEl.innerText = String(seconds).padStart(2, '0');
-                } else {
-                    if (titleEl) {
-                        titleEl.innerHTML = `<span class="text-green-400 font-bold">🎉 2026 CORTIS 日本橫濱場抽選活動已圓滿落幕！</span>`;
-                    }
-                    if (timerBox) {
-                        timerBox.classList.add('hidden');
+                const hintTextEl = document.getElementById('current-date-hint');
+                if (hintTextEl) {
+                    if (activeEventIndex !== -1) {
+                        hintTextEl.innerText = events[activeEventIndex].hint;
+                    } else {
+                        hintTextEl.innerText = "日本場抽選活動已全數圓滿結束。祝大家中籤去橫濱！";
                     }
                 }
-            }
 
-            updateTimer();
-            setInterval(updateTimer, 1000);
+                const titleEl = document.getElementById('countdown-title');
+                const dEl = document.getElementById('timer-days');
+                const hEl = document.getElementById('timer-hours');
+                const mEl = document.getElementById('timer-minutes');
+                const sEl = document.getElementById('timer-seconds');
+                const timerBox = document.getElementById('countdown-timer-box');
 
-            // 3. 自動高亮今天的月曆格子 (支援 6月 與 7月)
-            if (year === 2026) {
-                let todayCell = null;
-                if (month === 6) {
-                    todayCell = document.getElementById(`day-6-${date}`);
-                } else if (month === 7) {
-                    todayCell = document.getElementById(`day-7-${date}`);
+                function updateTimer() {
+                    const currentNow = Date.now();
+                    let foundIndex = -1;
+                    for (let i = 0; i < events.length; i++) {
+                        if (currentNow < events[i].target) {
+                            foundIndex = i;
+                            break;
+                        }
+                    }
+
+                    if (foundIndex !== -1) {
+                        const currentEvent = events[foundIndex];
+                        if (titleEl) {
+                            titleEl.innerText = `距離 ${currentEvent.name} 還剩：`;
+                        }
+
+                        const diffMs = currentEvent.target - currentNow;
+
+                        const days = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+                        const hours = Math.floor((diffMs % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                        const minutes = Math.floor((diffMs % (1000 * 60 * 60)) / (1000 * 60));
+                        const seconds = Math.floor((diffMs % (1000 * 60)) / 1000);
+
+                        if (dEl) dEl.innerText = String(days).padStart(2, '0');
+                        if (hEl) hEl.innerText = String(hours).padStart(2, '0');
+                        if (mEl) mEl.innerText = String(minutes).padStart(2, '0');
+                        if (sEl) sEl.innerText = String(seconds).padStart(2, '0');
+                    } else {
+                        if (titleEl) {
+                            titleEl.innerHTML = `<span class="text-green-400 font-bold">🎉 2026 CORTIS 日本橫濱場抽選活動已圓滿落幕！</span>`;
+                        }
+                        if (timerBox) {
+                            timerBox.classList.add('hidden');
+                        }
+                    }
                 }
 
-                if (todayCell) {
-                    // 移除普通的背景與邊框 (包含可能存在的色帶背景)
-                    todayCell.className = todayCell.className.replace(/bg-\w+-600\/\d+/g, '').replace(/border-\w+-500\/\d+/g, '').replace('bg-gray-900/40', '').replace('border-gray-800/50', '');
-                    
-                    // 批上金黃色閃爍高亮與陰影外框
-                    todayCell.classList.add('bg-yellow-500/10', 'border-yellow-500', 'ring-1', 'ring-yellow-500', 'shadow-lg', 'shadow-yellow-500/10');
-                    
-                    // 修改數字顏色為鮮艷金黃
-                    const dateNumSpan = todayCell.querySelector('.day-num');
-                    if (dateNumSpan) {
-                        dateNumSpan.classList.remove('text-gray-500', 'text-red-400', 'text-blue-400', 'text-purple-400');
-                        dateNumSpan.classList.add('text-yellow-400', 'font-bold');
+                updateTimer();
+                setInterval(updateTimer, 1000);
+
+                // 3. 自動高亮今天的月曆格子 (支援 6月 與 7月)
+                if (year === 2026) {
+                    let todayCell = null;
+                    if (month === 6) {
+                        todayCell = document.getElementById(`day-6-${date}`);
+                    } else if (month === 7) {
+                        todayCell = document.getElementById(`day-7-${date}`);
                     }
+
+                    if (todayCell) {
+                        // 移除普通的背景與邊框 (包含可能存在的色帶背景)
+                        todayCell.className = todayCell.className.replace(/bg-\w+-600\/\d+/g, '').replace(/border-\w+-500\/\d+/g, '').replace('bg-gray-900/40', '').replace('border-gray-800/50', '');
+                        
+                        // 披上金黃色閃爍高亮與陰影外框
+                        todayCell.classList.add('bg-yellow-500/10', 'border-yellow-500', 'ring-1', 'ring-yellow-500', 'shadow-lg', 'shadow-yellow-500/10');
+                        
+                        // 修改數字顏色為鮮艷金黃
+                        const dateNumSpan = todayCell.querySelector('.day-num');
+                        if (dateNumSpan) {
+                            dateNumSpan.classList.remove('text-gray-500', 'text-red-400', 'text-blue-400', 'text-purple-400');
+                            dateNumSpan.classList.add('text-yellow-400', 'font-bold');
+                        }
 
                     // 動態將格內的小字更換成「📅 今天」標籤
                     const badgeContainer = todayCell.querySelector('.badge-container');
@@ -600,5 +928,8 @@
                 }
             }
         })();
+        } catch (e) {
+            console.error("時間倒數引擎載入有微小延遲，已自動啟用防護安全隔離以保證標籤頁正常切換！", e);
+        }
     </script>
 </body></html>
