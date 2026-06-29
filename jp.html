@@ -1,5 +1,5 @@
 
-<html data-type="html" data-identifier="0bbdfcb0-23a1-4357-96bf-a8647a407fa2" data-title="CORTIS Tour Japan 售票資訊 (日本會員第二輪抽選版)" data-version="15"><head>
+<html data-type="html" data-identifier="0bbdfcb0-23a1-4357-96bf-a8647a407fa2" data-title="CORTIS Tour Japan 售票資訊 (日本會員第二輪抽選版)" data-version="16"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -100,7 +100,8 @@
             <button id="btn-seats" class="tab-btn px-6 py-4 text-sm text-gray-400 hover:text-white transition whitespace-nowrap">🗺️ 票價與VIP福利</button>
             <button id="btn-schedule" class="tab-btn px-6 py-4 text-sm text-gray-400 hover:text-white transition whitespace-nowrap">📅 抽選日程</button>
             <button id="btn-calendar" class="tab-btn px-6 py-4 text-sm text-gray-400 hover:text-white transition whitespace-nowrap">📅 售票日程表</button>
-            <button id="btn-entry" class="tab-btn px-6 py-4 text-sm text-gray-400 hover:text-white transition whitespace-nowrap">🎫 購票與枚數限制</button>
+            <!-- 💡 標籤更名為：購票與張數限制 -->
+            <button id="btn-entry" class="tab-btn px-6 py-4 text-sm text-gray-400 hover:text-white transition whitespace-nowrap">🎫 購票與張數限制</button>
             <button id="btn-rules" class="tab-btn px-6 py-4 text-sm text-gray-400 hover:text-white transition whitespace-nowrap">📋 實名身份驗證規範</button>
         </div>
 
@@ -195,7 +196,7 @@
                 </div>
             </div>
 
-            <!-- Tab 3: 抽選時程 (已加入全新的「日本會員2次優先抽選」時程 🚀) -->
+            <!-- Tab 3: 抽選時程 -->
             <div id="content-schedule" class="tab-content hidden space-y-6">
                 
                 <div class="flex items-center mb-4">
@@ -293,320 +294,15 @@
                 </div>
             </div>
 
-            <!-- 📅 售票日程表 -->
-            <div id="content-calendar" class="tab-content hidden space-y-6 relative">
-                <!-- 🛡️ 內嵌防截圖浮水印 -->
-                <div class="absolute bottom-4 right-6 text-[10px] text-gray-600 select-none pointer-events-none font-bold tracking-widest opacity-60">Made by Threads @janana_avatar</div>
-                
-                <div class="flex items-center mb-4">
-                    <span class="red-bullet"></span>
-                    <h2 class="text-xl font-bold text-white">2026 CORTIS TOUR 日本抽選日程表 (台灣時間)</h2>
-                </div>
-
-                <!-- 今日日期標記 -->
-                <div class="mb-4 bg-yellow-500/10 border border-yellow-500/30 p-3 rounded-lg flex items-center justify-between text-xs mb-4">
-                    <div>
-                        <span id="current-date-text" class="text-yellow-400 font-bold block">📅 今日日期：讀取中...</span>
-                        <span id="current-date-hint" class="text-gray-400">目前正處於售票期間。</span>
-                    </div>
-                    <span class="bg-yellow-500 text-black font-black px-2 py-0.5 rounded text-[10px] animate-pulse">TODAY</span>
-                </div>
-
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                    <!-- 1. 六月份月曆 (已串聯 6/30 JP會員二輪開始之紅色背景連線) -->
-                    <div class="bg-[#111317] -mx-6 lg:mx-0 p-2 md:p-4 rounded-none lg:rounded-lg border-y lg:border border-gray-800">
-                        <div class="text-center font-bold text-sm text-gray-400 mb-2">2026年 6月 (June)</div>
-                        <div class="grid grid-cols-7 gap-1 text-center text-xs w-full">
-                            <div class="font-bold text-gray-500 py-1 text-[10px] md:text-xs">日</div>
-                            <div class="font-bold text-gray-500 py-1 text-[10px] md:text-xs">一</div>
-                            <div class="font-bold text-gray-500 py-1 text-[10px] md:text-xs">二</div>
-                            <div class="font-bold text-gray-500 py-1 text-[10px] md:text-xs">三</div>
-                            <div class="font-bold text-gray-500 py-1 text-[10px] md:text-xs">四</div>
-                            <div class="font-bold text-gray-500 py-1 text-[10px] md:text-xs">五</div>
-                            <div class="font-bold text-gray-500 py-1 text-[10px] md:text-xs">六</div>
-
-                            <div class="py-2 bg-transparent"></div>
-                            
-                            <div id="day-6-1" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
-                                <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">1</span>
-                                <div class="badge-container w-full"></div>
-                            </div>
-                            <div id="day-6-2" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
-                                <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">2</span>
-                                <div class="badge-container w-full"></div>
-                            </div>
-                            <div id="day-6-3" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
-                                <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">3</span>
-                                <div class="badge-container w-full"></div>
-                            </div>
-                            <div id="day-6-4" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
-                                <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">4</span>
-                                <div class="badge-container w-full"></div>
-                            </div>
-                            <div id="day-6-5" class="py-1 bg-red-600/10 rounded border border-red-500/30 flex flex-col justify-between h-14 p-0.5">
-                                <span class="day-num text-red-400 font-bold text-[10px] md:text-xs">5</span>
-                                <div class="badge-container w-full">
-                                    <span class="bg-red-600/30 text-red-300 text-[7px] md:text-[8px] font-semibold py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">JP1次開</span>
-                                </div>
-                            </div>
-                            <div id="day-6-6" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
-                                <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">6</span>
-                                <div class="badge-container w-full"></div>
-                            </div>
-                            <div id="day-6-7" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
-                                <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">7</span>
-                                <div class="badge-container w-full"></div>
-                            </div>
-                            <div id="day-6-8" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
-                                <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">8</span>
-                                <div class="badge-container w-full"></div>
-                            </div>
-                            <div id="day-6-9" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
-                                <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">9</span>
-                                <div class="badge-container w-full"></div>
-                            </div>
-                            <div id="day-6-10" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
-                                <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">10</span>
-                                <div class="badge-container w-full"></div>
-                            </div>
-                            <div id="day-6-11" class="py-1 bg-red-600/10 rounded border border-red-500/30 flex flex-col justify-between h-14 p-0.5">
-                                <span class="day-num text-red-400 font-bold text-[10px] md:text-xs">11</span>
-                                <div class="badge-container w-full">
-                                    <span class="bg-red-600/30 text-red-300 text-[7px] md:text-[8px] font-semibold py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">JP1次止</span>
-                                </div>
-                            </div>
-                            <div id="day-6-12" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
-                                <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">12</span>
-                                <div class="badge-container w-full"></div>
-                            </div>
-                            <div id="day-6-13" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
-                                <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">13</span>
-                                <div class="badge-container w-full"></div>
-                            </div>
-                            <div id="day-6-14" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
-                                <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">14</span>
-                                <div class="badge-container w-full"></div>
-                            </div>
-                            <div id="day-6-15" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
-                                <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">15</span>
-                                <div class="badge-container w-full"></div>
-                            </div>
-                            <div id="day-6-16" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
-                                <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">16</span>
-                                <div class="badge-container w-full"></div>
-                            </div>
-                            <div id="day-6-17" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
-                                <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">17</span>
-                                <div class="badge-container w-full"></div>
-                            </div>
-                            <div id="day-6-18" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
-                                <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">18</span>
-                                <div class="badge-container w-full"></div>
-                            </div>
-                            <div id="day-6-19" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
-                                <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">19</span>
-                                <div class="badge-container w-full"></div>
-                            </div>
-                            <!-- 🔵 6/20 GLOBAL Weverse 開始 (Weverse連線起點) -->
-                            <div id="day-6-20" class="py-1 bg-blue-600/20 rounded border-y border-l border-blue-500 flex flex-col justify-between h-14 p-0.5">
-                                <span class="day-num text-blue-400 font-bold text-[10px] md:text-xs">20</span>
-                                <div class="badge-container w-full">
-                                    <span class="bg-blue-600 text-white text-[7px] md:text-[8px] font-semibold py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">全球登記</span>
-                                </div>
-                            </div>
-
-                            <!-- 6/21 ~ 6/27 -->
-                            <!-- 🔵 6/21 GLOBAL Weverse 登記中 (Weverse連線中) -->
-                            <div id="day-6-21" class="py-1 bg-blue-600/10 rounded border-y border-blue-500/30 flex flex-col justify-between h-14 p-0.5">
-                                <span class="text-blue-300 font-semibold text-[10px] md:text-xs">21</span>
-                                <div class="badge-container w-full">
-                                    <span class="text-blue-400 text-[7px] md:text-[8px] font-bold scale-90 origin-center">登記中</span>
-                                </div>
-                            </div>
-                            <!-- 🔵🟣 6/22 JP 1次中籤公佈/繳費開始 & GLOBAL Weverse截止 (Weverse連線終點 / 繳費連線起點) -->
-                            <div id="day-6-22" class="py-1 bg-purple-600/20 rounded border border-purple-500 flex flex-col justify-between h-14 p-0.5">
-                                <span class="day-num text-purple-400 font-bold text-[10px] md:text-xs">22</span>
-                                <div class="badge-container w-full">
-                                    <span class="bg-purple-600 text-white text-[7px] md:text-[8px] font-semibold py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">結果公佈</span>
-                                </div>
-                            </div>
-                            <!-- 🟣 6/23 JP 1次繳費中 (繳費連線中) -->
-                            <div id="day-6-23" class="py-1 bg-purple-600/10 rounded border-y border-purple-500/30 flex flex-col justify-between h-14 p-0.5">
-                                <span class="day-num text-purple-300 font-semibold text-[10px] md:text-xs">23</span>
-                                <div class="badge-container w-full">
-                                    <span class="text-purple-400 text-[7px] md:text-[8px] font-bold scale-90 origin-center">超商繳費</span>
-                                </div>
-                            </div>
-                            <!-- 🟣 6/24 JP 1次繳費中 (繳費連線中) -->
-                            <div id="day-6-24" class="py-1 bg-purple-600/10 rounded border-y border-purple-500/30 flex flex-col justify-between h-14 p-0.5">
-                                <span class="day-num text-purple-300 font-semibold text-[10px] md:text-xs">24</span>
-                                <div class="badge-container w-full">
-                                    <span class="text-purple-400 text-[7px] md:text-[8px] font-bold scale-90 origin-center">超商繳費</span>
-                                </div>
-                            </div>
-                            <!-- 🟣 6/25 JP 1次繳費中 (繳費連線中) -->
-                            <div id="day-6-25" class="py-1 bg-purple-600/10 rounded border-y border-purple-500/30 flex flex-col justify-between h-14 p-0.5">
-                                <span class="day-num text-purple-300 font-semibold text-[10px] md:text-xs">25</span>
-                                <div class="badge-container w-full">
-                                    <span class="text-purple-400 text-[7px] md:text-[8px] font-bold scale-90 origin-center">超商繳費</span>
-                                </div>
-                            </div>
-                            <!-- 🟣🔵 6/26 JP 1次繳費截止 & GLOBAL Lawson申請開始 (繳費連線終點 / Lawson連線起點) -->
-                            <div id="day-6-26" class="py-1 bg-purple-600/20 rounded border border-purple-500 flex flex-col justify-between h-14 p-0.5">
-                                <span class="day-num text-purple-400 font-bold text-[10px] md:text-xs">26</span>
-                                <div class="badge-container w-full">
-                                    <span class="bg-purple-600 text-white text-[7px] md:text-[8px] font-semibold py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">全球抽籤</span>
-                                </div>
-                            </div>
-                            <!-- 🔵 6/27 GLOBAL Lawson 申請中 (Lawson連線中) -->
-                            <div id="day-6-27" class="py-1 bg-blue-600/10 rounded border-y border-blue-500/30 flex flex-col justify-between h-14 p-0.5">
-                                <span class="day-num text-blue-300 font-semibold text-[10px] md:text-xs">27</span>
-                                <div class="badge-container w-full">
-                                    <span class="text-blue-400 text-[7px] md:text-[8px] font-bold scale-90 origin-center">申請中</span>
-                                </div>
-                            </div>
-
-                            <!-- 6/28 ~ 6/30 -->
-                            <!-- 🔵 6/28 GLOBAL Lawson 申請中 -->
-                            <div id="day-6-28" class="py-1 bg-blue-600/10 rounded border-y border-blue-500/30 flex flex-col justify-between h-14 p-0.5">
-                                <span class="day-num text-blue-300 font-semibold text-[10px] md:text-xs">28</span>
-                                <div class="badge-container w-full">
-                                    <span class="text-blue-400 text-[7px] md:text-[8px] font-bold scale-90 origin-center">申請中</span>
-                                </div>
-                            </div>
-                            <!-- 🔵 6/29 GLOBAL Lawson 申請截止 (Lawson連線終點) -->
-                            <div id="day-6-29" class="py-1 bg-blue-600/20 rounded border-y border-r border-blue-500 flex flex-col justify-between h-14 p-0.5">
-                                <span class="day-num text-blue-400 font-bold text-[10px] md:text-xs">29</span>
-                                <div class="badge-container w-full">
-                                    <span class="bg-blue-600 text-white text-[7px] md:text-[8px] font-semibold py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">全球截止</span>
-                                </div>
-                            </div>
-                            <!-- 🔴 6/30 【JP會員2次優先抽選】開始！(JP2次連線起點) -->
-                            <div id="day-6-30" class="py-1 bg-red-600/20 rounded border-y border-l border-red-500 flex flex-col justify-between h-14 p-0.5">
-                                <span class="day-num text-red-400 font-bold text-[10px] md:text-xs">30</span>
-                                <div class="badge-container w-full">
-                                    <span class="bg-red-600 text-white text-[7px] md:text-[8px] font-semibold py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">JP2次開</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 2. 七月份月曆 (已串聯 7/1 ~ 7/5 JP會員二輪、7/13 2次結果公佈) -->
-                    <div class="bg-[#111317] -mx-6 lg:mx-0 p-2 md:p-4 rounded-none lg:rounded-lg border-y lg:border border-gray-800">
-                        <div class="text-center font-bold text-sm text-gray-400 mb-2">2026年 7月 (July)</div>
-                        <div class="grid grid-cols-7 gap-1 text-center text-xs w-full">
-                            <div class="font-bold text-gray-500 py-1 text-[10px] md:text-xs">日</div>
-                            <div class="font-bold text-gray-500 py-1 text-[10px] md:text-xs">一</div>
-                            <div class="font-bold text-gray-500 py-1 text-[10px] md:text-xs">二</div>
-                            <div class="font-bold text-gray-500 py-1 text-[10px] md:text-xs">三</div>
-                            <div class="font-bold text-gray-500 py-1 text-[10px] md:text-xs">四</div>
-                            <div class="font-bold text-gray-500 py-1 text-[10px] md:text-xs">五</div>
-                            <div class="font-bold text-gray-500 py-1 text-[10px] md:text-xs">六</div>
-
-                            <!-- 第一週空欄 (7/1 是星期三) -->
-                            <div class="py-2 bg-transparent"></div>
-                            <div class="py-2 bg-transparent"></div>
-                            <div class="py-2 bg-transparent"></div>
-                            
-                            <!-- 7/1 ~ 7/4 -->
-                            <!-- 🔴 7/1 JP 2次 抽選中 (JP2次連線中) -->
-                            <div id="day-7-1" class="py-1 bg-red-600/10 rounded border-y border-red-500/30 flex flex-col justify-between h-14 p-0.5">
-                                <span class="day-num text-red-300 font-semibold text-[10px] md:text-xs">1</span>
-                                <div class="badge-container w-full">
-                                    <span class="text-red-400 text-[7px] md:text-[8px] font-bold scale-90 origin-center">2次抽選中</span>
-                                </div>
-                            </div>
-                            <!-- 🔴 7/2 JP 2次 抽選中 (JP2次連線中) -->
-                            <div id="day-7-2" class="py-1 bg-red-600/10 rounded border-y border-red-500/30 flex flex-col justify-between h-14 p-0.5">
-                                <span class="day-num text-red-300 font-semibold text-[10px] md:text-xs">2</span>
-                                <div class="badge-container w-full">
-                                    <span class="text-red-400 text-[7px] md:text-[8px] font-bold scale-90 origin-center">2次抽選中</span>
-                                </div>
-                            </div>
-                            <!-- 🔵🔴 7/3 GLOBAL 1次當落 & JP 2次抽選中 (Weverse 1次結果公佈) -->
-                            <div id="day-7-3" class="py-1 bg-gradient-to-r from-blue-600/15 to-red-600/10 rounded border border-blue-500 flex flex-col justify-between h-14 p-0.5">
-                                <span class="day-num text-blue-400 font-bold text-[10px] md:text-xs">3</span>
-                                <div class="badge-container w-full">
-                                    <span class="bg-blue-600 text-white text-[7px] md:text-[8px] font-semibold py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">結果公佈</span>
-                                </div>
-                            </div>
-                            <!-- 🔴 7/4 JP 2次 抽選中 (JP2次連線中) -->
-                            <div id="day-7-4" class="py-1 bg-red-600/10 rounded border-y border-red-500/30 flex flex-col justify-between h-14 p-0.5">
-                                <span class="day-num text-red-300 font-semibold text-[10px] md:text-xs">4</span>
-                                <div class="badge-container w-full">
-                                    <span class="text-red-400 text-[7px] md:text-[8px] font-bold scale-90 origin-center">2次抽選中</span>
-                                </div>
-                            </div>
-
-                            <!-- 7/5 JP 2次 抽選截止 (JP2次連線終點) -->
-                            <div id="day-7-5" class="py-1 bg-red-600/20 rounded border-y border-r border-red-500 flex flex-col justify-between h-14 p-0.5">
-                                <span class="day-num text-red-400 font-bold text-[10px] md:text-xs">5</span>
-                                <div class="badge-container w-full">
-                                    <span class="bg-red-600 text-white text-[7px] md:text-[8px] font-semibold py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">JP2次止</span>
-                                </div>
-                            </div>
-                            <div id="day-7-6" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
-                                <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">6</span>
-                                <div class="badge-container w-full"></div>
-                            </div>
-                            <div id="day-7-7" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
-                                <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">7</span>
-                                <div class="badge-container w-full"></div>
-                            </div>
-                            <div id="day-7-8" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
-                                <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">8</span>
-                                <div class="badge-container w-full"></div>
-                            </div>
-                            <div id="day-7-9" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
-                                <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">9</span>
-                                <div class="badge-container w-full"></div>
-                            </div>
-                            <div id="day-7-10" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
-                                <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">10</span>
-                                <div class="badge-container w-full"></div>
-                            </div>
-                            <div id="day-7-11" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
-                                <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">11</span>
-                                <div class="badge-container w-full"></div>
-                            </div>
-                            <div id="day-7-12" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
-                                <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">12</span>
-                                <div class="badge-container w-full"></div>
-                            </div>
-                            <!-- 🟣 7/13 【JP會員2次優先抽選】中籤公佈 (單日紫色高亮) -->
-                            <div id="day-7-13" class="py-1 bg-purple-600/20 rounded border border-purple-500 flex flex-col justify-between h-14 p-0.5">
-                                <span class="day-num text-purple-400 font-bold text-[10px] md:text-xs">13</span>
-                                <div class="badge-container w-full">
-                                    <span class="bg-purple-600 text-white text-[7px] md:text-[8px] font-semibold py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">2次結果</span>
-                                </div>
-                            </div>
-                            <div class="py-1 bg-transparent"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 備忘 timeline 清單 -->
-                <div class="bg-gray-900/50 p-4 rounded-lg text-xs text-gray-400 space-y-2 leading-relaxed mt-4">
-                    <p class="font-bold text-white">📋 日本場重要日程備忘 (台灣時間)：</p>
-                    <p>• <span class="text-red-400 font-bold">6月 5日 (五) 12:00 ~ 6月 11日 (四) 22:59</span>：【JP 會員 1次】優先抽選申請 (已截止)</p>
-                    <p>• <span class="text-blue-400 font-bold">6月 20日 (六) 12:00 ~ 6月 22日 (一) 22:59</span>：【GLOBAL 會員】Weverse 搶先登記</p>
-                    <p>• <span class="text-purple-400 font-bold">6月 22日 (一) 10:00</span>：【JP 會員 1次】中籤結果公佈 &amp; 繳費開始</p>
-                    <p>• <span class="text-blue-400 font-bold">6月 26日 (五) 12:00 ~ 6月 29日 (一) 22:59</span>：【GLOBAL 會員】Lawson 抽選申請期間</p>
-                    <p>• <span class="text-purple-400 font-bold">6月 26日 (五) 22:00</span>：【JP 會員 1次】中籤超商入金繳費截止</p>
-                    <p>• <span class="text-red-400 font-bold">6月 30日 (二) 12:00 ~ 7月 5日 (日) 22:59</span>：【JP 會員 2次】優先抽選申請 <span class="text-yellow-400 font-semibold">(★開放海外信用卡線上刷卡)</span></p>
-                    <p>• <span class="text-blue-400 font-bold">7月 3日 (五) 17:00</span>：【GLOBAL 會員】抽籤結果公佈</p>
-                    <p>• <span class="text-purple-400 font-bold">7月 13日 (一) 17:00</span>：【JP 會員 2次】中籤結果公佈 &amp; 自動扣款</p>
-                </div>
-            </div>
-
-            <!-- Tab 4: 購票與枚數限制 -->
+            <!-- Tab 4: 購票與張數限制 (更名並新增日本二輪抽選規則 🎯) -->
             <div id="content-entry" class="tab-content hidden space-y-6">
+                <!-- 💡 標題更名為：購票與張數限制 -->
                 <div class="flex items-center mb-4">
                     <span class="red-bullet"></span>
                     <h2 class="text-xl font-bold text-white">雙會員 購票張數與限制對照</h2>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-xs">
                     <!-- Global Member rules -->
                     <div class="bg-gray-900 p-5 md:p-6 rounded-lg border border-gray-800 text-[13px] md:text-sm leading-relaxed space-y-3.5">
                         <h3 class="font-bold text-blue-400 text-sm border-b border-gray-800 pb-2">🌍 GLOBAL 全球會員專屬規則</h3>
@@ -616,12 +312,24 @@
                         <p class="text-gray-400">• <span class="text-white font-bold">VIP 升級資格</span>：全球會員指定席中籤且完成付款後，同樣可參與後續的 VIP 升級席抽選。</p>
                     </div>
 
-                    <!-- JP Member rules -->
+                    <!-- JP 1次 Member rules -->
                     <div class="bg-gray-900 p-5 md:p-6 rounded-lg border border-gray-800 text-[13px] md:text-sm leading-relaxed space-y-3.5">
-                        <h3 class="font-bold text-[#e03e3e] text-sm border-b border-gray-800 pb-2">🇯🇵 JP 日本會員專屬規則</h3>
+                        <h3 class="font-bold text-[#e03e3e] text-sm border-b border-gray-800 pb-2">🇯🇵 JP 日本會員【1次優先抽選】</h3>
                         <p class="text-gray-300">• <span class="text-white font-bold">張數限制</span>：1 位會員每場公演最多可購買 2 張門票（可含 1 位非會員同行者）。</p>
                         <p class="text-gray-400">• <span class="text-white font-bold">會員判定基準</span>：系統會判定在 <span class="text-yellow-400 font-bold">6/12 (五) 05:00 AM (台灣時間)</span> 時點，是否仍為 JP 會員資格。</p>
                         <p class="text-red-400 font-bold">• 【VIP 升級限制】若要參與 VIP 升級，同行者也必須在升級截止前加入 JP 官方會員，否則無法申請升級。</p>
+                        <p class="text-gray-400">• <span class="text-white font-bold">超商付現限制</span>：1次中籤者僅能在日本當地 Lawson/Ministop 機台付現，不接受海外信用卡。</p>
+                    </div>
+
+                    <!-- 🆕 3. 新增：JP 2次會員 購票與張數限制卡片 -->
+                    <div class="bg-gradient-to-br from-red-950/20 to-transparent p-5 md:p-6 rounded-lg border border-red-500/30 text-[13px] md:text-sm leading-relaxed space-y-3.5 col-span-1 md:col-span-2 lg:col-span-1">
+                        <h3 class="font-bold text-yellow-500 text-sm border-b border-red-800/40 pb-2 flex items-center">
+                            <span class="w-1.5 h-3.5 bg-yellow-500 inline-block mr-2 rounded-sm"></span>🇯🇵 JP 日本會員【2次優先抽選】
+                        </h3>
+                        <p class="text-gray-300">• <span class="text-white font-bold">張數限制</span>：1 位會員每場公演最多可購買 2 張門票（可含 1 位非會員同行者）。</p>
+                        <p class="text-red-400 font-bold">• 【限信用卡扣款 💳】2次中籤付款僅支援「信用卡線上扣款」與「電信代付」。中籤當下系統會直接自動刷卡，不需去日本超商！</p>
+                        <p class="text-gray-300">• <span class="text-white font-bold">會員判定基準</span>：最晚必須在 <span class="text-yellow-400 font-bold">7/5 (日) 22:59 (台灣時間)</span> 前完成 JP 官方會員的入金入會手續。</p>
+                        <p class="text-gray-400">• <span class="text-white font-bold">VIP 升級限制</span>：若 2 張票要申請 VIP 席升級，同行夥伴也必須在升級截止前加入 JP 會員。</p>
                     </div>
                 </div>
             </div>
@@ -653,7 +361,7 @@
                         <div class="space-y-3.5">
                             <div class="bg-gray-950 p-3.5 rounded">
                                 <span class="text-blue-400 font-bold">① Weverse 全球會員卡 (ONLINE MEMBERSHIP CARD)</span>
-                                <p class="text-gray-400 mt-1">需現場用手機開啟 Weverse App，顯示以 <span class="text-yellow-400 font-bold">「CO」</span> 開頭的 9 位數全球會員卡畫面。<span class="text-red-400 font-bold">※ 嚴禁出示螢幕截圖！</span></p>
+                                <p class="text-gray-400 mt-1">需現場用手機開啟 Weverse App，顯示以 <span class="text-yellow-400 font-bold">「BR」</span> 開頭的 9 位數全球會員卡畫面。<span class="text-red-400 font-bold">※ 嚴禁出示螢幕截圖！</span></p>
                             </div>
 
                             <div class="bg-gray-950 p-3.5 rounded">
@@ -759,7 +467,7 @@
                     hint: "目前處於：【JP 1次會籍抽選】已截止，等待 6/22 公佈抽籤結果。"
                 },
                 {
-                    name: "【JP 1次】中籤公佈 &【GLOBAL】Weverse登記截止",
+                    name: "【JP 1次】中籤結果公佈 &【GLOBAL】Weverse登記截止",
                     target: Date.UTC(2026, 5, 22, 2, 0, 0), // 2026/06/22 10:00 (TST) = 02:00 UTC
                     hint: "🚨 【GLOBAL 全球會員】Weverse 搶先參加登記進行中！(截止至 6/22 22:59)"
                 },
@@ -779,7 +487,7 @@
                     hint: "目前處於：【GLOBAL 抽選】已截止，等待 6/30 開放【JP 會員 2次抽選】。"
                 },
                 {
-                    name: "【GLOBAL 1次當落】公佈",
+                    name: "【GLOBAL 1次中籤】公佈",
                     target: Date.UTC(2026, 6, 3, 9, 0, 0), // 2026/07/03 17:00 (TST) = 09:00 UTC
                     hint: "🚨 【JP 會員 2次優先抽選】全速進行中！(本階段開放海外信用卡線上刷卡 💳)"
                 },
@@ -874,7 +582,7 @@
                     // 移除普通的背景與邊框 (包含可能存在的色帶背景)
                     todayCell.className = todayCell.className.replace(/bg-\w+-600\/\d+/g, '').replace(/border-\w+-500\/\d+/g, '').replace('bg-gray-900/40', '').replace('border-gray-800/50', '');
                     
-                    // 披上金黃色閃爍高亮與陰影外框
+                    // 批上金黃色閃爍高亮與陰影外框
                     todayCell.classList.add('bg-yellow-500/10', 'border-yellow-500', 'ring-1', 'ring-yellow-500', 'shadow-lg', 'shadow-yellow-500/10');
                     
                     // 修改數字顏色為鮮艷金黃
