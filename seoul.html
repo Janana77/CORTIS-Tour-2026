@@ -1,0 +1,806 @@
+
+
+HTML
+<html data-type="html" data-identifier="cbff32e4-ef0a-4636-8502-6370393cdaba" data-title="CORTIS Tour Seoul 生日場售票資訊 (精緻置中填滿版)" data-version="3"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- 瀏覽器分頁標題 -->
+    <title>CORTIS Tour Seoul 生日場售票指南 (Melon Ticket 獨家繁中版)</title>
+    
+    <!-- 📱 iPhone 主畫面 App 自訂圖示與全螢幕設定 -->
+    <link rel="apple-touch-icon" href="app-icon.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="CORTIS TOUR">
+    
+    <!-- 社群分享預覽優化 -->
+    <meta property="og:title" content="CORTIS Tour Seoul 生日場售票指南 (Melon Ticket 獨家繁中版)">
+    <meta property="og:description" content="2026 CORTIS TOUR BIRTHDAY PARTY 首爾生日場繁中售票指南！Melon Ticket 獨家售票時程、化汀體育館座位圖與實名制入場指南。">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="banner_seoul.jpg">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #121418;
+            color: #e2e8f0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+        .tab-active {
+            border-bottom: 3px solid #f43f5e;
+            color: #ffffff;
+            font-weight: bold;
+        }
+        .red-bullet {
+            width: 8px;
+            height: 14px;
+            background-color: #f43f5e;
+            display: inline-block;
+            margin-right: 8px;
+            transform: skewX(-15deg);
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+    
+    <!-- 頂部場次切換導覽列 -->
+    <div class="max-w-4xl mx-auto flex flex-col items-center mb-4 space-y-2">
+        <div class="flex flex-wrap justify-center gap-2">
+            <a href="index.html" class="px-4 py-2 text-xs md:text-sm font-bold rounded-full bg-[#1f242e] text-gray-400 hover:text-white hover:bg-gray-800 border border-gray-800 transition duration-300">
+                🇰🇷 韓國仁川場 (INCHEON)
+            </a>
+            <a href="jp.html" class="px-4 py-2 text-xs md:text-sm font-bold rounded-full bg-[#1f242e] text-gray-400 hover:text-white hover:bg-gray-800 border border-gray-800 transition duration-300">
+                🇯🇵 日本橫濱場 (KANAGAWA)
+            </a>
+            <a href="seoul.html" class="px-4 py-2 text-xs md:text-sm font-bold rounded-full bg-[#f43f5e] text-white shadow-lg border border-[#f43f5e]">
+                🎂 首爾生日場 (SEOUL)
+            </a>
+        </div>
+        <!-- 💡 頂部創作者精美超連結微標 -->
+        <a href="https://www.threads.net/@janana_avatar" target="_blank" rel="noopener noreferrer" class="text-[11px] text-gray-500 hover:text-white transition duration-200 flex items-center space-x-1">
+            <span>🌐 Made by：</span>
+            <span class="font-bold underline">Threads @janana_avatar</span>
+        </a>
+    </div>
+
+    <div class="max-w-4xl mx-auto bg-[#1a1d24] rounded-xl shadow-2xl overflow-hidden border border-gray-800">
+        
+        <!-- 
+          Banner Header (置中填滿，精準露出海報最頂端的生日場官方紅字標題) 
+          1. 稍微拉高高度 (h-64 md:h-96) 
+          2. 使用 no-repeat center top / cover 讓頂部白字紅字標題完美露出
+          3. 漸層微調，讓海報底部與深灰色背景完美融合
+        -->
+        <div class="relative h-64 md:h-96 flex flex-col justify-end p-6 border-b border-gray-800" style="background: linear-gradient(180deg, rgba(26,29,36,0) 50%, rgba(26,29,36,0.95) 100%), url('banner_seoul.jpg') no-repeat center top / cover;">
+            <div class="absolute bottom-4 right-4 bg-[#f43f5e] text-white text-[10px] font-bold px-2.5 py-1 rounded shadow-lg tracking-wider">首爾公演繁中指南 (生日特調版)</div>
+        </div>
+
+        <!-- Warning Notice Banner -->
+        <div class="bg-[#1f242e] px-6 py-4 border-b border-gray-800 text-xs text-gray-300 space-y-2">
+            <p class="text-[#f43f5e] font-bold">⚠️ 【首爾生日場】搶票與入場兩大死守規則：</p>
+            <ul class="list-disc pl-4 space-y-1 text-gray-400">
+                <li><span class="text-pink-400 font-bold">全實施 Melon Ticket 行動電子票</span>：本公演<span class="text-white font-bold">無實體紙本票</span>。必須在手機上下載 Melon Ticket App 開啟 QR Code 進行驗證入場。嚴禁使用螢幕截圖！</li>
+                <li><span class="text-pink-400 font-bold">實名制 100% 本人身份核對</span>：海外觀眾現場取票/入場時，<span class="text-white font-bold underline">必須攜帶護照正本（不承認影印本或照片）</span>，且英文姓名必須與 Weverse 會員、Melon Ticket 購票姓名完全一致。</li>
+            </ul>
+        </div>
+
+        <!-- ⏱️ 首爾生日場專屬：多階段自動接檔倒數計時器 UI 區 -->
+        <div id="countdown-container" class="bg-gradient-to-r from-pink-950/20 via-pink-900/5 to-transparent px-6 py-3 border-b border-gray-800 flex flex-col md:flex-row items-center justify-between gap-3 text-xs">
+            <div class="flex items-center space-x-2">
+                <span class="w-2 h-2 rounded-full bg-[#f43f5e] animate-ping"></span>
+                <span id="countdown-title" class="font-bold text-gray-300">正在讀取最新搶票進度...</span>
+            </div>
+            <div id="countdown-timer-box" class="font-mono text-white text-sm font-black flex items-center space-x-1">
+                <span id="timer-days" class="bg-gray-950 px-2 py-0.5 rounded border border-gray-800 text-[#f43f5e]">00</span>
+                <span class="text-gray-500 font-normal text-[10px] md:text-xs">天</span>
+                <span id="timer-hours" class="bg-gray-950 px-2 py-0.5 rounded border border-gray-800 text-[#f43f5e]">00</span>
+                <span class="text-gray-500 font-normal text-[10px] md:text-xs">時</span>
+                <span id="timer-minutes" class="bg-gray-950 px-2 py-0.5 rounded border border-gray-800 text-[#f43f5e]">00</span>
+                <span class="text-gray-500 font-normal text-[10px] md:text-xs">分</span>
+                <span id="timer-seconds" class="bg-gray-950 px-2 py-0.5 rounded border border-gray-800 text-yellow-500">00</span>
+                <span class="text-gray-500 font-normal text-[10px] md:text-xs">秒</span>
+            </div>
+        </div>
+
+        <!-- Interactive Tabs -->
+        <div class="flex border-b border-gray-800 overflow-x-auto bg-[#15181e] scrollbar-none">
+            <button id="btn-info" class="tab-btn px-6 py-4 text-sm text-gray-400 hover:text-white transition whitespace-nowrap tab-active">📊 演出資訊</button>
+            <button id="btn-seats" class="tab-btn px-6 py-4 text-sm text-gray-400 hover:text-white transition whitespace-nowrap">🗺️ 座位圖與票價</button>
+            <button id="btn-schedule" class="tab-btn px-6 py-4 text-sm text-gray-400 hover:text-white transition whitespace-nowrap">📅 購票時程</button>
+            <button id="btn-calendar" class="tab-btn px-6 py-4 text-sm text-gray-400 hover:text-white transition whitespace-nowrap">📅 售票日程表</button>
+            <button id="btn-entry" class="tab-btn px-6 py-4 text-sm text-gray-400 hover:text-white transition whitespace-nowrap">🎫 購票與張數限制</button>
+            <button id="btn-rules" class="tab-btn px-6 py-4 text-sm text-gray-400 hover:text-white transition whitespace-nowrap">📋 現場須知 &amp; 交通</button>
+        </div>
+
+        <!-- Content Area -->
+        <div class="p-6">
+            
+            <!-- Tab 1: 演出資訊 -->
+            <div id="content-info" class="tab-content space-y-6">
+                <div class="flex items-center mb-4">
+                    <span class="red-bullet"></span>
+                    <h2 class="text-xl font-bold text-white">首爾生日場公演資訊</h2>
+                </div>
+                
+                <div class="overflow-hidden border border-gray-800 rounded-lg">
+                    <table class="w-full text-left border-collapse text-[13px] md:text-sm">
+                        <tbody>
+                            <tr class="border-b border-gray-800 bg-[#1f242e]">
+                                <td class="p-4 w-1/4 font-semibold text-gray-400">演出名稱</td>
+                                <td class="p-4 text-white font-bold">2026 CORTIS TOUR &lt;PUT YOUR PHONE DOWN&gt; BIRTHDAY PARTY</td>
+                            </tr>
+                            <tr class="border-b border-gray-800">
+                                <td class="p-4 w-1/4 font-semibold text-gray-400">演出地點</td>
+                                <td class="p-4 text-white leading-relaxed">
+                                    <span class="font-bold">首爾・高麗大學 化汀體育館 (고려대학교 화정체육관)</span><br>
+                                    <span class="text-xs text-gray-400 block mt-1">地址：首爾特別市城北區安岩路145 (145 Anam-ro, Seongbuk-gu, Seoul)</span>
+                                    <a href="https://www.google.com/maps/search/?api=1&amp;query=Korea+University+Hwajeong+Tiger+Dome" target="_blank" rel="noopener noreferrer" class="inline-flex items-center mt-2 text-xs bg-pink-600/20 hover:bg-pink-600 text-pink-400 hover:text-white border border-pink-500/30 px-2.5 py-1 rounded transition duration-200">
+                                        🗺️ 開啟 Google 地圖導航
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-gray-800 bg-[#1f242e]">
+                                <td class="p-4 font-semibold text-gray-400">演出日期與時間</td>
+                                <td class="p-4 text-white space-y-2">
+                                    <div class="text-[#f43f5e] font-semibold text-xs">⏰ 下方時間為【韓國當地時間 KST】：</div>
+                                    <div class="pl-2 border-l-2 border-pink-500">
+                                        • <span class="font-bold">8月 22日 (六)</span>：開場 17:00 / 開演 18:00 <span class="text-xs text-gray-500 block md:inline md:ml-1">(台灣時間 16:00 開場 / 17:00 開演)</span><br>
+                                        • <span class="font-bold">8月 23日 (日)</span>：開場 16:00 / 開演 17:00 <span class="text-xs text-gray-500 block md:inline md:ml-1">(台灣時間 15:00 開場 / 16:00 開演)</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-gray-800">
+                                <td class="p-4 font-semibold text-gray-400">票價 (含稅)</td>
+                                <td class="p-4 text-white leading-relaxed">
+                                    • <span class="text-pink-400 font-bold">STANDING (Floor 站區)</span>：143,000 韓元<br>
+                                    • <span class="text-blue-400 font-bold">SEATED (2F 指定席/對號座)</span>：143,000 韓元
+                                </td>
+                            </tr>
+                            <tr class="border-b border-gray-800 bg-[#1f242e]">
+                                <td class="p-4 font-semibold text-gray-400">售票通路</td>
+                                <td class="p-4 text-white font-bold">Melon Ticket (멜론티켓 - 獨家售票)</td>
+                            </tr>
+                            <tr class="bg-[#1f242e]">
+                                <td class="p-4 font-semibold text-gray-400">購票限制</td>
+                                <td class="p-4 text-red-400 font-bold">滿 9 歲以上可觀看 (未滿9歲謝絕入場)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Tab 2: 座位圖與票價 -->
+            <div id="content-seats" class="tab-content hidden space-y-6">
+                <div class="flex items-center mb-4">
+                    <span class="red-bullet"></span>
+                    <h2 class="text-xl font-bold text-white">化汀體育館座位配置圖</h2>
+                </div>
+
+                <!-- 高麗大學化汀體育館：精細向量座位配置圖 (SVG) -->
+                <div class="bg-[#111317] p-4 md:p-6 rounded-lg border border-gray-800 flex flex-col items-center relative">
+                    <div class="absolute bottom-16 right-6 text-[10px] text-gray-600 select-none pointer-events-none font-bold tracking-widest opacity-60">Made by Threads @janana_avatar</div>
+                    
+                    <svg viewBox="20 10 470 380" class="w-full max-w-xl h-auto mx-auto">
+                        <!-- STAGE 舞台 -->
+                        <rect x="200" y="25" width="150" height="35" fill="#4d535c" rx="2"></rect>
+                        <text x="275" y="55" fill="#ffffff" font-size="12" font-weight="black" text-anchor="middle" letter-spacing="1">STAGE</text>
+                        
+                        <!-- 舞台前凸 -->
+                        <rect x="250" y="60" width="50" height="15" fill="#4d535c"></rect>
+                        <rect x="265" y="75" width="20" height="50" fill="#4d535c"></rect>
+
+                        <!-- Floor STANDING 站區 S1 - S4 -->
+                        <rect x="180" y="75" width="45" height="50" fill="#e03e3e" rx="1"></rect>
+                        <text x="202.5" y="105" fill="#ffffff" font-size="10" font-weight="black" text-anchor="middle">S1</text>
+
+                        <rect x="325" y="75" width="45" height="50" fill="#e03e3e" rx="1"></rect>
+                        <text x="347.5" y="105" fill="#ffffff" font-size="10" font-weight="black" text-anchor="middle">S2</text>
+
+                        <rect x="175" y="135" width="50" height="40" fill="#e03e3e" rx="1"></rect>
+                        <text x="200" y="160" fill="#ffffff" font-size="10" font-weight="black" text-anchor="middle">S3</text>
+
+                        <rect x="325" y="135" width="50" height="40" fill="#e03e3e" rx="1"></rect>
+                        <text x="350" y="160" fill="#ffffff" font-size="10" font-weight="black" text-anchor="middle">S4</text>
+
+                        <!-- Console -->
+                        <rect x="235" y="145" width="80" height="20" fill="#1a1d24" stroke="#4d535c" stroke-width="1.5" rx="1"></rect>
+                        <text x="275" y="157" fill="#a0aec0" font-size="8" font-weight="bold" text-anchor="middle">CONSOLE</text>
+
+                        <!-- 2F 指定席 (U形包圍看台 J - G 區) -->
+                        <g fill="#9cb3c9" font-size="9" font-weight="bold" text-anchor="middle">
+                            <rect x="125" y="55" width="25" height="30" rx="1"></rect><text x="137.5" y="73" fill="#1a1d24">J</text>
+                            <rect x="125" y="90" width="25" height="35" rx="1"></rect><text x="137.5" y="111" fill="#1a1d24">K</text>
+                            <rect x="125" y="130" width="25" height="35" rx="1"></rect><text x="137.5" y="151" fill="#1a1d24">L</text>
+                            <rect x="145" y="175" width="25" height="30" rx="1"></rect><text x="157.5" y="193" fill="#1a1d24">M</text>
+                            
+                            <path d="M 180,215 L 230,215 L 220,240 L 180,240 Z"></path><text x="205" y="233" fill="#1a1d24">N</text>
+                            <rect x="235" y="215" width="35" height="25" rx="1"></rect><text x="252.5" y="231" fill="#1a1d24">A</text>
+                            <rect x="280" y="215" width="35" height="25" rx="1"></rect><text x="297.5" y="231" fill="#1a1d24">B</text>
+                            <path d="M 320,215 L 370,215 L 370,240 L 330,240 Z"></path><text x="345" y="233" fill="#1a1d24">C</text>
+
+                            <rect x="380" y="175" width="25" height="30" rx="1"></rect><text x="392.5" y="193" fill="#1a1d24">D</text>
+                            <rect x="400" y="130" width="25" height="35" rx="1"></rect><text x="412.5" y="151" fill="#1a1d24">E</text>
+                            <rect x="400" y="90" width="25" height="35" rx="1"></rect><text x="412.5" y="111" fill="#1a1d24">F</text>
+                            <rect x="400" y="55" width="25" height="30" rx="1"></rect><text x="412.5" y="73" fill="#1a1d24">G</text>
+                        </g>
+                    </svg>
+
+                    <!-- 圖例 -->
+                    <div class="grid grid-cols-3 gap-2 text-xs mt-4 w-full max-w-sm border-t border-gray-800 pt-3 text-center">
+                        <div class="flex items-center justify-center space-x-1.5">
+                            <span class="w-3 h-3 bg-[#e03e3e] rounded-sm inline-block"></span>
+                            <span class="text-gray-300">STANDING 站區</span>
+                        </div>
+                        <div class="flex items-center justify-center space-x-1.5">
+                            <span class="w-3 h-3 bg-[#9cb3c9] rounded-sm inline-block"></span>
+                            <span class="text-gray-300">SEATED 看台對號座</span>
+                        </div>
+                        <div class="flex items-center justify-center space-x-1.5">
+                            <span class="w-1.5 h-3 bg-purple-500 inline-block"></span>
+                            <span class="text-gray-300">♿ 輪椅席</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 票價與座位說明 -->
+                <div class="bg-gray-900/50 p-4 rounded-lg text-xs text-gray-400 space-y-2 leading-relaxed">
+                    <p>• 本次首爾生日場分為 <span class="text-red-400 font-bold">STANDING (S1、S2、S3、S4)</span> 及 <span class="text-blue-300 font-bold">SEATED看台對號座 (J 至 G 區)</span>。</p>
+                    <p>• 舞台設有凸型延伸小舞台，讓 S1 與 S2 搖滾站區能享有極佳的近距離互動視角。</p>
+                    <p>• 體育館 2 樓為呈馬蹄形包圍的階梯對號座，視野開闊且音響包覆感佳。</p>
+                </div>
+            </div>
+
+            <!-- Tab 3: 購票時程 -->
+            <div id="content-schedule" class="tab-content hidden space-y-6">
+                <div class="flex items-center mb-4">
+                    <span class="red-bullet"></span>
+                    <h2 class="text-xl font-bold text-white">首爾生日場優先預售時程 (★台灣時間)</h2>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- Step 1: Weverse FC 預先登記 -->
+                    <div class="bg-gradient-to-r from-pink-950/15 to-transparent p-5 rounded-lg border-l-4 border-pink-500 border-y border-r border-gray-800 text-[13px] leading-relaxed">
+                        <span class="bg-pink-600 text-white text-xs font-bold px-2 py-0.5 rounded-full">步驟 1：Weverse 搶先登記期間</span>
+                        <h3 class="text-md font-bold text-white mt-2">GLOBAL 及 JP 雙官方會員皆在此登記</h3>
+                        <p class="text-gray-400 mt-1">欲參與優先購票，必須先在 Weverse 登記頁面提交「優先參與」之申請。</p>
+                        <div class="mt-2 bg-gray-900 p-3 rounded font-bold text-yellow-400 text-xs">
+                            📅 【登記期間】：7月 20日 (一) 13:00 ~ 7月 22日 (三) 22:59 (台灣時間)
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Member Pre-sale -->
+                    <div class="bg-gray-900 p-5 md:p-6 rounded-lg border border-gray-800 text-[13px] md:text-sm leading-relaxed space-y-3">
+                        <span class="bg-gray-700 text-white text-xs font-bold px-2 py-0.5 rounded-full">步驟 2：會員優先搶票開放</span>
+                        <h3 class="text-md font-bold text-white mt-1">Melon Ticket 會員認證與優先購票</h3>
+                        <p class="text-gray-400">登記成功的會員，必須在 Melon Ticket 售票頁面完成會員號碼核對，並於以下指定時間參與搶票：</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+                            <div class="bg-gray-950 p-3 rounded border border-gray-800">
+                                <span class="text-pink-400 font-bold block mb-1">🇰🇷 韓國內頁面售票 (台灣時間)</span>
+                                <span class="text-white font-semibold">7月 22日 (三) 19:00 ~ 22:59</span><br>
+                                <span class="text-[10px] text-gray-500">/* 認證時間：7/20 13:00 ~ 7/22 22:59 */</span>
+                            </div>
+                            <div class="bg-gray-950 p-3 rounded border border-gray-800">
+                                <span class="text-blue-400 font-bold block mb-1">🌍 全球頁面售票 (台灣時間)</span>
+                                <span class="text-white font-semibold">7月 23日 (四) 19:00 ~ 22:59</span><br>
+                                <span class="text-[10px] text-gray-500">/* 全球認證：7/20 13:00 ~ 7/23 22:59 */</span>
+                            </div>
+                        </div>
+                        <p class="text-[11px] text-red-400 font-bold">⚠️ 每人限購 1 張，僅限會員本人參戰！</p>
+                    </div>
+
+                    <!-- Step 3: General Sale -->
+                    <div class="bg-gray-900 p-5 md:p-6 rounded-lg border border-gray-800 text-[13px] md:text-sm leading-relaxed space-y-2">
+                        <span class="bg-blue-600 text-white text-xs font-bold px-2 py-0.5 rounded-full">步驟 3：一般售票全面開賣</span>
+                        <h3 class="text-md font-bold text-white mt-1">免驗證一般全面搶票</h3>
+                        <p class="text-gray-400">開放給所有人進行搶購。僅限會員優先搶票後剩餘的門票。</p>
+                        <div class="bg-gray-950 p-3 rounded border border-gray-800 font-bold text-yellow-400 text-xs w-full md:w-2/3">
+                            📅 【一般開賣時間】：7月 24日 (五) 19:00 (台灣時間) 起
+                        </div>
+                        <p class="text-gray-500 text-[11px]">※ 張數限制：每人每場次限購 1 張，兩場演出合計最多購買 2 張（包含優先購票已購入的票數）。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 📅 售票日程表 -->
+            <div id="content-calendar" class="tab-content hidden space-y-6 relative">
+                <!-- 🛡️ 內嵌防截圖浮水印 -->
+                <div class="absolute bottom-4 right-6 text-[10px] text-gray-600 select-none pointer-events-none font-bold tracking-widest opacity-60">Made by Threads @janana_avatar</div>
+                
+                <div class="flex items-center mb-4">
+                    <span class="red-bullet"></span>
+                    <h2 class="text-xl font-bold text-white">首爾生日場 售票日程表 (台灣時間)</h2>
+                </div>
+
+                <div class="bg-[#111317] -mx-6 md:mx-0 p-2 md:p-6 rounded-none md:rounded-lg border-y md:border border-gray-800">
+                    <!-- 今日日期標記 -->
+                    <div class="mb-4 bg-yellow-500/10 border border-yellow-500/30 p-3 rounded-lg flex items-center justify-between text-xs mb-4">
+                        <div>
+                            <span id="current-date-text" class="text-yellow-400 font-bold block">📅 今日日期：讀取中...</span>
+                            <span id="current-date-hint" class="text-gray-400">目前處於售票準備期。</span>
+                        </div>
+                        <span class="bg-yellow-500 text-black font-black px-2 py-0.5 rounded text-[10px] animate-pulse">TODAY</span>
+                    </div>
+
+                    <!-- 7月份月曆 -->
+                    <div class="text-center font-bold text-sm text-gray-400 mb-2">2026年 7月 (July)</div>
+                    
+                    <div class="grid grid-cols-7 gap-1 text-center text-xs w-full">
+                        <div class="font-bold text-gray-500 py-1 text-[10px] md:text-sm">日</div>
+                        <div class="font-bold text-gray-500 py-1 text-[10px] md:text-sm">一</div>
+                        <div class="font-bold text-gray-500 py-1 text-[10px] md:text-sm">二</div>
+                        <div class="font-bold text-gray-500 py-1 text-[10px] md:text-sm">三</div>
+                        <div class="font-bold text-gray-500 py-1 text-[10px] md:text-sm">四</div>
+                        <div class="font-bold text-gray-500 py-1 text-[10px] md:text-sm">五</div>
+                        <div class="font-bold text-gray-500 py-1 text-[10px] md:text-sm">六</div>
+
+                        <!-- 7/1 星期三開始 -->
+                        <div class="py-2 bg-transparent"></div>
+                        <div class="py-2 bg-transparent"></div>
+                        <div class="py-2 bg-transparent"></div>
+                        
+                        <!-- 7/1 ~ 7/4 -->
+                        <div id="day-7-1" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                            <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">1</span>
+                            <div class="badge-container w-full"></div>
+                        </div>
+                        <div id="day-7-2" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                            <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">2</span>
+                            <div class="badge-container w-full"></div>
+                        </div>
+                        <div id="day-7-3" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                            <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">3</span>
+                            <div class="badge-container w-full"></div>
+                        </div>
+                        <div id="day-7-4" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                            <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">4</span>
+                            <div class="badge-container w-full"></div>
+                        </div>
+
+                        <!-- 7/5 ~ 7/11 -->
+                        <div id="day-7-5" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                            <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">5</span>
+                            <div class="badge-container w-full"></div>
+                        </div>
+                        <div id="day-7-6" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                            <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">6</span>
+                            <div class="badge-container w-full"></div>
+                        </div>
+                        <div id="day-7-7" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                            <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">7</span>
+                            <div class="badge-container w-full"></div>
+                        </div>
+                        <div id="day-7-8" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                            <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">8</span>
+                            <div class="badge-container w-full"></div>
+                        </div>
+                        <div id="day-7-9" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                            <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">9</span>
+                            <div class="badge-container w-full"></div>
+                        </div>
+                        <div id="day-7-10" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                            <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">10</span>
+                            <div class="badge-container w-full"></div>
+                        </div>
+                        <div id="day-7-11" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                            <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">11</span>
+                            <div class="badge-container w-full"></div>
+                        </div>
+
+                        <!-- 7/12 ~ 7/18 -->
+                        <div id="day-7-12" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                            <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">12</span>
+                            <div class="badge-container w-full"></div>
+                        </div>
+                        <div id="day-7-13" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                            <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">13</span>
+                            <div class="badge-container w-full"></div>
+                        </div>
+                        <div id="day-7-14" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                            <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">14</span>
+                            <div class="badge-container w-full"></div>
+                        </div>
+                        <div id="day-7-15" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                            <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">15</span>
+                            <div class="badge-container w-full"></div>
+                        </div>
+                        <div id="day-7-16" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                            <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">16</span>
+                            <div class="badge-container w-full"></div>
+                        </div>
+                        <div id="day-7-17" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                            <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">17</span>
+                            <div class="badge-container w-full"></div>
+                        </div>
+                        <div id="day-7-18" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                            <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">18</span>
+                            <div class="badge-container w-full"></div>
+                        </div>
+
+                        <!-- 7/19 ~ 7/25 -->
+                        <div id="day-7-19" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5">
+                            <span class="day-num text-gray-500 font-semibold text-[10px] md:text-xs">19</span>
+                            <div class="badge-container w-full"></div>
+                        </div>
+                        <!-- 🔵 會籍優先認證開始 -->
+                        <div id="day-7-20" class="py-1 bg-blue-600/20 rounded border-y border-l border-blue-500 flex flex-col justify-between h-14 p-0.5">
+                            <span class="day-num text-blue-400 font-bold text-[10px] md:text-sm">20</span>
+                            <div class="badge-container w-full">
+                                <span class="bg-blue-600 text-white text-[7px] md:text-[8px] font-semibold py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">會員認證</span>
+                            </div>
+                        </div>
+                        <!-- 🔵 會籍優先認證中 -->
+                        <div id="day-7-21" class="py-1 bg-blue-600/10 rounded border-y border-blue-500/30 flex flex-col justify-between h-14 p-0.5">
+                            <span class="text-blue-300 font-semibold text-[10px] md:text-xs">21</span>
+                            <div class="badge-container w-full">
+                                <span class="text-blue-400 text-[7px] md:text-[8px] font-bold scale-90 origin-center">認證中</span>
+                            </div>
+                        </div>
+                        <!-- 🔵🔴 7/22 韓國內認證截止 / 韓國內售票開放 -->
+                        <div id="day-7-22" class="py-1 bg-gradient-to-r from-blue-600/10 to-red-600/10 rounded border-y border-red-500/40 flex flex-col justify-between h-14 p-0.5">
+                            <span class="day-num text-[#e03e3e] font-bold text-[10px] md:text-sm">22</span>
+                            <div class="badge-container w-full">
+                                <span class="bg-[#e03e3e] text-white text-[7px] md:text-[8px] font-semibold py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">韓國售票</span>
+                            </div>
+                        </div>
+                        <!-- 🔵🔴 7/23 全球認證截止 / 全球售票開放 -->
+                        <div id="day-7-23" class="py-1 bg-red-600/20 rounded border-y border-r border-red-500 flex flex-col justify-between h-14 p-0.5">
+                            <span class="day-num text-[#e03e3e] font-bold text-[10px] md:text-sm">23</span>
+                            <div class="badge-container w-full">
+                                <span class="bg-[#e03e3e] text-white text-[7px] md:text-[8px] font-semibold py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">全球售票</span>
+                            </div>
+                        </div>
+                        <!-- 7/24 一般售票開始 -->
+                        <div id="day-7-24" class="py-1 bg-blue-600/10 rounded border border-blue-500/50 flex flex-col justify-between h-14 p-0.5 md:p-1">
+                            <span class="day-num text-blue-400 font-bold text-[10px] md:text-sm">24</span>
+                            <div class="badge-container w-full">
+                                <span class="bg-blue-600 text-white text-[7px] md:text-[8px] font-semibold py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">一般售票</span>
+                            </div>
+                        </div>
+                        <div id="day-7-25" class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5 md:p-1">
+                            <span class="day-num text-gray-500 font-semibold text-[10px] md:text-sm">25</span>
+                            <div class="badge-container w-full"></div>
+                        </div>
+
+                        <!-- 7/26 ~ 7/31 (略) -->
+                        <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5 md:p-1">
+                            <span class="day-num text-gray-500 font-semibold text-[10px] md:text-sm">26</span>
+                            <div class="badge-container w-full"></div>
+                        </div>
+                        <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5 md:p-1">
+                            <span class="day-num text-gray-500 font-semibold text-[10px] md:text-sm">27</span>
+                            <div class="badge-container w-full"></div>
+                        </div>
+                        <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5 md:p-1">
+                            <span class="day-num text-gray-500 font-semibold text-[10px] md:text-sm">28</span>
+                            <div class="badge-container w-full"></div>
+                        </div>
+                        <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5 md:p-1">
+                            <span class="day-num text-gray-500 font-semibold text-[10px] md:text-sm">29</span>
+                            <div class="badge-container w-full"></div>
+                        </div>
+                        <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5 md:p-1">
+                            <span class="day-num text-gray-500 font-semibold text-[10px] md:text-sm">30</span>
+                            <div class="badge-container w-full"></div>
+                        </div>
+                        <div class="py-1 bg-gray-900/40 rounded border border-gray-800/50 flex flex-col justify-between h-14 p-0.5 md:p-1">
+                            <span class="day-num text-gray-500 font-semibold text-[10px] md:text-sm">31</span>
+                            <div class="badge-container w-full"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 備忘 timeline 清單 -->
+                <div class="bg-gray-900/50 p-4 rounded-lg text-xs text-gray-400 space-y-2 leading-relaxed">
+                    <p class="font-bold text-white">📋 首爾生日場重要日程備忘 (台灣時間)：</p>
+                    <p>• <span class="text-blue-400 font-bold">7月 20日 (一) 13:00 ~ 7月 22日 (三) 22:59</span>：Weverse 優先購票預先登記期間</p>
+                    <p>• <span class="text-[#e03e3e] font-bold">7月 22日 (三) 19:00 ~ 22:59</span>：【韓國內頁面】會員優先購票 <span class="text-gray-500">(認證同時段截止)</span></p>
+                    <p>• <span class="text-[#e03e3e] font-bold">7月 23日 (四) 19:00 ~ 22:59</span>：【全球頁面】會員優先購票 <span class="text-gray-500">(認證時間 7/20 13:00 起 ~ 7/23 22:59 截止)</span></p>
+                    <p>• <span class="text-blue-400 font-bold">7月 24日 (五) 19:00</span>：一般全面開賣 <span class="text-gray-500">(Melon Ticket 系統先搶先贏)</span></p>
+                </div>
+            </div>
+
+            <!-- Tab 5: 購票與張數限制 -->
+            <div id="content-entry" class="tab-content hidden space-y-6">
+                <div class="flex items-center mb-4">
+                    <span class="red-bullet"></span>
+                    <h2 class="text-xl font-bold text-white">首爾生日場 購票與張數限制</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+                    <!-- Global/JP Pre-sale rules -->
+                    <div class="bg-gray-900 p-5 md:p-6 rounded-lg border border-gray-800 text-[13px] md:text-sm leading-relaxed space-y-3.5">
+                        <h3 class="font-bold text-pink-400 text-sm border-b border-gray-800 pb-2">👥 官方會員優先預售限制</h3>
+                        <p class="text-red-400 font-bold">• 【嚴格枚數限制】1 位會員「每場公演」僅限購買 1 張門票。因全實名制，僅供登記之會員本人入場，不可轉讓同行者。</p>
+                        <p class="text-gray-300">• <span class="text-white font-bold">JP/GLOBAL 會員皆可登記</span>：本次優先預售適用於 Weverse Shop 購買的 GLOBAL 與 JP 有效會籍會員。</p>
+                        <p class="text-gray-400">• <span class="text-white font-bold">會員判定基準</span>：系統判定在 <span class="text-yellow-400 font-bold">7/23 (四) 05:00 AM (台灣時間)</span> 時點，您是否為 Weverse 的有效會員。</p>
+                    </div>
+
+                    <!-- General Sale rules -->
+                    <div class="bg-gray-900 p-5 md:p-6 rounded-lg border border-gray-800 text-[13px] md:text-sm leading-relaxed space-y-3.5">
+                        <h3 class="font-bold text-blue-400 text-sm border-b border-gray-800 pb-2">🎟️ 一般全面售票限制</h3>
+                        <p class="text-gray-300">• <span class="text-white font-bold">張數限制</span>：每人每場公演最多可購買 1 張門票（包含優先預售已購入的票數，意即優先購票已買者無法在一般售票再買同場）。</p>
+                        <p class="text-gray-400">• <span class="text-white font-bold">合計限購</span>：兩場公演合計最多可購買 2 張。</p>
+                        <p class="text-yellow-400 font-semibold">• ※ 提醒：一般售票僅開放「會員優先預售」後剩餘之座位。若優先售票已售罄，一般售票可能無剩餘票券可供購買。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 6: 現場須知 & 交通 -->
+            <div id="content-rules" class="tab-content hidden space-y-8">
+                <!-- 現場營運時間表卡片 -->
+                <div class="space-y-4">
+                    <div class="flex items-center">
+                        <span class="red-bullet"></span>
+                        <h2 class="text-xl font-bold text-white">現場營運時間表 <span class="text-[#e03e3e] text-sm">(🚨注意：以下為韓國當地時間)</span></h2>
+                    </div>
+                    <div class="overflow-hidden border border-gray-800 rounded-lg text-[13px]">
+                        <table class="w-full border-collapse text-left">
+                            <thead>
+                                <tr class="bg-gray-900 text-gray-300 font-semibold border-b border-gray-800">
+                                    <th class="py-3 px-3">項目</th>
+                                    <th class="py-3 px-3">8/22 (六) 18:00 場</th>
+                                    <th class="py-3 px-3">8/23 (日) 17:00 場</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-gray-300 leading-relaxed">
+                                <tr class="border-b border-gray-800 bg-[#1f242e]">
+                                    <td class="py-3 px-3 font-semibold text-white">手環發放 &amp; 本人實名查驗</td>
+                                    <td class="py-3 px-3">12:00 - 18:30 <span class="text-[11px] text-gray-500 block">(11:00-17:30 台時)</span></td>
+                                    <td class="py-3 px-3">12:00 - 17:30 <span class="text-[11px] text-gray-500 block">(11:00-16:30 台時)</span></td>
+                                </tr>
+                                <tr class="border-b border-gray-800">
+                                    <td class="py-3 px-3 font-semibold text-white">寄物處開放 (物品保管所)</td>
+                                    <td class="py-3 px-3">12:00開放 <span class="text-[11px] text-gray-500 block">(11:00 台時)</span></td>
+                                    <td class="py-3 px-3">12:00開放 <span class="text-[11px] text-gray-500 block">(11:00 台時)</span></td>
+                                </tr>
+                                <tr class="border-b border-gray-800 bg-[#1f242e]">
+                                    <td class="py-3 px-3 font-semibold text-white">大廳開放</td>
+                                    <td class="py-3 px-3">15:00 <span class="text-[11px] text-gray-500 block">(14:00 台時)</span></td>
+                                    <td class="py-3 px-3">14:00 <span class="text-[11px] text-gray-500 block">(13:00 台時)</span></td>
+                                </tr>
+                                <tr class="border-b border-gray-800">
+                                    <td class="py-3 px-3 font-semibold text-white">搖滾站區整隊</td>
+                                    <td class="py-3 px-3">16:00 - 17:00 <span class="text-[11px] text-gray-500 block">(15:00-16:00 台時)</span></td>
+                                    <td class="py-3 px-3">15:00 - 16:00 <span class="text-[11px] text-gray-500 block">(14:00-15:00 台時)</span></td>
+                                </tr>
+                                <tr class="border-b border-gray-800 bg-[#1f242e]">
+                                    <td class="py-3 px-3 font-semibold text-white">觀眾入場 (門票驗證)</td>
+                                    <td class="py-3 px-3">17:00 起 <span class="text-[11px] text-gray-500 block">(16:00 起 台時)</span></td>
+                                    <td class="py-3 px-3">16:00 起 <span class="text-[11px] text-gray-500 block">(15:00 起 台時)</span></td>
+                                </tr>
+                                <tr class="text-[#e03e3e] font-bold">
+                                    <td class="py-3 px-3">演出正式開始</td>
+                                    <td class="py-3 px-3">18:00 <span class="text-[11px] text-gray-500 block">(17:00 台時)</span></td>
+                                    <td class="py-3 px-3">17:00 <span class="text-[11px] text-gray-500 block">(16:00 台時)</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- 寄物處卡片 -->
+                <div class="bg-gray-900 p-5 md:p-6 rounded-lg border border-gray-800 text-[13px] md:text-sm leading-relaxed space-y-3.5">
+                    <h3 class="font-bold text-white text-sm flex items-center"><span class="w-1.5 h-3.5 bg-yellow-500 inline-block mr-2 rounded-sm"></span>🎒 寄物處規範</h3>
+                    <p class="text-gray-300 border-b border-gray-800/40 pb-2">• 費用：<span class="text-white font-bold">5,000 韓元</span> / 再次寄物費用：5,000 韓元 (可刷信用卡/付現金)。</p>
+                    <p class="text-gray-300 border-b border-gray-800/40 pb-2">• 營運時間：公演開始前 5 小時開放，直至公演結束後半小時關閉。</p>
+                    <p class="text-red-400 font-bold">• ⚠️ 貴重物品、易碎品、寵物不接受寄放。任何個人保管不當造成的遺失 or 損壞，主辦方恕不負責。</p>
+                </div>
+
+                <!-- 嚴禁行為卡片 -->
+                <div class="bg-[#1a1d24] border border-red-600/30 p-5 md:p-6 rounded-lg text-[13px] md:text-sm leading-relaxed space-y-3.5">
+                    <h3 class="font-bold text-red-400 text-sm flex items-center"><span class="w-1.5 h-3.5 bg-red-500 inline-block mr-2 rounded-sm"></span>🚫 嚴禁行為</h3>
+                    <p class="text-gray-300 border-b border-gray-800/40 pb-2">• 嚴禁攜帶瓶裝水以外的所有食物 and 飲料進入場館。</p>
+                    <p class="text-gray-300 border-b border-gray-800/40 pb-2">• 嚴禁攜帶 glass 瓶、煙火、爆裂物、雷射筆、大型行李箱、腳架及自拍棒。</p>
+                    <p class="text-red-400 font-bold">• 【手機與相機錄影政策】：本公演裝備嚴禁進行錄影、錄音、語音直播 or 高規格專業攝影。一經工作人員發現，將會被強制刪除素材並請離現場，且門票不予退票。</p>
+                </div>
+
+                <!-- 交通指南卡片 -->
+                <div class="space-y-4">
+                    <div class="flex items-center">
+                        <span class="red-bullet"></span>
+                        <h2 class="text-xl font-bold text-white">交通指南</h2>
+                    </div>
+                    <div class="bg-gray-900 p-5 md:p-6 rounded-lg border border-gray-800 text-[13px] md:text-sm leading-relaxed space-y-3.5 text-gray-300">
+                        <p class="border-b border-gray-800/40 pb-2"><span class="font-bold text-white">📍 地點地址：</span> 首爾特別市城北區安岩路145，高麗大學 化汀體育館 (고려대학교 화정체육관)</p>
+                        <a href="https://www.google.com/maps/search/?api=1&amp;query=Korea+University+Hwajeong+Tiger+Dome" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs bg-pink-600/20 hover:bg-pink-600 text-pink-400 hover:text-white border border-pink-500/30 px-3 py-1.5 rounded transition duration-200">
+                            🗺️ 開啟 Google 地圖導航
+                        </a>
+                        <p class="mt-4 font-bold text-white flex items-center"><span class="w-1.5 h-3.5 bg-blue-500 inline-block mr-2 rounded-sm"></span>🚇 地鐵大眾交通路線：</p>
+                        <div class="pl-4 space-y-2 text-gray-400">
+                            <p>1. 搭乘地鐵 <span class="text-white font-semibold">首爾地鐵 6 號線「安岩站 (Anam)」</span> 1 號或 3 號出口，步行約 15 - 20 分鐘上山 (沿著高麗大學校區引導)。</p>
+                            <p>2. 搭乘接駁或市區公車：綠色支線公車 <span class="text-white font-semibold">273、1111、2115</span> 至高麗大學安岩校區後步行前往會場。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer Contact Info -->
+        <div class="bg-[#111317] p-6 border-t border-gray-800 text-xs text-gray-400 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div>
+                <p class="font-bold text-white">📞 官方客服諮詢 (Inquiry)</p>
+                <p class="mt-1">
+                    【售票相關】Melon Ticket 海外客服：1544-1555 (平日 09:00 - 18:00)
+                </p>
+            </div>
+            <!-- 🛡️ 頁尾創作者署名 (保留您的個人化特調) -->
+            <div class="text-right text-[11px] text-gray-500">
+                © 祝COER們都能順利入場! |Edition by <a href="https://www.threads.net/@janana_avatar" target="_blank" class="underline text-gray-400 hover:text-white">@janana_avatar</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tab Logic Script (內含防死鎖、Try-catch 沙盒與最上層優先執行之極致穩定版 🛡️) -->
+    <script>
+        const buttons = {
+            'btn-info': 'content-info',
+            'btn-seats': 'content-seats',
+            'btn-schedule': 'content-schedule',
+            'btn-calendar': 'content-calendar', 
+            'btn-entry': 'content-entry',
+            'btn-rules': 'content-rules'
+        };
+
+        // 🛡️ 1. 最優先執行：標籤頁切換點擊事件（放在最頂端防卡死）
+        Object.keys(buttons).forEach(btnId => {
+            const button = document.getElementById(btnId);
+            if (button) {
+                button.addEventListener('click', () => {
+                    // Hide all content areas
+                    Object.values(buttons).forEach(contentId => {
+                        const target = document.getElementById(contentId);
+                        if (target) target.classList.add('hidden');
+                    });
+                    
+                    // Deactivate all buttons
+                    Object.keys(buttons).forEach(id => {
+                        const btn = document.getElementById(id);
+                        if (btn) btn.classList.remove('tab-active');
+                    });
+
+                    // Show active content and set active button
+                    const targetContent = document.getElementById(buttons[btnId]);
+                    if (targetContent) targetContent.classList.remove('hidden');
+                    button.classList.add('tab-active');
+                });
+            }
+        });
+
+        // 🛡️ 2. 放在 Try-Catch 沙盒內的自動更新日曆與倒數引擎，確保絕對防死鎖！
+        try {
+            // 🌟 自動化動態時間與生日場四階段倒數計時引擎 (100% 精準對齊) 🌟
+            (function() {
+                const today = new Date();
+                const year = today.getFullYear();
+                const month = today.getMonth() + 1; // 1-12
+                const date = today.getDate();
+                const dayNames = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+                const dayName = dayNames[today.getDay()];
+
+                // 1. 自動寫入目前時間與星期
+                const dateTextEl = document.getElementById('current-date-text');
+                if (dateTextEl) {
+                    dateTextEl.innerText = `📅 今日日期：${year}年 ${month}月 ${date}日 (${dayName})`;
+                }
+
+                // 定義首爾生日場重要售票時程 (全部自動換算為台灣時間，並以 UTC 絕對秒數對齊)
+                const events = [
+                    {
+                        name: "【Weverse 先行登記】開始",
+                        target: Date.UTC(2026, 6, 20, 5, 0, 0), // 2026/07/20 13:00 (TST) = 05:00 UTC
+                        hint: "目前處於：等待生日場 Weverse 優先登記開放階段。"
+                    },
+                    {
+                        name: "【韓國內頁面優先購票】開始",
+                        target: Date.UTC(2026, 6, 22, 11, 0, 0), // 2026/07/22 19:00 (TST) = 11:00 UTC
+                        hint: "目前正處於：【Weverse 優先登記】登記期間！請務必在 7/22 22:59 前登記。"
+                    },
+                    {
+                        name: "【全球頁面優先購票】開始",
+                        target: Date.UTC(2026, 6, 23, 11, 0, 0), // 2026/07/23 19:00 (TST) = 11:00 UTC
+                        hint: "目前處於：【韓國內會員】優先購票期間。全球會員認證售票將於明日 19:00 開放。"
+                    },
+                    {
+                        name: "【一般全面售票】開放",
+                        target: Date.UTC(2026, 6, 24, 11, 0, 0), // 2026/07/24 19:00 (TST) = 11:00 UTC
+                        hint: "目前處於：【全球會員】優先購票期間。一般售票（免驗證）將於明日 19:00 開放。"
+                    }
+                ];
+
+                let activeEventIndex = -1;
+                const nowMs = Date.now();
+
+                for (let i = 0; i < events.length; i++) {
+                    if (nowMs < events[i].target) {
+                        activeEventIndex = i;
+                        break;
+                    }
+                }
+
+                const hintTextEl = document.getElementById('current-date-hint');
+                if (hintTextEl) {
+                    if (activeEventIndex !== -1) {
+                        hintTextEl.innerText = events[activeEventIndex].hint;
+                    } else {
+                        if (year === 2026 && month === 7 && date <= 31) {
+                            hintTextEl.innerText = "目前正處於：【一般全面售票】熱賣中！(Melon Ticket 系統先搶先贏)";
+                        } else {
+                            hintTextEl.innerText = "首爾生日場售票已全部落幕。祝大家現場玩得開心！🎂";
+                        }
+                    }
+                }
+
+                const titleEl = document.getElementById('countdown-title');
+                const dEl = document.getElementById('timer-days');
+                const hEl = document.getElementById('timer-hours');
+                const mEl = document.getElementById('timer-minutes');
+                const sEl = document.getElementById('timer-seconds');
+                const timerBox = document.getElementById('countdown-timer-box');
+
+                function updateTimer() {
+                    const currentNow = Date.now();
+                    let foundIndex = -1;
+                    for (let i = 0; i < events.length; i++) {
+                        if (currentNow < events[i].target) {
+                            foundIndex = i;
+                            break;
+                        }
+                    }
+
+                    if (foundIndex !== -1) {
+                        const currentEvent = events[foundIndex];
+                        if (titleEl) {
+                            titleEl.innerText = `距離 ${currentEvent.name} 還剩：`;
+                        }
+
+                        const diffMs = currentEvent.target - currentNow;
+
+                        const days = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+                        const hours = Math.floor((diffMs % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                        const minutes = Math.floor((diffMs % (1000 * 60 * 60)) / (1000 * 60));
+                        const seconds = Math.floor((diffMs % (1000 * 60)) / 1000);
+
+                        if (dEl) dEl.innerText = String(days).padStart(2, '0');
+                        if (hEl) hEl.innerText = String(hours).padStart(2, '0');
+                        if (mEl) mEl.innerText = String(minutes).padStart(2, '0');
+                        if (sEl) sEl.innerText = String(seconds).padStart(2, '0');
+                    } else {
+                        if (titleEl) {
+                            titleEl.innerHTML = `<span class="text-pink-400 font-bold">🎉 2026 CORTIS 首爾生日場搶票活動已圓滿落幕！</span>`;
+                        }
+                        if (timerBox) {
+                            timerBox.classList.add('hidden');
+                        }
+                    }
+                }
+
+                updateTimer();
+                setInterval(updateTimer, 1000);
+
+                // 3. 自動高亮今天的月曆格子 (限 2026 年 7 月)
+                if (year === 2026 && month === 7) {
+                    const todayCell = document.getElementById(`day-7-${date}`);
+                    if (todayCell) {
+                        todayCell.classList.remove('bg-gray-900/40', 'border-gray-800/50');
+                        todayCell.classList.add('bg-yellow-500/10', 'border-yellow-500', 'ring-1', 'ring-yellow-500', 'shadow-lg', 'shadow-yellow-500/10');
+                        
+                        const dateNumSpan = todayCell.querySelector('.day-num');
+                        if (dateNumSpan) {
+                            dateNumSpan.classList.remove('text-gray-500');
+                            dateNumSpan.classList.add('text-yellow-400', 'font-bold');
+                        }
+
+                        const badgeContainer = todayCell.querySelector('.badge-container');
+                        if (badgeContainer) {
+                            badgeContainer.innerHTML = `<span class="bg-yellow-500 text-black text-[7px] md:text-[8px] font-black py-0.5 rounded tracking-tighter scale-90 origin-center inline-block w-full">📅 今天</span>`;
+                        }
+                    }
+                }
+            })();
+        } catch (e) {
+            console.error("時間倒數引擎載入有微小延遲，已自動啟用防護安全隔離以保證標籤頁正常切換！", e);
+        }
+    </script>
+</body></html>
